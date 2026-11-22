@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Einzelhandel Rechner: Rabatt, DB I, Mietquote &amp; UPT kostenlos berechnen | JPA 360°</title>
-<meta name="description" content="Kostenloser Einzelhandel-Rechner für Mode-, Schuh- &amp; Fachhändler: Rabatt vs. Deckungsbeitrag I (DB I), Mietquote pro m² &amp; Kabinen-UPT (+0,15) sofort inkl. PDF-Auswertung berechnen." />
+<title>Retail Rechner &amp; Einzelhandel Rechner (DACH): Rabatt, DB I, Mietquote &amp; UPT | JPA 360°</title>
+<meta name="description" content="Kostenloser Retail Rechner &amp; Einzelhandel Rechner für Deutschland, Österreich &amp; Schweiz (DACH): Rabatt vs. Deckungsbeitrag I (DB I), Mietquote pro m² &amp; Kabinen-UPT (+0,15) inkl. PDF-Export." />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Marge entsteht in der Kabine — nicht durch Rabatte | JPA 360° Retail Toolkit" />
 <meta property="og:description" content="3 kostenlose Sofort-Rechner + ZDF-Benchmarks + 25 bundesweite Standort-Guides für den stationären Fachhandel." />
@@ -444,7 +444,7 @@ html,body{overflow-x:hidden;-webkit-text-size-adjust:100%}
       <a href="#zdf">Margen-Matrix</a>
       <a href="#glossar">Methodik</a>
       <a href="#ratgeber">Ratgeber</a>
-      <a href="#staedte">25 Städte</a>
+      <a href="#staedte">35 DACH-Städte</a>
       <a class="btn-primary" href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">360° Store Quick-Check →</a>
     </nav>
   </div>
@@ -697,6 +697,8 @@ html,body{overflow-x:hidden;-webkit-text-size-adjust:100%}
 <div class="region-title">Ostdeutschland & Berlin</div><div class="cities"><a href="./berlin.html">Berlin</a><a href="./leipzig.html">Leipzig</a><a href="./dresden.html">Dresden</a></div>
 <div class="region-title">Rhein-Main & Mitte</div><div class="cities"><a href="./frankfurt.html">Frankfurt am Main</a><a href="./wiesbaden.html">Wiesbaden</a><a href="./kassel.html">Kassel</a></div>
 <div class="region-title">Süddeutschland</div><div class="cities"><a href="./muenchen.html">München</a><a href="./stuttgart.html">Stuttgart</a><a href="./nuernberg.html">Nürnberg</a><a href="./augsburg.html">Augsburg</a><a href="./freiburg.html">Freiburg im Breisgau</a><a href="./wuerzburg.html">Würzburg</a></div>
+<div class="region-title">Österreich</div><div class="cities"><a href="./wien.html">Wien</a><a href="./graz.html">Graz</a><a href="./linz.html">Linz</a><a href="./salzburg.html">Salzburg</a><a href="./innsbruck.html">Innsbruck</a></div>
+<div class="region-title">Schweiz</div><div class="cities"><a href="./zuerich.html">Zürich</a><a href="./basel.html">Basel</a><a href="./bern.html">Bern</a><a href="./luzern.html">Luzern</a><a href="./st-gallen.html">St. Gallen</a></div>
 
     <div class="cta-band">
       <div>
@@ -722,24 +724,26 @@ let lastSummary = "";
 function fmt(n){ return Math.round(n).toLocaleString('de-DE'); }
 function sync(id, val){ document.getElementById(id).value = val; calcAll(); }
 function calcAll(){
-  const rev = +document.getElementById('rRev').value || 0;
-  const disc = +document.getElementById('rDisc').value || 0;
-  const m = +document.getElementById('rMargin').value || 50;
+  const rev = Math.max(0, +document.getElementById('rRev').value || 0);
+  const disc = Math.max(0, Math.min(99, +document.getElementById('rDisc').value || 0));
+  const m = Math.max(1, Math.min(99, +document.getElementById('rMargin').value || 50));
   document.getElementById('vRev').textContent = fmt(rev) + ' €';
   document.getElementById('vDisc').textContent = disc + ' %';
   document.getElementById('vMargin').textContent = m + ' %';
 
   const euroLoss = rev * (disc / 100);
   const dbLoss = Math.min(100, (disc / m) * 100);
-  const reqVol = (disc / Math.max(1, m - disc)) * 100;
+  const isLossPerUnit = disc >= m;
+  const reqVol = isLossPerUnit ? null : (disc / (m - disc)) * 100;
+  const reqVolText = isLossPerUnit ? 'Verlustgeschäft (nicht kompensierbar)' : `+${reqVol.toFixed(1)} % Stück`;
   document.getElementById('outRabatt').innerHTML =
     `<div class="kpi-row"><span>Direkter Rohertragsverlust</span><span class="kpi-bad">−${fmt(euroLoss)} € / Mon.</span></div>`+
     `<div class="kpi-row"><span>DB-I-Verlust</span><span class="kpi-bad">−${dbLoss.toFixed(1)} %</span></div>`+
-    `<div class="kpi-row"><span>Nötiger Mehrabsatz</span><span class="kpi-warn">+${reqVol.toFixed(1)} % Stück</span></div>`+
+    `<div class="kpi-row"><span>Nötiger Mehrabsatz</span><span class="${isLossPerUnit ? 'kpi-bad' : 'kpi-warn'}">${reqVolText}</span></div>`+
     `<div class="bar-wrap"><div class="bar-lbl"><span>Margen-Erosion durch Rabatt</span><span>${dbLoss.toFixed(0)} %</span></div><div class="bar-track"><div class="bar-fill-bad" style="width:${Math.min(100,dbLoss)}%"></div></div></div>`;
 
   const sqm = Math.max(1, +document.getElementById('mSqm').value || 1);
-  const rent = +document.getElementById('mRent').value || 0;
+  const rent = Math.max(0, +document.getElementById('mRent').value || 0);
   const mrev = Math.max(1, +document.getElementById('mRev').value || 1);
   document.getElementById('vSqm').textContent = fmt(sqm) + ' m²';
   document.getElementById('vRent').textContent = fmt(rent) + ' €';
@@ -754,9 +758,9 @@ function calcAll(){
     `<div class="kpi-row"><span>Flächenproduktivität</span><span class="kpi-good">${fmt(yearlySqm)} € / m² p.a.</span></div>`+
     `<div class="bar-wrap"><div class="bar-lbl"><span>Mietbelastung (Ziel ≤ 8 %)</span><span>${ratio.toFixed(1)} %</span></div><div class="bar-track"><div class="${ratio<=8?'bar-fill-good':'bar-fill-bad'}" style="width:${Math.min(100,ratio*5)}%"></div></div></div>`;
 
-  const bons = +document.getElementById('kBons').value || 0;
-  const price = +document.getElementById('kPrice').value || 0;
-  const upt = +document.getElementById('kUpt').value || 0.15;
+  const bons = Math.max(0, +document.getElementById('kBons').value || 0);
+  const price = Math.max(0, +document.getElementById('kPrice').value || 0);
+  const upt = Math.max(0, +document.getElementById('kUpt').value || 0);
   document.getElementById('vBons').textContent = fmt(bons) + ' Bons';
   document.getElementById('vPrice').textContent = fmt(price) + ' €';
   document.getElementById('vUpt').textContent = '+' + upt.toFixed(2).replace('.', ',') + ' Teile';
@@ -768,10 +772,10 @@ function calcAll(){
     `<div class="kpi-row"><span>Zusätzlicher DB I (${m} %)</span><span class="kpi-good">+${fmt(extraDb)} € / Jahr</span></div>`+
     `<div class="bar-wrap"><div class="bar-lbl"><span>Vollpreis-Hebel ohne Zusatzmiete</span><span>+${fmt(extraDb)} €</span></div><div class="bar-track"><div class="bar-fill-good" style="width:${Math.min(100, (upt/0.5)*100)}%"></div></div></div>`;
 
-    const waMsg = `Hallo Jeeno, ich habe gerade meine Zahlen auf rechner.jp-aring-advisory.de geprüft:\n- Rabatt-Check: ${disc}% Rabatt auf ${fmt(rev)} € Monatsumsatz = -${fmt(euroLoss)} €/Mon. (-${dbLoss.toFixed(1)}% DB I, +${reqVol.toFixed(1)}% Mehrabsatz nötig)\n- Mietquote: ${ratio.toFixed(1)}% (${fmt(yearlySqm)} €/m² p.a.)\n- Kabinen-UPT (+${upt.toFixed(2)} Teile/Bon): +${fmt(extraDb)} € zusätzlicher DB I/Jahr\nWo sehen Sie aus Ihrer Flächenpraxis den schnellsten Hebel für meinen Store?`;
+    const waMsg = `Hallo Jeeno, ich habe gerade meine Zahlen auf rechner.jp-aring-advisory.de geprüft:\n- Rabatt-Check: ${disc}% Rabatt auf ${fmt(rev)} € Monatsumsatz = -${fmt(euroLoss)} €/Mon. (-${dbLoss.toFixed(1)}% DB I, ${isLossPerUnit ? 'Verlustgeschäft' : '+' + reqVol.toFixed(1) + '% Mehrabsatz nötig'})\n- Mietquote: ${ratio.toFixed(1)}% (${fmt(yearlySqm)} €/m² p.a.)\n- Kabinen-UPT (+${upt.toFixed(2)} Teile/Bon): +${fmt(extraDb)} € zusätzlicher DB I/Jahr\nWo sehen Sie aus Ihrer Flächenpraxis den schnellsten Hebel für meinen Store?`;
   const waBtn = document.getElementById('btnSmartWa');
   if(waBtn){ waBtn.href = 'https://wa.me/491708957669?text=' + encodeURIComponent(waMsg); }
-  lastSummary = `JPA 360° Retail-Modellrechnung: ${disc}% Rabatt auf ${fmt(rev)} € Umsatz = -${fmt(euroLoss)} €/Mon. (-${dbLoss.toFixed(1)}% DB I, +${reqVol.toFixed(1)}% Mehrabsatz nötig) | Mietquote: ${ratio.toFixed(1)}% (${fmt(yearlySqm)} €/m² p.a.) | +${upt.toFixed(2)} Kabinen-UPT = +${fmt(extraDb)} € DB I/Jahr (Quelle: https://www.jp-aring-advisory.de)`;
+  lastSummary = `JPA 360° Retail-Modellrechnung: ${disc}% Rabatt auf ${fmt(rev)} € Umsatz = -${fmt(euroLoss)} €/Mon. (-${dbLoss.toFixed(1)}% DB I, ${isLossPerUnit ? 'Verlustgeschäft' : '+' + reqVol.toFixed(1) + '% Mehrabsatz nötig'}) | Mietquote: ${ratio.toFixed(1)}% (${fmt(yearlySqm)} €/m² p.a.) | +${upt.toFixed(2)} Kabinen-UPT = +${fmt(extraDb)} € DB I/Jahr (Quelle: https://www.jp-aring-advisory.de)`;
 }
 function printReport(){
   const d = new Date();
