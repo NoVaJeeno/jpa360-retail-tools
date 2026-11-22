@@ -35,3 +35,11 @@
 - [Einzelhandelsberatung Freiburg im Breisgau (Süddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/freiburg.html)
 - [Einzelhandelsberatung Würzburg (Süddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/wuerzburg.html)
 - [Haupt-Website JPA 360° Retail Advisory](https://www.jp-aring-advisory.de)
+
+## Praxis-Ratgeber (High-Intent Retail-Wissen)
+- 10 % Rabatt im Einzelhandel: Warum 20 % Deckungsbeitrag I verschwinden: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-rabatt-falle-db1.html
+- Umsatzrückgang im Modegeschäft: 5 operative Hebel ohne Rabattschlacht: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-umsatzrueckgang-modegeschaeft.html
+- UPT steigern an der Umkleidekabine: Der +0,15-Teile-pro-Bon-Leitfaden: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-upt-steigern-umkleidekabine.html
+- Inventurdifferenzen im Einzelhandel senken: Forensische 4-Augen-Checkliste: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-inventurdifferenzen-senken.html
+- Das „10 to 10“-Morgenbriefing: Mitarbeiterführung auf der Verkaufsfläche: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-10-to-10-morgenbriefing.html
+- Agile Personaleinsatzplanung (PEP) im Einzelhandel: Frequenz, Wetter & Liefertage: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-personaleinsatzplanung-frequenz.html

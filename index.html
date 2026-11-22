@@ -210,6 +210,33 @@ footer a:hover{color:var(--ink); text-decoration:underline}
   font-size:7.5px;font-weight:500;letter-spacing:.38em;text-transform:uppercase;
   color:#1c1917;opacity:.65;line-height:1;margin-top:5px;padding-left:.38em;
 }
+
+.btn-group{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.print-banner{display:none}
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.guide-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;text-decoration:none;color:inherit;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .18s,transform .18s}
+.guide-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.guide-tag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.guide-card h3{font-family:var(--serif);font-size:20px;line-height:1.25;margin:0 0 10px;color:var(--ink)}
+.guide-card p{font-size:13.5px;color:var(--muted);margin:0 0 16px;line-height:1.55}
+.guide-more{font-size:12.5px;font-weight:600;color:var(--ink)}
+@media (max-width:960px){.guide-grid{grid-template-columns:1fr}}
+@media print{
+  @page{size:A4 portrait;margin:14mm}
+  body{background:#fff !important;color:#111 !important}
+  header.topbar nav,.hero,.trust-strip,#zdf,#glossar,#ratgeber,#staedte,.cta-band,.btn-group,footer,.field input[type="range"]{display:none !important}
+  header.topbar{position:static !important;border-bottom:2px solid #111 !important;background:#fff !important;padding:0 0 12px !important;margin-bottom:16px !important}
+  .topbar-in{padding:0 !important}
+  .print-banner{display:block !important;border:1px solid #d4cec4;background:#faf8f4;padding:12px 16px;border-radius:8px;margin-bottom:16px;font-size:12px;line-height:1.5}
+  .wrap{padding:0 !important;max-width:100% !important}
+  .section{padding:0 !important;border:none !important}
+  .calc-grid{grid-template-columns:1fr 1fr 1fr !important;gap:12px !important}
+  .card{box-shadow:none !important;border:1px solid #ccc !important;padding:14px !important;break-inside:avoid}
+  .field input[type="number"]{border:none !important;padding:0 !important;font-weight:700 !important;background:transparent !important}
+  .print-footer{display:block !important;margin-top:18px;padding-top:12px;border-top:1px solid #ccc;font-size:11px;color:#444;line-height:1.5}
+}
+.print-footer{display:none}
+
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -301,6 +328,7 @@ footer a:hover{color:var(--ink); text-decoration:underline}
       <a href="#rechner">Rechner</a>
       <a href="#zdf">Margen-Matrix</a>
       <a href="#glossar">Methodik</a>
+      <a href="#ratgeber">Ratgeber</a>
       <a href="#staedte">25 Städte</a>
       <a class="btn-primary" href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">360° Store Quick-Check →</a>
     </nav>
@@ -330,9 +358,17 @@ footer a:hover{color:var(--ink); text-decoration:underline}
         <h2>Executive Retail-Rechner Suite</h2>
         <p class="sec-sub">Bewegen Sie die Regler für Ihr Geschäft — alle Deckungsbeitrags- und Flächenkennzahlen berechnen sich in Echtzeit.</p>
       </div>
-      <button class="btn-ghost" id="btnCopySummary" type="button" onclick="copySummary()">📋 Ergebnis kopieren</button>
+      <div class="btn-group">
+        <button class="btn-ghost" id="btnCopySummary" type="button" onclick="copySummary()">📋 Ergebnis kopieren</button>
+        <button class="btn-primary" id="btnPrintPdf" type="button" onclick="printReport()">🖨️ Als PDF speichern</button>
+      </div>
     </div>
 
+        <div class="print-banner" id="printBanner">
+      <strong>Executive Modellrechnung — JPA 360° Retail Advisory</strong><br/>
+      Erstellt am <span id="printDate"></span> · Unverbindliche mathematische Kalkulationshilfe (kein Steuer- oder Rechtsrat).<br/>
+      Kontakt für den 360° Store Quick-Check (490,00 € netto, § 611 BGB): <strong>https://www.jp-aring-advisory.de</strong> · Jeeno Paulo Aring
+    </div>
     <div class="calc-grid">
       <article class="card">
         <div class="card-num">01 / Preisnachlass-Realität</div>
@@ -403,6 +439,12 @@ footer a:hover{color:var(--ink); text-decoration:underline}
     </div>
   </section>
 
+    <div class="print-footer">
+      <strong>JPA 360° Retail Advisory · Jeeno Paulo Aring · Bundesweit &amp; DACH</strong><br/>
+      Reiner Dienstvertrag nach § 611 BGB · 19+ Jahre stationäre Flächenpraxis (u. a. Frankfurt Zeil, LOOP5, Fulda) · Quelle: https://www.jp-aring-advisory.de
+    </div>
+  </section>
+
   <section id="zdf" class="section">
     <div class="sec-head">
       <div>
@@ -441,6 +483,65 @@ footer a:hover{color:var(--ink); text-decoration:underline}
     <details open><summary>Wie viel Deckungsbeitrag vernichten 10 % Rabatt wirklich?</summary><p>Bei einer Kalkulation von 50 % Rohertrag sinkt Ihr Deckungsbeitrag I um exakt 20 %. Um denselben Euro-Ertrag zu halten, müssten Sie 25 % mehr Teile verkaufen — bei voller Raum- und Personalbelastung.</p></details>
     <details><summary>Arbeitet JPA 360° bundesweit vor Ort?</summary><p>Ja. Einsätze erfolgen bundesweit in ganz Deutschland (von Hamburg und Berlin über NRW/OWL und Rhein-Main bis München und Stuttgart) sowie im gesamten DACH-Raum.</p></details>
     <details><summary>Auf welcher rechtlichen Basis erfolgt eine Zusammenarbeit?</summary><p>Ausschließlich als transparenter Dienstvertrag nach § 611 BGB (z. B. 360° Store Quick-Check ab 490,00 € netto zzgl. 19 % USt) — ohne versteckte Knebelverträge oder unseriöse Erfolgsgarantien.</p></details>
+  </section>
+
+  <section id="ratgeber" class="section">
+    <div class="sec-head">
+      <div>
+        <h2>Praxis-Ratgeber für Inhaber &amp; Store Manager</h2>
+        <p class="sec-sub">Konkrete Antworten auf die 6 häufigsten Ertrags-, Kabinen-, Inventur- und Führungsfragen im stationären Einzelhandel.</p>
+      </div>
+    </div>
+    <div class="guide-grid">
+      <a class="guide-card" href="./ratgeber-rabatt-falle-db1.html">
+        <div>
+          <div class="guide-tag">Margen-Mathematik</div>
+          <h3>10 % Rabatt im Einzelhandel: Warum 20 % Deckungsbeitrag I verschwinden</h3>
+          <p>Warum pauschale Rabattaktionen im stationären Einzelhandel den Gewinn auffressen — und wie Sie Ihre Vollpreis-Marge schützen.</p>
+        </div>
+        <span class="guide-more">Praxis-Leitfaden lesen →</span>
+      </a>
+      <a class="guide-card" href="./ratgeber-umsatzrueckgang-modegeschaeft.html">
+        <div>
+          <div class="guide-tag">Turnaround &amp; Ertrag</div>
+          <h3>Umsatzrückgang im Modegeschäft: 5 operative Hebel ohne Rabattschlacht</h3>
+          <p>Wenn die Passantenfrequenz sinkt, entscheidet die Abschöpfung im Laden. Fünf sofort umsetzbare Hebel aus 19 Jahren Großflächen- und Store-Praxis.</p>
+        </div>
+        <span class="guide-more">Praxis-Leitfaden lesen →</span>
+      </a>
+      <a class="guide-card" href="./ratgeber-upt-steigern-umkleidekabine.html">
+        <div>
+          <div class="guide-tag">Kabinen-UPT</div>
+          <h3>UPT steigern an der Umkleidekabine: Der +0,15-Teile-pro-Bon-Leitfaden</h3>
+          <p>Warum ein zusätzliches Teil auf jedem sechsten bis siebten Bon (+0,15 UPT) zehntausende Euro zusätzlichen Deckungsbeitrag I pro Jahr erzeugt.</p>
+        </div>
+        <span class="guide-more">Praxis-Leitfaden lesen →</span>
+      </a>
+      <a class="guide-card" href="./ratgeber-inventurdifferenzen-senken.html">
+        <div>
+          <div class="guide-tag">Revisionssicherheit</div>
+          <h3>Inventurdifferenzen im Einzelhandel senken: Forensische 4-Augen-Checkliste</h3>
+          <p>Revisionssicherheit ist keine Schikane, sondern der Schutzschild für Ihr Betriebsergebnis. Die wichtigsten Prozesskontrollen aus der Großflächen-Praxis.</p>
+        </div>
+        <span class="guide-more">Praxis-Leitfaden lesen →</span>
+      </a>
+      <a class="guide-card" href="./ratgeber-10-to-10-morgenbriefing.html">
+        <div>
+          <div class="guide-tag">Flächenführung</div>
+          <h3>Das „10 to 10“-Morgenbriefing: Mitarbeiterführung auf der Verkaufsfläche</h3>
+          <p>Umsatz entsteht auf der Fläche, nicht hinter der Bürotür. Die praxiserprobte Struktur für ein interaktives 10-Minuten-Briefing vor Öffnung.</p>
+        </div>
+        <span class="guide-more">Praxis-Leitfaden lesen →</span>
+      </a>
+      <a class="guide-card" href="./ratgeber-personaleinsatzplanung-frequenz.html">
+        <div>
+          <div class="guide-tag">Agile PEP</div>
+          <h3>Agile Personaleinsatzplanung (PEP) im Einzelhandel: Frequenz, Wetter &amp; Liefertage</h3>
+          <p>Personalkosten sind neben der Miete der größte Kostenblock. So steuern Sie Ihre Einsatzplanung nach Frequenz, Wetter und Warenfluss.</p>
+        </div>
+        <span class="guide-more">Praxis-Leitfaden lesen →</span>
+      </a>
+    </div>
   </section>
 
   <section id="staedte" class="section">
@@ -528,6 +629,12 @@ function calcAll(){
     `<div class="bar-wrap"><div class="bar-lbl"><span>Vollpreis-Hebel ohne Zusatzmiete</span><span>+${fmt(extraDb)} €</span></div><div class="bar-track"><div class="bar-fill-good" style="width:${Math.min(100, (upt/0.5)*100)}%"></div></div></div>`;
 
   lastSummary = `JPA 360° Retail-Modellrechnung: ${disc}% Rabatt auf ${fmt(rev)} € Umsatz = -${fmt(euroLoss)} €/Mon. (-${dbLoss.toFixed(1)}% DB I, +${reqVol.toFixed(1)}% Mehrabsatz nötig) | Mietquote: ${ratio.toFixed(1)}% (${fmt(yearlySqm)} €/m² p.a.) | +${upt.toFixed(2)} Kabinen-UPT = +${fmt(extraDb)} € DB I/Jahr (Quelle: https://www.jp-aring-advisory.de)`;
+}
+function printReport(){
+  const d = new Date();
+  const el = document.getElementById('printDate');
+  if(el){ el.textContent = d.toLocaleDateString('de-DE') + ' um ' + d.toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}) + ' Uhr'; }
+  window.print();
 }
 function copySummary(){
   if(navigator.clipboard && lastSummary){
