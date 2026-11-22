@@ -3,48 +3,194 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Einzelhandelsberatung Deutschland (0 € Rechner) — Rabatt vs. Kabinen-UPT | JPA 360°</title>
-<meta name="description" content="Bundesweite Einzelhandelsberatung &amp; kostenlose Retail-Rechner für Modehäuser und Fachgeschäfte in ganz Deutschland: Rabatt-vs.-Kabinen-UPT, Mietquote/m² &amp; Samstags-Potenzial." />
+<title>JPA 360° Retail Advisory — Kostenlose Margen- &amp; Kabinen-UPT-Rechner (Bundesweit)</title>
+<meta name="description" content="Executive Retail-Rechner für inhabergeführte Modehäuser &amp; Fachgeschäfte in Deutschland: Rabatt vs. Kabinen-UPT, Mietquote/m² &amp; Samstags-Potenzial. 100 % kostenlos &amp; DSGVO-frei von Tracking." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Marge entsteht in der Kabine — nicht durch Rabatte | JPA 360° Retail Toolkit" />
+<meta property="og:description" content="3 kostenlose Sofort-Rechner + ZDF-Benchmarks + 25 bundesweite Standort-Guides für den stationären Fachhandel." />
+<meta property="og:url" content="https://novajeeno.github.io/jpa360-retail-tools/" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://novajeeno.github.io/jpa360-retail-tools/" />
 <style>
-:root{--bg:#060a14;--card:#0f172a;--line:rgba(148,163,184,.2);--cyan:#22d3ee;--emerald:#10b981;--gold:#f59e0b;--red:#f43f5e;--text:#e2e8f0;--muted:#94a3b8}
-*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,sans-serif}
-body{background:radial-gradient(circle at 15% 10%,rgba(34,211,238,.12),transparent 42%),linear-gradient(180deg,#081122 0%,var(--bg) 70%);color:var(--text);line-height:1.6;padding:24px 16px 64px}
-.wrap{max-width:1080px;margin:0 auto}
-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:28px}
-.brand{font-weight:800;letter-spacing:1.4px;font-size:14px;color:var(--cyan);text-transform:uppercase}
-nav{display:flex;gap:12px;flex-wrap:wrap}
-nav a{color:var(--muted);text-decoration:none;font-size:13px;padding:6px 10px;border-radius:8px;border:1px solid transparent}
-nav a:hover{color:#fff;border-color:var(--line);background:rgba(255,255,255,.04)}
-.cta{background:linear-gradient(135deg,#06b6d4,#10b981);color:#04111d!important;font-weight:800;border-radius:10px;padding:8px 14px;text-decoration:none;display:inline-block}
-h1{font-size:clamp(26px,4vw,40px);line-height:1.15;margin-bottom:12px;letter-spacing:-.02em}
-h2{font-size:21px;margin:30px 0 12px;color:#fff}
-h3{font-size:16px;margin-bottom:8px;color:var(--cyan)}
-.lead{color:#cbd5e1;font-size:16px;max-width:800px;margin-bottom:22px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:16px}
-.card{background:rgba(15,23,42,.86);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 16px 40px rgba(0,0,0,.35)}
-label{display:block;font-size:12px;color:var(--muted);margin:10px 0 4px;text-transform:uppercase;letter-spacing:.5px}
-input[type=number]{width:100%;background:#050b16;border:1px solid rgba(34,211,238,.35);color:#fff;padding:10px 12px;border-radius:10px;font-size:15px}
-.res{margin-top:14px;padding:12px;border-radius:12px;background:rgba(2,8,20,.78);border:1px solid rgba(16,185,129,.35);font-size:14px}
-.res b{color:var(--emerald)}
-.res .warn{color:var(--gold);font-weight:700}
-.res .bad{color:var(--red);font-weight:700}
-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px;background:rgba(15,23,42,.7);border-radius:12px;overflow:hidden}
-th,td{padding:11px 13px;border-bottom:1px solid var(--line);text-align:left}
-th{color:var(--cyan);font-size:12px;text-transform:uppercase;letter-spacing:.6px;background:rgba(2,8,20,.8)}
-.region-title{font-size:12px;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold);margin:16px 0 8px;font-weight:800}
-.cities{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
-.cities a{background:rgba(34,211,238,.09);border:1px solid rgba(34,211,238,.28);color:#bae6fd;padding:7px 12px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:600}
-.cities a:hover{background:rgba(34,211,238,.24)}
-footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-footer a{color:var(--cyan);text-decoration:none}
+:root{
+  --bg:#F7F5F0; --surface:#FFFFFF; --ink:#121316; --ink-soft:#4B505B;
+  --muted:#6E737E; --line:rgba(18,19,22,.11); --brass:#9E7B43;
+  --brass-soft:rgba(158,123,67,.12); --emerald:#0F5132; --emerald-bg:#ECF6F0;
+  --crimson:#9B1C2E; --crimson-bg:#FDF0F2; --obsidian:#121316;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;
+  line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+.topbar{
+  position:sticky; top:0; z-index:40;
+  background:rgba(247,245,240,.92); backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-in{
+  max-width:1160px; margin:0 auto; padding:16px 24px;
+  display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;
+}
+.brand{
+  display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink);
+  font-size:12.5px; letter-spacing:2.4px; font-weight:700; text-transform:uppercase;
+}
+.brand-mark{
+  width:26px; height:26px; border-radius:6px; background:var(--obsidian); color:#F7F5F0;
+  display:grid; place-items:center; font-family:Georgia,'Times New Roman',serif; font-size:13px; font-weight:700;
+}
+nav{display:flex; align-items:center; gap:20px; flex-wrap:wrap}
+nav a{color:var(--ink-soft); text-decoration:none; font-size:13.5px; font-weight:500; transition:color .2s}
+nav a:hover{color:var(--ink)}
+.btn-primary{
+  background:var(--obsidian); color:#F7F5F0!important; text-decoration:none;
+  padding:11px 20px; border-radius:999px; font-size:13px; font-weight:600; letter-spacing:.3px;
+  transition:transform .22s cubic-bezier(.22,1,.36,1), background .2s, box-shadow .2s;
+  display:inline-flex; align-items:center; gap:8px; border:none; cursor:pointer;
+}
+.btn-primary:hover{background:#23262E; transform:translateY(-1px); box-shadow:0 10px 24px rgba(18,19,22,.16)}
+.btn-ghost{
+  background:transparent; color:var(--ink); border:1px solid var(--line);
+  padding:9px 16px; border-radius:999px; font-size:12.5px; font-weight:600; cursor:pointer;
+  text-decoration:none; display:inline-flex; align-items:center; gap:6px; transition:all .2s;
+}
+.btn-ghost:hover{border-color:var(--ink); background:#fff}
+
+.wrap{max-width:1160px; margin:0 auto; padding:0 24px}
+.hero{padding:68px 0 44px; border-bottom:1px solid var(--line)}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:11.5px; letter-spacing:2px; text-transform:uppercase; font-weight:700;
+  color:var(--brass); margin-bottom:18px;
+}
+.eyebrow::before{content:""; width:28px; height:1px; background:var(--brass)}
+h1{
+  font-family:Georgia,'Times New Roman',serif; font-weight:400;
+  font-size:clamp(34px,5vw,56px); line-height:1.1; letter-spacing:-.02em;
+  color:var(--ink); max-width:860px; margin-bottom:20px;
+}
+h1 em{font-style:italic; color:var(--brass)}
+.lead{font-size:17px; color:var(--ink-soft); max-width:740px; margin-bottom:28px}
+.trust-strip{
+  display:flex; flex-wrap:wrap; gap:24px; padding-top:24px; border-top:1px solid var(--line);
+  font-size:13px; color:var(--ink-soft);
+}
+.trust-strip span{display:inline-flex; align-items:center; gap:8px}
+.trust-strip b{color:var(--ink)}
+
+.section{padding:56px 0; border-bottom:1px solid var(--line)}
+.sec-head{display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:28px}
+h2{
+  font-family:Georgia,'Times New Roman',serif; font-weight:400;
+  font-size:clamp(25px,3.2vw,34px); line-height:1.2; color:var(--ink);
+}
+.sec-sub{font-size:14.5px; color:var(--muted); max-width:560px; margin-top:6px}
+
+.calc-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:22px}
+.card{
+  background:var(--surface); border:1px solid var(--line); border-radius:20px;
+  padding:28px; box-shadow:0 4px 24px rgba(18,19,22,.04);
+  transition:transform .28s cubic-bezier(.22,1,.36,1), box-shadow .28s ease;
+}
+.card:hover{transform:translateY(-2px); box-shadow:0 18px 40px rgba(18,19,22,.08)}
+.card-num{font-size:11px; letter-spacing:1.8px; text-transform:uppercase; color:var(--brass); font-weight:700; margin-bottom:6px}
+h3{font-family:Georgia,'Times New Roman',serif; font-weight:400; font-size:21px; margin-bottom:16px; color:var(--ink)}
+
+.field{margin-bottom:14px}
+.field-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:6px}
+.field label{font-size:12px; font-weight:600; color:var(--ink-soft); letter-spacing:.3px}
+.field-val{font-size:13px; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums}
+input[type=range]{width:100%; accent-color:var(--obsidian); cursor:pointer; height:5px}
+input[type=number]{
+  width:100%; margin-top:6px; padding:9px 12px; border-radius:10px;
+  border:1px solid var(--line); background:var(--bg); color:var(--ink);
+  font-size:14.5px; font-weight:600; font-variant-numeric:tabular-nums;
+}
+input[type=number]:focus{outline:none; border-color:var(--obsidian); background:#fff}
+
+.kpi-box{
+  margin-top:18px; padding:16px; border-radius:14px; background:var(--bg);
+  border:1px solid var(--line); font-variant-numeric:tabular-nums;
+}
+.kpi-row{display:flex; justify-content:space-between; align-items:baseline; padding:5px 0; font-size:13.5px}
+.kpi-row + .kpi-row{border-top:1px solid rgba(18,19,22,.07)}
+.kpi-bad{color:var(--crimson); font-weight:700}
+.kpi-good{color:var(--emerald); font-weight:700}
+.kpi-warn{color:var(--brass); font-weight:700}
+.bar-wrap{margin-top:12px}
+.bar-lbl{display:flex; justify-content:space-between; font-size:11px; color:var(--muted); margin-bottom:4px}
+.bar-track{height:8px; border-radius:999px; background:rgba(18,19,22,.08); overflow:hidden}
+.bar-fill-bad{height:100%; background:var(--crimson); border-radius:999px; transition:width .3s ease}
+.bar-fill-good{height:100%; background:var(--emerald); border-radius:999px; transition:width .3s ease}
+
+.legal-note{
+  margin-top:20px; padding:14px 18px; border-radius:12px; background:rgba(18,19,22,.03);
+  border-left:3px solid var(--brass); font-size:12px; color:var(--muted);
+}
+
+table{width:100%; border-collapse:collapse; background:var(--surface); border-radius:16px; overflow:hidden; border:1px solid var(--line); font-size:14px}
+th,td{padding:14px 18px; text-align:left; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums}
+th{background:var(--obsidian); color:#F7F5F0; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; font-weight:600}
+tr:last-child td{border-bottom:none}
+tr.hl td{background:var(--brass-soft); font-weight:600}
+
+.glossar-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
+.g-item{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px}
+.g-item dt{font-family:Georgia,'Times New Roman',serif; font-size:17px; color:var(--ink); margin-bottom:6px}
+.g-item dd{font-size:13.5px; color:var(--ink-soft)}
+
+details{
+  background:var(--surface); border:1px solid var(--line); border-radius:14px;
+  padding:16px 20px; margin-bottom:10px; transition:border-color .2s;
+}
+details[open]{border-color:var(--obsidian)}
+summary{font-weight:600; font-size:15px; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center}
+summary::after{content:"+"; font-size:18px; color:var(--brass); font-weight:400}
+details[open] summary::after{content:"−"}
+details p{margin-top:10px; font-size:14px; color:var(--ink-soft)}
+
+.region-title{font-size:11.5px; letter-spacing:1.8px; text-transform:uppercase; color:var(--brass); font-weight:700; margin:22px 0 10px}
+.cities{display:flex; flex-wrap:wrap; gap:8px}
+.cities a{
+  background:var(--surface); border:1px solid var(--line); color:var(--ink);
+  padding:8px 14px; border-radius:999px; text-decoration:none; font-size:13px; font-weight:500;
+  transition:all .2s;
+}
+.cities a:hover{border-color:var(--obsidian); background:var(--obsidian); color:#F7F5F0}
+
+.cta-band{
+  margin-top:48px; background:var(--obsidian); color:#F7F5F0; border-radius:24px;
+  padding:40px 32px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px;
+}
+.cta-band h2{color:#F7F5F0; font-size:clamp(22px,3vw,30px); margin-bottom:8px}
+.cta-band p{color:#C8CDD6; font-size:14.5px; max-width:580px}
+.btn-light{
+  background:#F7F5F0; color:var(--obsidian); text-decoration:none;
+  padding:13px 24px; border-radius:999px; font-weight:700; font-size:13.5px;
+  transition:transform .2s; display:inline-block;
+}
+.btn-light:hover{transform:translateY(-2px); background:#fff}
+
+footer{
+  max-width:1160px; margin:48px auto 0; padding:24px 24px 48px;
+  border-top:1px solid var(--line); font-size:12.5px; color:var(--muted);
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px;
+}
+footer a{color:var(--ink-soft); text-decoration:none}
+footer a:hover{color:var(--ink); text-decoration:underline}
+.breadcrumb{font-size:12.5px; color:var(--muted); margin-bottom:18px}
+.breadcrumb a{color:var(--ink-soft); text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebApplication",
-      "name": "JPA 360° Retail-Margen- & Kabinen-UPT-Rechner Suite (Bundesweit & DACH)",
+      "name": "JPA 360° Retail-Margen- & Kabinen-UPT-Rechner Suite (Deutschland & DACH)",
       "url": "https://novajeeno.github.io/jpa360-retail-tools/",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
@@ -56,6 +202,10 @@ footer a{color:var(--cyan);text-decoration:none}
       "provider": {
         "@type": "ProfessionalService",
         "name": "JPA 360° Retail Advisory",
+        "founder": {
+          "@type": "Person",
+          "name": "Jeeno Paulo Aring"
+        },
         "areaServed": {
           "@type": "Country",
           "name": "Deutschland"
@@ -64,42 +214,52 @@ footer a{color:var(--cyan);text-decoration:none}
       }
     },
     {
-      "@type": "DefinedTerm",
-      "name": "Kabinen-UPT",
-      "description": "Erhöhung der durchschnittlichen Teile pro Bon (Units Per Transaction) direkt an der Umkleidekabine im stationären Modehandel durch strukturierte Zureich- und Komplettierungsroutinen bei voller Vollpreis-Marge.",
-      "inDefinedTermSet": "https://novajeeno.github.io/jpa360-retail-tools/#glossar"
-    },
-    {
-      "@type": "DefinedTerm",
-      "name": "1926er Schaufenster-Ruhe",
-      "description": "Kuratierte Schaufenster-Dramaturgie mit maximal 3 klaren Haupt-Looks statt Reizüberflutung zur messbaren Steigerung der Stopp- und Eintrittsquote im stationären Fachhandel.",
-      "inDefinedTermSet": "https://novajeeno.github.io/jpa360-retail-tools/#glossar"
+      "@type": "DefinedTermSet",
+      "@id": "https://novajeeno.github.io/jpa360-retail-tools/#glossar",
+      "name": "JPA 360° Retail-Kennzahlen & Fachbegriffe",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Kabinen-UPT",
+          "description": "Erhöhung der durchschnittlichen Teile pro Bon (Units Per Transaction) direkt an der Umkleidekabine im stationären Modehandel durch strukturierte Zureich- und Komplettierungsroutinen bei voller Vollpreis-Marge."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "1926er Schaufenster-Ruhe",
+          "description": "Kuratierte Schaufenster-Dramaturgie mit maximal 3 klaren Haupt-Looks statt Reizüberflutung zur Steigerung der Stopp- und Eintrittsquote im stationären Fachhandel."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Mietquote im Einzelhandel",
+          "description": "Verhältnis der monatlichen Gesamtmiete (inkl. Nebenkosten) zum monatlichen Nettoumsatz. Richtwert im Modefachhandel: bis 8 % gesund, 8–12 % angespannt, über 12 % kritisch."
+        }
+      ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Wie viel Deckungsbeitrag vernichten 10 % Rabatt im Modehandel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bei einer Kalkulation von 50 % Rohertrag vernichten 10 % Preisnachlass rechnerisch exakt 20 % des Deckungsbeitrags I und erfordern +25 % Mehrabsatz, um denselben Euro-Rohertrag zu erzielen."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Ist JPA 360° Retail Advisory bundesweit im Einsatz?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja. JPA 360° Retail Advisory begleitet inhabergeführte Mode-, Schuh- und Fachgeschäfte bundesweit in ganz Deutschland (von Hamburg und Berlin über NRW/OWL und Rhein-Main bis München und Stuttgart) sowie im gesamten DACH-Raum."
+            "text": "Ja. JPA 360° Retail Advisory berät inhabergeführte Mode-, Schuh- und Fachgeschäfte bundesweit in ganz Deutschland und im DACH-Raum — direkt auf der Verkaufsfläche."
           }
         },
         {
           "@type": "Question",
-          "name": "Wie viel Marge vernichten 10 % Rabatt im stationären Modehandel?",
+          "name": "Auf welcher rechtlichen Grundlage arbeitet JPA 360°?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bei 50 % Rohertrag vernichten 10 % Rabatt exakt 20 % des Deckungsbeitrags I und erfordern +25 % mehr verkaufte Stückzahl, um denselben Euro-Ertrag zu halten."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Was bringt +0,15 UPT in der Umkleidekabine statt Rabattaktionen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ein Plus von 0,15 Teilen pro Bon bei voller Vollpreis-Marge schützt 100 % der Kalkulation und steigert den Deckungsbeitrag I ohne zusätzliche Werbe- oder Mietkosten."
+            "text": "Alle Beratungs- und Trainingsleistungen erfolgen transparent und rechtssicher als reiner Dienstvertrag gemäß § 611 BGB ohne versteckte Laufzeiten."
           }
         }
       ]
@@ -108,117 +268,249 @@ footer a{color:var(--cyan);text-decoration:none}
 }</script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="brand">◈ JPA 360° // RETAIL MARGIN TOOLKIT DEUTSCHLAND (0 €)</div>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="./index.html"><span class="brand-mark">J</span> JPA 360° RETAIL ADVISORY</a>
     <nav>
       <a href="#rechner">Rechner</a>
-      <a href="#zdf">ZDF-Tabelle</a>
-      <a href="#staedte">25 Städte Bundesweit</a>
-      <a class="cta" href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">360° Store Quick-Check →</a>
+      <a href="#zdf">Margen-Matrix</a>
+      <a href="#glossar">Methodik</a>
+      <a href="#staedte">25 Städte</a>
+      <a class="btn-primary" href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">360° Store Quick-Check →</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <h1>Einzelhandelsberatung bundesweit: Marge entsteht in der Kabine — nicht durch Rabatte.</h1>
-  <p class="lead">Drei kostenlose Sofort-Rechner und 25 lokale Standort-Guides für inhabergeführte Modehäuser und Fachgeschäfte in <strong>ganz Deutschland &amp; DACH</strong> — entwickelt von <strong>Jeeno Paulo Aring (JPA 360° Retail Advisory)</strong>.</p>
-
-  <section id="rechner" class="grid">
-    <div class="card">
-      <h3>1. Rabatt vs. Kabinen-UPT Rechner</h3>
-      <label for="rRev">Monatsumsatz (€)</label>
-      <input id="rRev" type="number" value="100000" min="1000" step="1000" oninput="calcAll()" />
-      <label for="rDisc">Geplanter Rabatt (%)</label>
-      <input id="rDisc" type="number" value="10" min="1" max="45" step="1" oninput="calcAll()" />
-      <label for="rMargin">Rohertrag / Kalkulation (%)</label>
-      <input id="rMargin" type="number" value="50" min="20" max="80" step="1" oninput="calcAll()" />
-      <div class="res" id="outRabatt"></div>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Bundesweite Einzelhandelsberatung · Zahlen, Daten, Fakten</div>
+    <h1>Marge entsteht in der <em>Kabine</em> — nicht durch Rabatte.</h1>
+    <p class="lead">Präzise, kostenlose Sofort-Rechner für Inhaber und Geschäftsführer im stationären Mode-, Schuh- und Fachhandel. Entwickelt aus 19 Jahren Flächenpraxis von <strong>Jeeno Paulo Aring</strong> — ohne Anmeldung, ohne Cookies, 100 % lokal im Browser berechnet.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px">
+      <a class="btn-primary" href="#rechner">Jetzt eigene Marge berechnen ↓</a>
+      <a class="btn-ghost" href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">Haupt-Website jp-aring-advisory.de ↗</a>
     </div>
-
-    <div class="card">
-      <h3>2. Mietquote &amp; m²-Umsatz Check</h3>
-      <label for="mSqm">Verkaufsfläche (m²)</label>
-      <input id="mSqm" type="number" value="250" min="20" step="10" oninput="calcAll()" />
-      <label for="mRent">Monatsmiete inkl. NK (€)</label>
-      <input id="mRent" type="number" value="6500" min="200" step="100" oninput="calcAll()" />
-      <label for="mRev">Monatsumsatz (€)</label>
-      <input id="mRev" type="number" value="75000" min="1000" step="1000" oninput="calcAll()" />
-      <div class="res" id="outMiete"></div>
-    </div>
-
-    <div class="card">
-      <h3>3. Samstags-Kabinen-Potenzial</h3>
-      <label for="kBons">Kassenbons pro Woche</label>
-      <input id="kBons" type="number" value="280" min="10" step="10" oninput="calcAll()" />
-      <label for="kPrice">Ø Preis pro Teil (€)</label>
-      <input id="kPrice" type="number" value="69" min="5" step="1" oninput="calcAll()" />
-      <label for="kUpt">Ziel-Steigerung Kabinen-UPT (Teile/Bon)</label>
-      <input id="kUpt" type="number" value="0.15" min="0.05" max="1.0" step="0.05" oninput="calcAll()" />
-      <div class="res" id="outKabine"></div>
+    <div class="trust-strip">
+      <span><b>19+ Jahre</b> stationäre Retail-Praxis</span>
+      <span><b>Bundesweit &amp; DACH</b> direkt auf der Fläche</span>
+      <span><b>§ 611 BGB</b> transparenter Dienstvertrag</span>
+      <span><b>0 Cookies</b> · 100 % DSGVO-sauber</span>
     </div>
   </section>
 
-  <section id="zdf">
-    <h2>Verifizierte ZDF-Tabelle: Rabatt-Verlust bei 50 % Rohertrag</h2>
+  <section id="rechner" class="section">
+    <div class="sec-head">
+      <div>
+        <h2>Executive Retail-Rechner Suite</h2>
+        <p class="sec-sub">Bewegen Sie die Regler für Ihr Geschäft — alle Deckungsbeitrags- und Flächenkennzahlen berechnen sich in Echtzeit.</p>
+      </div>
+      <button class="btn-ghost" id="btnCopySummary" type="button" onclick="copySummary()">📋 Ergebnis kopieren</button>
+    </div>
+
+    <div class="calc-grid">
+      <article class="card">
+        <div class="card-num">01 / Preisnachlass-Realität</div>
+        <h3>Rabatt vs. Kabinen-UPT</h3>
+        <div class="field">
+          <div class="field-top"><label for="rRev">Monatsumsatz</label><span class="field-val" id="vRev">100.000 €</span></div>
+          <input id="rRevR" type="range" min="15000" max="500000" step="5000" value="100000" oninput="sync('rRev',this.value)" />
+          <input id="rRev" type="number" value="100000" min="1000" step="1000" oninput="sync('rRevR',this.value)" />
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="rDisc">Geplanter Rabatt</label><span class="field-val" id="vDisc">10 %</span></div>
+          <input id="rDiscR" type="range" min="2" max="35" step="1" value="10" oninput="sync('rDisc',this.value)" />
+          <input id="rDisc" type="number" value="10" min="1" max="45" step="1" oninput="sync('rDiscR',this.value)" />
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="rMargin">Rohertrag / Kalkulation</label><span class="field-val" id="vMargin">50 %</span></div>
+          <input id="rMarginR" type="range" min="30" max="70" step="1" value="50" oninput="sync('rMargin',this.value)" />
+          <input id="rMargin" type="number" value="50" min="20" max="80" step="1" oninput="sync('rMarginR',this.value)" />
+        </div>
+        <div class="kpi-box" id="outRabatt"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-num">02 / Flächenproduktivität</div>
+        <h3>Mietquote &amp; m²-Check</h3>
+        <div class="field">
+          <div class="field-top"><label for="mSqm">Verkaufsfläche</label><span class="field-val" id="vSqm">250 m²</span></div>
+          <input id="mSqmR" type="range" min="40" max="1500" step="10" value="250" oninput="sync('mSqm',this.value)" />
+          <input id="mSqm" type="number" value="250" min="20" step="10" oninput="sync('mSqmR',this.value)" />
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="mRent">Monatsmiete inkl. NK</label><span class="field-val" id="vRent">6.500 €</span></div>
+          <input id="mRentR" type="range" min="1000" max="45000" step="250" value="6500" oninput="sync('mRent',this.value)" />
+          <input id="mRent" type="number" value="6500" min="200" step="100" oninput="sync('mRentR',this.value)" />
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="mRev">Monatsumsatz</label><span class="field-val" id="vMRev">75.000 €</span></div>
+          <input id="mRevR" type="range" min="15000" max="400000" step="2500" value="75000" oninput="sync('mRev',this.value)" />
+          <input id="mRev" type="number" value="75000" min="1000" step="1000" oninput="sync('mRevR',this.value)" />
+        </div>
+        <div class="kpi-box" id="outMiete"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-num">03 / Vollpreis-Hebel</div>
+        <h3>Kabinen-UPT Potenzial</h3>
+        <div class="field">
+          <div class="field-top"><label for="kBons">Kassenbons pro Woche</label><span class="field-val" id="vBons">280 Bons</span></div>
+          <input id="kBonsR" type="range" min="40" max="1200" step="10" value="280" oninput="sync('kBons',this.value)" />
+          <input id="kBons" type="number" value="280" min="10" step="10" oninput="sync('kBonsR',this.value)" />
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="kPrice">Ø Preis pro Teil</label><span class="field-val" id="vPrice">69 €</span></div>
+          <input id="kPriceR" type="range" min="19" max="299" step="5" value="69" oninput="sync('kPrice',this.value)" />
+          <input id="kPrice" type="number" value="69" min="5" step="1" oninput="sync('kPriceR',this.value)" />
+        </div>
+        <div class="field">
+          <div class="field-top"><label for="kUpt">Ziel-Steigerung Kabinen-UPT</label><span class="field-val" id="vUpt">+0,15 Teile</span></div>
+          <input id="kUptR" type="range" min="0.05" max="0.50" step="0.05" value="0.15" oninput="sync('kUpt',this.value)" />
+          <input id="kUpt" type="number" value="0.15" min="0.05" max="1.0" step="0.05" oninput="sync('kUptR',this.value)" />
+        </div>
+        <div class="kpi-box" id="outKabine"></div>
+      </article>
+    </div>
+
+    <div class="legal-note">
+      <strong>Methodischer &amp; rechtlicher Hinweis:</strong> Alle Berechnungen stellen unverbindliche betriebswirtschaftliche Modellrechnungen auf Basis Ihrer eigenen Eingaben dar. Sie ersetzen keine Steuer- oder Rechtsberatung und stellen keine Umsatz- oder Erfolgsgarantie dar. Beratungsmandate erfolgen ausschließlich als reiner Dienstvertrag gemäß § 611 BGB.
+    </div>
+  </section>
+
+  <section id="zdf" class="section">
+    <div class="sec-head">
+      <div>
+        <h2>Verifizierte Margen-Matrix (50 % Rohertrag)</h2>
+        <p class="sec-sub">Warum selbst kleine Rabattaktionen unverhältnismäßig hohe Stückzahl-Steigerungen erzwingen — rein mathematisch belegt.</p>
+      </div>
+    </div>
     <table>
-      <thead><tr><th>Preisnachlass / Rabatt</th><th>Verlust am Deckungsbeitrag I</th><th>Nötiger Mehrabsatz für gleichen €-Ertrag</th><th>Besserer Vollpreis-Hebel</th></tr></thead>
+      <thead><tr><th>Preisnachlass</th><th>Verlust am Deckungsbeitrag I</th><th>Nötiger Mehrabsatz für gleichen €-Ertrag</th><th>Operativer Vollpreis-Gegenhebel</th></tr></thead>
       <tbody>
-        <tr><td><strong>5 % Rabatt</strong></td><td>−10,0 % DB I</td><td>+11,1 % Stückzahl</td><td>Kassenzone / Pflege-Add-on</td></tr>
-        <tr><td><strong>10 % Rabatt</strong></td><td><strong>−20,0 % DB I</strong></td><td><strong>+25,0 % Stückzahl</strong></td><td><strong>+0,15 Kabinen-UPT (Zureichroutine)</strong></td></tr>
-        <tr><td><strong>15 % Rabatt</strong></td><td>−30,0 % DB I</td><td>+42,9 % Stückzahl</td><td>1926er Schaufenster-Ruhe (max. 3 Looks)</td></tr>
-        <tr><td><strong>20 % Rabatt</strong></td><td>−40,0 % DB I</td><td>+66,7 % Stückzahl</td><td>Komplett-Outfit-Beratung &amp; Stammkunden-Abend</td></tr>
+        <tr><td>5 % Rabatt</td><td>−10,0 % DB I</td><td>+11,1 % Stückzahl</td><td>Kassenzonen- &amp; Pflege-Add-on</td></tr>
+        <tr class="hl"><td>10 % Rabatt</td><td>−20,0 % DB I</td><td>+25,0 % Stückzahl</td><td>+0,15 Kabinen-UPT (Zureichroutine)</td></tr>
+        <tr><td>15 % Rabatt</td><td>−30,0 % DB I</td><td>+42,9 % Stückzahl</td><td>1926er Schaufenster-Ruhe (max. 3 Looks)</td></tr>
+        <tr><td>20 % Rabatt</td><td>−40,0 % DB I</td><td>+66,7 % Stückzahl</td><td>Komplett-Outfit-Beratung &amp; Stammkunden-Abend</td></tr>
       </tbody>
     </table>
   </section>
 
-  <section id="staedte">
-    <h2>Bundesweite Retail-Guides (25 Top-Städte in Deutschland)</h2>
-    <p class="lead">Einsatzgebiet bundesweit &amp; DACH — wählen Sie Ihre Region oder Stadt:</p>
-    <div class="region-title">NRW & OWL</div><div class="cities"><a href="./paderborn.html">📍 Paderborn</a><a href="./bielefeld.html">📍 Bielefeld</a><a href="./muenster.html">📍 Münster</a><a href="./lippstadt.html">📍 Lippstadt</a><a href="./guetersloh.html">📍 Gütersloh</a><a href="./duesseldorf.html">📍 Düsseldorf</a><a href="./koeln.html">📍 Köln</a><a href="./dortmund.html">📍 Dortmund</a><a href="./essen.html">📍 Essen</a></div>
-<div class="region-title">Norddeutschland</div><div class="cities"><a href="./hamburg.html">📍 Hamburg</a><a href="./bremen.html">📍 Bremen</a><a href="./hannover.html">📍 Hannover</a><a href="./kiel.html">📍 Kiel</a></div>
-<div class="region-title">Ostdeutschland & Berlin</div><div class="cities"><a href="./berlin.html">📍 Berlin</a><a href="./leipzig.html">📍 Leipzig</a><a href="./dresden.html">📍 Dresden</a></div>
-<div class="region-title">Rhein-Main & Mitte</div><div class="cities"><a href="./frankfurt.html">📍 Frankfurt am Main</a><a href="./wiesbaden.html">📍 Wiesbaden</a><a href="./kassel.html">📍 Kassel</a></div>
-<div class="region-title">Süddeutschland</div><div class="cities"><a href="./muenchen.html">📍 München</a><a href="./stuttgart.html">📍 Stuttgart</a><a href="./nuernberg.html">📍 Nürnberg</a><a href="./augsburg.html">📍 Augsburg</a><a href="./freiburg.html">📍 Freiburg im Breisgau</a><a href="./wuerzburg.html">📍 Würzburg</a></div>
+  <section id="glossar" class="section">
+    <div class="sec-head">
+      <div>
+        <h2>JPA 360° Fachglossar &amp; Methodik</h2>
+        <p class="sec-sub">Klare Definitionen aus der täglichen Flächenpraxis — ohne Berater-Jargon.</p>
+      </div>
+    </div>
+    <dl class="glossar-grid">
+      <div class="g-item"><dt>Kabinen-UPT</dt><dd>Steigerung der durchschnittlichen Teile pro Bon direkt an der Umkleidekabine durch geplante Zureich- und Outfit-Komplettierung — bei 100 % Vollpreis-Marge.</dd></div>
+      <div class="g-item"><dt>1926er Schaufenster-Ruhe</dt><dd>Kuratierte Inszenierung mit maximal drei klaren Haupt-Looks statt Reizüberflutung. Erhöht Stopp-Quote und Wertanmutung unmittelbar.</dd></div>
+      <div class="g-item"><dt>Mietquote (Richtwerte)</dt><dd>Monatsmiete inkl. Nebenkosten geteilt durch Monatsumsatz. Im Modefachhandel gelten ≤ 8 % als gesund, 8–12 % als angespannt und &gt; 12 % als akutes Handlungsfeld.</dd></div>
+      <div class="g-item"><dt>360° Store Quick-Check</dt><dd>Kompakte Vor-Ort-Diagnose von Schaufenster, Laufwegen, Kabinen-Taktung und Rohertragshebeln auf Basis eines klaren Dienstvertrags nach § 611 BGB.</dd></div>
+    </dl>
   </section>
 
-  <footer>
-    <span>© 2026 JPA 360° Retail Advisory — Bundesweit &amp; DACH · Reine Dienstleistung nach § 611 BGB</span>
-    <span><a href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">www.jp-aring-advisory.de</a> · <a href="./llms.txt">llms.txt</a> · <a href="./sitemap.xml">sitemap.xml</a></span>
-  </footer>
-</div>
+  <section id="faq" class="section">
+    <div class="sec-head"><div><h2>Häufige Fragen von Inhabern</h2></div></div>
+    <details open><summary>Wie viel Deckungsbeitrag vernichten 10 % Rabatt wirklich?</summary><p>Bei einer Kalkulation von 50 % Rohertrag sinkt Ihr Deckungsbeitrag I um exakt 20 %. Um denselben Euro-Ertrag zu halten, müssten Sie 25 % mehr Teile verkaufen — bei voller Raum- und Personalbelastung.</p></details>
+    <details><summary>Arbeitet JPA 360° bundesweit vor Ort?</summary><p>Ja. Einsätze erfolgen bundesweit in ganz Deutschland (von Hamburg und Berlin über NRW/OWL und Rhein-Main bis München und Stuttgart) sowie im gesamten DACH-Raum.</p></details>
+    <details><summary>Auf welcher rechtlichen Basis erfolgt eine Zusammenarbeit?</summary><p>Ausschließlich als transparenter Dienstvertrag nach § 611 BGB (z. B. 360° Store Quick-Check ab 490,00 € netto zzgl. 19 % USt) — ohne versteckte Knebelverträge oder unseriöse Erfolgsgarantien.</p></details>
+  </section>
+
+  <section id="staedte" class="section">
+    <div class="sec-head">
+      <div>
+        <h2>Bundesweite Standort-Guides (25 Städte)</h2>
+        <p class="sec-sub">Lokale Retail-Analysen und Flächenhebel für Deutschlands wichtigste Einkaufsstädte:</p>
+      </div>
+    </div>
+    <div class="region-title">NRW & OWL</div><div class="cities"><a href="./paderborn.html">Paderborn</a><a href="./bielefeld.html">Bielefeld</a><a href="./muenster.html">Münster</a><a href="./lippstadt.html">Lippstadt</a><a href="./guetersloh.html">Gütersloh</a><a href="./duesseldorf.html">Düsseldorf</a><a href="./koeln.html">Köln</a><a href="./dortmund.html">Dortmund</a><a href="./essen.html">Essen</a></div>
+<div class="region-title">Norddeutschland</div><div class="cities"><a href="./hamburg.html">Hamburg</a><a href="./bremen.html">Bremen</a><a href="./hannover.html">Hannover</a><a href="./kiel.html">Kiel</a></div>
+<div class="region-title">Ostdeutschland & Berlin</div><div class="cities"><a href="./berlin.html">Berlin</a><a href="./leipzig.html">Leipzig</a><a href="./dresden.html">Dresden</a></div>
+<div class="region-title">Rhein-Main & Mitte</div><div class="cities"><a href="./frankfurt.html">Frankfurt am Main</a><a href="./wiesbaden.html">Wiesbaden</a><a href="./kassel.html">Kassel</a></div>
+<div class="region-title">Süddeutschland</div><div class="cities"><a href="./muenchen.html">München</a><a href="./stuttgart.html">Stuttgart</a><a href="./nuernberg.html">Nürnberg</a><a href="./augsburg.html">Augsburg</a><a href="./freiburg.html">Freiburg im Breisgau</a><a href="./wuerzburg.html">Würzburg</a></div>
+
+    <div class="cta-band">
+      <div>
+        <h2>Bereit für Klarheit direkt auf Ihrer Verkaufsfläche?</h2>
+        <p>Starten Sie risikofrei mit dem kompakten <strong>360° Store Quick-Check</strong> (490,00 € netto, § 611 BGB) — messbare Diagnose Ihrer Schaufenster-, Flächen- und Kabinen-Potenziale.</p>
+      </div>
+      <a class="btn-light" href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">Zur Haupt-Website jp-aring-advisory.de →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 JPA 360° Retail Advisory · Jeeno Paulo Aring · Bundesweit &amp; DACH</span>
+  <span style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">Haupt-Website</a>
+    <a href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">Impressum &amp; Datenschutz</a>
+    <a href="./llms.txt">llms.txt</a>
+    <a href="./sitemap.xml">sitemap.xml</a>
+  </span>
+</footer>
+
 <script>
+let lastSummary = "";
 function fmt(n){ return Math.round(n).toLocaleString('de-DE'); }
+function sync(id, val){ document.getElementById(id).value = val; calcAll(); }
 function calcAll(){
   const rev = +document.getElementById('rRev').value || 0;
   const disc = +document.getElementById('rDisc').value || 0;
   const m = +document.getElementById('rMargin').value || 50;
+  document.getElementById('vRev').textContent = fmt(rev) + ' €';
+  document.getElementById('vDisc').textContent = disc + ' %';
+  document.getElementById('vMargin').textContent = m + ' %';
+
   const euroLoss = rev * (disc / 100);
-  const dbLoss = (disc / m) * 100;
+  const dbLoss = Math.min(100, (disc / m) * 100);
   const reqVol = (disc / Math.max(1, m - disc)) * 100;
   document.getElementById('outRabatt').innerHTML =
-    `Direkter Rohertragsverlust: <span class="bad">−${fmt(euroLoss)} € / Monat</span><br>`+
-    `DB-I-Verlust: <span class="bad">−${dbLoss.toFixed(1)} %</span> · Nötiger Mehrabsatz: <span class="warn">+${reqVol.toFixed(1)} %</span><br>`+
-    `<b>Gegenhebel:</b> +0,15 Kabinen-UPT sichert 100 % Vollpreis-Marge.`;
+    `<div class="kpi-row"><span>Direkter Rohertragsverlust</span><span class="kpi-bad">−${fmt(euroLoss)} € / Mon.</span></div>`+
+    `<div class="kpi-row"><span>DB-I-Verlust</span><span class="kpi-bad">−${dbLoss.toFixed(1)} %</span></div>`+
+    `<div class="kpi-row"><span>Nötiger Mehrabsatz</span><span class="kpi-warn">+${reqVol.toFixed(1)} % Stück</span></div>`+
+    `<div class="bar-wrap"><div class="bar-lbl"><span>Margen-Erosion durch Rabatt</span><span>${dbLoss.toFixed(0)} %</span></div><div class="bar-track"><div class="bar-fill-bad" style="width:${Math.min(100,dbLoss)}%"></div></div></div>`;
 
   const sqm = Math.max(1, +document.getElementById('mSqm').value || 1);
   const rent = +document.getElementById('mRent').value || 0;
   const mrev = Math.max(1, +document.getElementById('mRev').value || 1);
+  document.getElementById('vSqm').textContent = fmt(sqm) + ' m²';
+  document.getElementById('vRent').textContent = fmt(rent) + ' €';
+  document.getElementById('vMRev').textContent = fmt(mrev) + ' €';
+
   const ratio = (rent / mrev) * 100;
   const yearlySqm = (mrev * 12) / sqm;
-  const cls = ratio <= 8 ? '' : (ratio <= 12 ? 'warn' : 'bad');
-  const lbl = ratio <= 8 ? 'GESUND (≤ 8 %)' : (ratio <= 12 ? 'ANGESPANNT (8–12 %)' : 'ALARM (> 12 %)');
+  const cls = ratio <= 8 ? 'kpi-good' : (ratio <= 12 ? 'kpi-warn' : 'kpi-bad');
+  const lbl = ratio <= 8 ? 'GESUND (≤ 8 %)' : (ratio <= 12 ? 'ANGESPANNT (8–12 %)' : 'KRITISCH (> 12 %)');
   document.getElementById('outMiete').innerHTML =
-    `Mietquote: <span class="${cls}"><b>${ratio.toFixed(1)} %</b> (${lbl})</span><br>`+
-    `Flächenproduktivität: <b>${fmt(yearlySqm)} € / m² p.a.</b>`;
+    `<div class="kpi-row"><span>Mietquote</span><span class="${cls}">${ratio.toFixed(1)} % · ${lbl}</span></div>`+
+    `<div class="kpi-row"><span>Flächenproduktivität</span><span class="kpi-good">${fmt(yearlySqm)} € / m² p.a.</span></div>`+
+    `<div class="bar-wrap"><div class="bar-lbl"><span>Mietbelastung (Ziel ≤ 8 %)</span><span>${ratio.toFixed(1)} %</span></div><div class="bar-track"><div class="${ratio<=8?'bar-fill-good':'bar-fill-bad'}" style="width:${Math.min(100,ratio*5)}%"></div></div></div>`;
 
   const bons = +document.getElementById('kBons').value || 0;
   const price = +document.getElementById('kPrice').value || 0;
   const upt = +document.getElementById('kUpt').value || 0.15;
-  const extraWeek = bons * upt * price;
-  const extraYear = extraWeek * 50;
-  const extraDb = extraYear * 0.50;
+  document.getElementById('vBons').textContent = fmt(bons) + ' Bons';
+  document.getElementById('vPrice').textContent = fmt(price) + ' €';
+  document.getElementById('vUpt').textContent = '+' + upt.toFixed(2).replace('.', ',') + ' Teile';
+
+  const extraYear = bons * upt * price * 50;
+  const extraDb = extraYear * (m / 100);
   document.getElementById('outKabine').innerHTML =
-    `Zusatzumsatz (Vollpreis): <b>+${fmt(extraYear)} € / Jahr</b><br>`+
-    `Zusätzlicher Rohertrag (50 %): <b>+${fmt(extraDb)} € / Jahr</b> ohne 1 € mehr Miete.`;
+    `<div class="kpi-row"><span>Zusatzumsatz (Vollpreis)</span><span class="kpi-good">+${fmt(extraYear)} € / Jahr</span></div>`+
+    `<div class="kpi-row"><span>Zusätzlicher DB I (${m} %)</span><span class="kpi-good">+${fmt(extraDb)} € / Jahr</span></div>`+
+    `<div class="bar-wrap"><div class="bar-lbl"><span>Vollpreis-Hebel ohne Zusatzmiete</span><span>+${fmt(extraDb)} €</span></div><div class="bar-track"><div class="bar-fill-good" style="width:${Math.min(100, (upt/0.5)*100)}%"></div></div></div>`;
+
+  lastSummary = `JPA 360° Retail-Modellrechnung: ${disc}% Rabatt auf ${fmt(rev)} € Umsatz = -${fmt(euroLoss)} €/Mon. (-${dbLoss.toFixed(1)}% DB I, +${reqVol.toFixed(1)}% Mehrabsatz nötig) | Mietquote: ${ratio.toFixed(1)}% (${fmt(yearlySqm)} €/m² p.a.) | +${upt.toFixed(2)} Kabinen-UPT = +${fmt(extraDb)} € DB I/Jahr (Quelle: https://www.jp-aring-advisory.de)`;
+}
+function copySummary(){
+  if(navigator.clipboard && lastSummary){
+    navigator.clipboard.writeText(lastSummary).then(()=>{
+      const b = document.getElementById('btnCopySummary');
+      b.textContent = '✓ Kopiert';
+      setTimeout(()=>{ b.textContent = '📋 Ergebnis kopieren'; }, 1800);
+    });
+  }
 }
 calcAll();
 </script>
