@@ -232,10 +232,61 @@ footer a:hover{color:var(--ink); text-decoration:underline}
   .section{padding:0 !important;border:none !important}
   .calc-grid{grid-template-columns:1fr 1fr 1fr !important;gap:12px !important}
   .card{box-shadow:none !important;border:1px solid #ccc !important;padding:14px !important;break-inside:avoid}
-  .field input[type="number"]{border:none !important;padding:0 !important;font-weight:700 !important;background:transparent !important}
+  .field input[type="number" inputmode="decimal"]{border:none !important;padding:0 !important;font-weight:700 !important;background:transparent !important}
   .print-footer{display:block !important;margin-top:18px;padding-top:12px;border-top:1px solid #ccc;font-size:11px;color:#444;line-height:1.5}
 }
 .print-footer{display:none}
+
+
+/* === MOBILE-FIRST TOUCH UX UPGRADE === */
+html,body{overflow-x:hidden;-webkit-text-size-adjust:100%}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:768px){
+  .topbar{position:sticky;top:0;z-index:50}
+  .topbar-in{padding:10px 16px;flex-direction:column;align-items:stretch;gap:10px}
+  .jpa-logo{gap:11px}
+  .jpa-box{width:34px;height:34px}
+  .jpa-box span{font-size:11px}
+  .jpa-360{font-size:14px}
+  .jpa-sub{font-size:6.8px}
+  header.topbar nav{
+    display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;gap:8px;padding-bottom:2px;margin:0 -4px;padding-left:4px;padding-right:4px;
+  }
+  header.topbar nav::-webkit-scrollbar{display:none}
+  header.topbar nav a{
+    flex:0 0 auto;white-space:nowrap;padding:8px 12px;border-radius:999px;
+    background:rgba(18,19,22,.05);font-size:13px;min-height:36px;display:inline-flex;align-items:center;
+  }
+  header.topbar nav a.btn-primary{background:var(--ink);color:#fff;padding:8px 14px}
+  .wrap{padding:0 16px}
+  .hero{padding:28px 0 24px}
+  .hero h1{font-size:clamp(28px,7.5vw,38px);line-height:1.12}
+  .hero .lead{font-size:15.5px;line-height:1.58}
+  .hero .btn-primary,.hero .btn-ghost{width:100%;justify-content:center;min-height:46px;font-size:15px}
+  .trust-strip{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px}
+  .trust-strip span{padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+  .section{padding:28px 0}
+  .sec-head{flex-direction:column;align-items:stretch;gap:12px}
+  .sec-head h2{font-size:24px}
+  .btn-group{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+  .btn-group button{width:100%;min-height:44px;justify-content:center;font-size:13.5px;padding:10px 10px}
+  .calc-grid{grid-template-columns:1fr !important;gap:16px}
+  .card{padding:18px 16px}
+  .field input[type="number" inputmode="decimal"]{
+    font-size:16px !important;min-height:44px;padding:10px 12px;width:100%;
+  }
+  .field input[type="range"]{height:34px;margin:6px 0}
+  .field input[type="range"]::-webkit-slider-thumb{width:24px;height:24px}
+  .kpi-row{font-size:14px;gap:8px}
+  .guide-grid{grid-template-columns:1fr !important;gap:12px}
+  .guide-card{padding:18px 16px}
+  .cities{gap:8px}
+  .cities a{padding:9px 12px;font-size:13px;min-height:38px;display:inline-flex;align-items:center}
+  .cta-band{flex-direction:column;align-items:stretch;padding:24px 18px;gap:16px;text-align:left}
+  .cta-band .btn-light{width:100%;justify-content:center;min-height:46px}
+  footer{padding:24px 16px;flex-direction:column;align-items:flex-start;gap:12px;font-size:12.5px}
+}
 
 </style>
 <script type="application/ld+json">{
@@ -319,6 +370,11 @@ footer a:hover{color:var(--ink); text-decoration:underline}
     }
   ]
 }</script>
+<meta property="og:image" content="https://rechner.jp-aring-advisory.de/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="627" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://rechner.jp-aring-advisory.de/og-image.png" />
 </head>
 <body>
 <header class="topbar">
@@ -376,17 +432,17 @@ footer a:hover{color:var(--ink); text-decoration:underline}
         <div class="field">
           <div class="field-top"><label for="rRev">Monatsumsatz</label><span class="field-val" id="vRev">100.000 €</span></div>
           <input id="rRevR" type="range" min="15000" max="500000" step="5000" value="100000" oninput="sync('rRev',this.value)" />
-          <input id="rRev" type="number" value="100000" min="1000" step="1000" oninput="sync('rRevR',this.value)" />
+          <input id="rRev" type="number" inputmode="decimal" value="100000" min="1000" step="1000" oninput="sync('rRevR',this.value)" />
         </div>
         <div class="field">
           <div class="field-top"><label for="rDisc">Geplanter Rabatt</label><span class="field-val" id="vDisc">10 %</span></div>
           <input id="rDiscR" type="range" min="2" max="35" step="1" value="10" oninput="sync('rDisc',this.value)" />
-          <input id="rDisc" type="number" value="10" min="1" max="45" step="1" oninput="sync('rDiscR',this.value)" />
+          <input id="rDisc" type="number" inputmode="decimal" value="10" min="1" max="45" step="1" oninput="sync('rDiscR',this.value)" />
         </div>
         <div class="field">
           <div class="field-top"><label for="rMargin">Rohertrag / Kalkulation</label><span class="field-val" id="vMargin">50 %</span></div>
           <input id="rMarginR" type="range" min="30" max="70" step="1" value="50" oninput="sync('rMargin',this.value)" />
-          <input id="rMargin" type="number" value="50" min="20" max="80" step="1" oninput="sync('rMarginR',this.value)" />
+          <input id="rMargin" type="number" inputmode="decimal" value="50" min="20" max="80" step="1" oninput="sync('rMarginR',this.value)" />
         </div>
         <div class="kpi-box" id="outRabatt"></div>
       </article>
@@ -397,17 +453,17 @@ footer a:hover{color:var(--ink); text-decoration:underline}
         <div class="field">
           <div class="field-top"><label for="mSqm">Verkaufsfläche</label><span class="field-val" id="vSqm">250 m²</span></div>
           <input id="mSqmR" type="range" min="40" max="1500" step="10" value="250" oninput="sync('mSqm',this.value)" />
-          <input id="mSqm" type="number" value="250" min="20" step="10" oninput="sync('mSqmR',this.value)" />
+          <input id="mSqm" type="number" inputmode="decimal" value="250" min="20" step="10" oninput="sync('mSqmR',this.value)" />
         </div>
         <div class="field">
           <div class="field-top"><label for="mRent">Monatsmiete inkl. NK</label><span class="field-val" id="vRent">6.500 €</span></div>
           <input id="mRentR" type="range" min="1000" max="45000" step="250" value="6500" oninput="sync('mRent',this.value)" />
-          <input id="mRent" type="number" value="6500" min="200" step="100" oninput="sync('mRentR',this.value)" />
+          <input id="mRent" type="number" inputmode="decimal" value="6500" min="200" step="100" oninput="sync('mRentR',this.value)" />
         </div>
         <div class="field">
           <div class="field-top"><label for="mRev">Monatsumsatz</label><span class="field-val" id="vMRev">75.000 €</span></div>
           <input id="mRevR" type="range" min="15000" max="400000" step="2500" value="75000" oninput="sync('mRev',this.value)" />
-          <input id="mRev" type="number" value="75000" min="1000" step="1000" oninput="sync('mRevR',this.value)" />
+          <input id="mRev" type="number" inputmode="decimal" value="75000" min="1000" step="1000" oninput="sync('mRevR',this.value)" />
         </div>
         <div class="kpi-box" id="outMiete"></div>
       </article>
@@ -418,17 +474,17 @@ footer a:hover{color:var(--ink); text-decoration:underline}
         <div class="field">
           <div class="field-top"><label for="kBons">Kassenbons pro Woche</label><span class="field-val" id="vBons">280 Bons</span></div>
           <input id="kBonsR" type="range" min="40" max="1200" step="10" value="280" oninput="sync('kBons',this.value)" />
-          <input id="kBons" type="number" value="280" min="10" step="10" oninput="sync('kBonsR',this.value)" />
+          <input id="kBons" type="number" inputmode="decimal" value="280" min="10" step="10" oninput="sync('kBonsR',this.value)" />
         </div>
         <div class="field">
           <div class="field-top"><label for="kPrice">Ø Preis pro Teil</label><span class="field-val" id="vPrice">69 €</span></div>
           <input id="kPriceR" type="range" min="19" max="299" step="5" value="69" oninput="sync('kPrice',this.value)" />
-          <input id="kPrice" type="number" value="69" min="5" step="1" oninput="sync('kPriceR',this.value)" />
+          <input id="kPrice" type="number" inputmode="decimal" value="69" min="5" step="1" oninput="sync('kPriceR',this.value)" />
         </div>
         <div class="field">
           <div class="field-top"><label for="kUpt">Ziel-Steigerung Kabinen-UPT</label><span class="field-val" id="vUpt">+0,15 Teile</span></div>
           <input id="kUptR" type="range" min="0.05" max="0.50" step="0.05" value="0.15" oninput="sync('kUpt',this.value)" />
-          <input id="kUpt" type="number" value="0.15" min="0.05" max="1.0" step="0.05" oninput="sync('kUptR',this.value)" />
+          <input id="kUpt" type="number" inputmode="decimal" value="0.15" min="0.05" max="1.0" step="0.05" oninput="sync('kUptR',this.value)" />
         </div>
         <div class="kpi-box" id="outKabine"></div>
       </article>
