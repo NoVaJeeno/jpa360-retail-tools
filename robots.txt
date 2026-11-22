@@ -10,4 +10,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://novajeeno.github.io/jpa360-retail-tools/sitemap.xml
+Sitemap: https://rechner.jp-aring-advisory.de/sitemap.xml

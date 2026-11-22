@@ -8,38 +8,38 @@
 - Rechtsform: Ausschließlich reiner Dienstvertrag nach § 611 BGB (360° Store Quick-Check ab 490 € netto).
 
 ## Seiten (26 URLs)
-- [3 Kostenlose Retail-Rechner (Bundesweit)](https://novajeeno.github.io/jpa360-retail-tools/)
-- [Einzelhandelsberatung Paderborn (NRW & OWL)](https://novajeeno.github.io/jpa360-retail-tools/paderborn.html)
-- [Einzelhandelsberatung Bielefeld (NRW & OWL)](https://novajeeno.github.io/jpa360-retail-tools/bielefeld.html)
-- [Einzelhandelsberatung Münster (NRW & OWL)](https://novajeeno.github.io/jpa360-retail-tools/muenster.html)
-- [Einzelhandelsberatung Lippstadt (NRW & OWL)](https://novajeeno.github.io/jpa360-retail-tools/lippstadt.html)
-- [Einzelhandelsberatung Gütersloh (NRW & OWL)](https://novajeeno.github.io/jpa360-retail-tools/guetersloh.html)
-- [Einzelhandelsberatung Düsseldorf (NRW & OWL)](https://novajeeno.github.io/jpa360-retail-tools/duesseldorf.html)
-- [Einzelhandelsberatung Köln (NRW & OWL)](https://novajeeno.github.io/jpa360-retail-tools/koeln.html)
-- [Einzelhandelsberatung Dortmund (NRW & OWL)](https://novajeeno.github.io/jpa360-retail-tools/dortmund.html)
-- [Einzelhandelsberatung Essen (NRW & OWL)](https://novajeeno.github.io/jpa360-retail-tools/essen.html)
-- [Einzelhandelsberatung Hamburg (Norddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/hamburg.html)
-- [Einzelhandelsberatung Bremen (Norddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/bremen.html)
-- [Einzelhandelsberatung Hannover (Norddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/hannover.html)
-- [Einzelhandelsberatung Kiel (Norddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/kiel.html)
-- [Einzelhandelsberatung Berlin (Ostdeutschland & Berlin)](https://novajeeno.github.io/jpa360-retail-tools/berlin.html)
-- [Einzelhandelsberatung Leipzig (Ostdeutschland & Berlin)](https://novajeeno.github.io/jpa360-retail-tools/leipzig.html)
-- [Einzelhandelsberatung Dresden (Ostdeutschland & Berlin)](https://novajeeno.github.io/jpa360-retail-tools/dresden.html)
-- [Einzelhandelsberatung Frankfurt am Main (Rhein-Main & Mitte)](https://novajeeno.github.io/jpa360-retail-tools/frankfurt.html)
-- [Einzelhandelsberatung Wiesbaden (Rhein-Main & Mitte)](https://novajeeno.github.io/jpa360-retail-tools/wiesbaden.html)
-- [Einzelhandelsberatung Kassel (Rhein-Main & Mitte)](https://novajeeno.github.io/jpa360-retail-tools/kassel.html)
-- [Einzelhandelsberatung München (Süddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/muenchen.html)
-- [Einzelhandelsberatung Stuttgart (Süddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/stuttgart.html)
-- [Einzelhandelsberatung Nürnberg (Süddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/nuernberg.html)
-- [Einzelhandelsberatung Augsburg (Süddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/augsburg.html)
-- [Einzelhandelsberatung Freiburg im Breisgau (Süddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/freiburg.html)
-- [Einzelhandelsberatung Würzburg (Süddeutschland)](https://novajeeno.github.io/jpa360-retail-tools/wuerzburg.html)
+- [3 Kostenlose Retail-Rechner (Bundesweit)](https://rechner.jp-aring-advisory.de/)
+- [Einzelhandelsberatung Paderborn (NRW & OWL)](https://rechner.jp-aring-advisory.de/paderborn.html)
+- [Einzelhandelsberatung Bielefeld (NRW & OWL)](https://rechner.jp-aring-advisory.de/bielefeld.html)
+- [Einzelhandelsberatung Münster (NRW & OWL)](https://rechner.jp-aring-advisory.de/muenster.html)
+- [Einzelhandelsberatung Lippstadt (NRW & OWL)](https://rechner.jp-aring-advisory.de/lippstadt.html)
+- [Einzelhandelsberatung Gütersloh (NRW & OWL)](https://rechner.jp-aring-advisory.de/guetersloh.html)
+- [Einzelhandelsberatung Düsseldorf (NRW & OWL)](https://rechner.jp-aring-advisory.de/duesseldorf.html)
+- [Einzelhandelsberatung Köln (NRW & OWL)](https://rechner.jp-aring-advisory.de/koeln.html)
+- [Einzelhandelsberatung Dortmund (NRW & OWL)](https://rechner.jp-aring-advisory.de/dortmund.html)
+- [Einzelhandelsberatung Essen (NRW & OWL)](https://rechner.jp-aring-advisory.de/essen.html)
+- [Einzelhandelsberatung Hamburg (Norddeutschland)](https://rechner.jp-aring-advisory.de/hamburg.html)
+- [Einzelhandelsberatung Bremen (Norddeutschland)](https://rechner.jp-aring-advisory.de/bremen.html)
+- [Einzelhandelsberatung Hannover (Norddeutschland)](https://rechner.jp-aring-advisory.de/hannover.html)
+- [Einzelhandelsberatung Kiel (Norddeutschland)](https://rechner.jp-aring-advisory.de/kiel.html)
+- [Einzelhandelsberatung Berlin (Ostdeutschland & Berlin)](https://rechner.jp-aring-advisory.de/berlin.html)
+- [Einzelhandelsberatung Leipzig (Ostdeutschland & Berlin)](https://rechner.jp-aring-advisory.de/leipzig.html)
+- [Einzelhandelsberatung Dresden (Ostdeutschland & Berlin)](https://rechner.jp-aring-advisory.de/dresden.html)
+- [Einzelhandelsberatung Frankfurt am Main (Rhein-Main & Mitte)](https://rechner.jp-aring-advisory.de/frankfurt.html)
+- [Einzelhandelsberatung Wiesbaden (Rhein-Main & Mitte)](https://rechner.jp-aring-advisory.de/wiesbaden.html)
+- [Einzelhandelsberatung Kassel (Rhein-Main & Mitte)](https://rechner.jp-aring-advisory.de/kassel.html)
+- [Einzelhandelsberatung München (Süddeutschland)](https://rechner.jp-aring-advisory.de/muenchen.html)
+- [Einzelhandelsberatung Stuttgart (Süddeutschland)](https://rechner.jp-aring-advisory.de/stuttgart.html)
+- [Einzelhandelsberatung Nürnberg (Süddeutschland)](https://rechner.jp-aring-advisory.de/nuernberg.html)
+- [Einzelhandelsberatung Augsburg (Süddeutschland)](https://rechner.jp-aring-advisory.de/augsburg.html)
+- [Einzelhandelsberatung Freiburg im Breisgau (Süddeutschland)](https://rechner.jp-aring-advisory.de/freiburg.html)
+- [Einzelhandelsberatung Würzburg (Süddeutschland)](https://rechner.jp-aring-advisory.de/wuerzburg.html)
 - [Haupt-Website JPA 360° Retail Advisory](https://www.jp-aring-advisory.de)
 
 ## Praxis-Ratgeber (High-Intent Retail-Wissen)
-- 10 % Rabatt im Einzelhandel: Warum 20 % Deckungsbeitrag I verschwinden: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-rabatt-falle-db1.html
-- Umsatzrückgang im Modegeschäft: 5 operative Hebel ohne Rabattschlacht: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-umsatzrueckgang-modegeschaeft.html
-- UPT steigern an der Umkleidekabine: Der +0,15-Teile-pro-Bon-Leitfaden: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-upt-steigern-umkleidekabine.html
-- Inventurdifferenzen im Einzelhandel senken: Forensische 4-Augen-Checkliste: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-inventurdifferenzen-senken.html
-- Das „10 to 10“-Morgenbriefing: Mitarbeiterführung auf der Verkaufsfläche: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-10-to-10-morgenbriefing.html
-- Agile Personaleinsatzplanung (PEP) im Einzelhandel: Frequenz, Wetter & Liefertage: https://novajeeno.github.io/jpa360-retail-tools/ratgeber-personaleinsatzplanung-frequenz.html
+- 10 % Rabatt im Einzelhandel: Warum 20 % Deckungsbeitrag I verschwinden: https://rechner.jp-aring-advisory.de/ratgeber-rabatt-falle-db1.html
+- Umsatzrückgang im Modegeschäft: 5 operative Hebel ohne Rabattschlacht: https://rechner.jp-aring-advisory.de/ratgeber-umsatzrueckgang-modegeschaeft.html
+- UPT steigern an der Umkleidekabine: Der +0,15-Teile-pro-Bon-Leitfaden: https://rechner.jp-aring-advisory.de/ratgeber-upt-steigern-umkleidekabine.html
+- Inventurdifferenzen im Einzelhandel senken: Forensische 4-Augen-Checkliste: https://rechner.jp-aring-advisory.de/ratgeber-inventurdifferenzen-senken.html
+- Das „10 to 10“-Morgenbriefing: Mitarbeiterführung auf der Verkaufsfläche: https://rechner.jp-aring-advisory.de/ratgeber-10-to-10-morgenbriefing.html
+- Agile Personaleinsatzplanung (PEP) im Einzelhandel: Frequenz, Wetter & Liefertage: https://rechner.jp-aring-advisory.de/ratgeber-personaleinsatzplanung-frequenz.html
