@@ -183,6 +183,32 @@ footer a:hover{color:var(--ink); text-decoration:underline}
 .breadcrumb{font-size:12.5px; color:var(--muted); margin-bottom:18px}
 .breadcrumb a{color:var(--ink-soft); text-decoration:none}
 .breadcrumb a:hover{text-decoration:underline}
+
+.jpa-logo{display:inline-flex;align-items:center;gap:14px;text-decoration:none;padding:4px 0}
+.jpa-box{
+  width:40px;height:40px;position:relative;display:flex;align-items:center;justify-content:center;
+  border:2px solid #000000;border-radius:0;overflow:hidden;background:transparent;
+}
+.jpa-box::after{
+  content:"";position:absolute;inset:-8px;background:rgba(0,0,0,.06);
+  transform:skewX(30deg) translateX(-160%);transition:transform .7s cubic-bezier(.22,1,.36,1);
+}
+.jpa-logo:hover .jpa-box::after{transform:skewX(30deg) translateX(180%)}
+.jpa-box span{
+  position:relative;z-index:1;font-size:13px;font-weight:300;letter-spacing:.2em;
+  color:#000000;padding-left:.2em;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;
+}
+.jpa-word{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.jpa-360{
+  font-size:16px;font-weight:700;letter-spacing:.15em;line-height:1;
+  background:linear-gradient(135deg,#ef4444 0%,#dc2626 50%,#7f1d1d 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  border-bottom:.5px solid rgba(127,29,29,.15);padding-bottom:2px;
+}
+.jpa-sub{
+  font-size:7.5px;font-weight:500;letter-spacing:.38em;text-transform:uppercase;
+  color:#1c1917;opacity:.65;line-height:1;margin-top:5px;padding-left:.38em;
+}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -233,7 +259,7 @@ footer a:hover{color:var(--ink); text-decoration:underline}
 <body>
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="./index.html"><span class="brand-mark">J</span> JPA 360° // GÜTERSLOH</a>
+    <a class="jpa-logo" href="./index.html" aria-label="JPA 360° Retail Advisory"><span class="jpa-box"><span>JPA</span></span><span class="jpa-word"><span class="jpa-360">360°</span><span class="jpa-sub">RETAIL ADVISORY</span></span></a>
     <nav>
       <a href="./index.html#rechner">← Alle 3 Rechner</a>
       <a href="./index.html#staedte">Alle 25 Städte</a>
