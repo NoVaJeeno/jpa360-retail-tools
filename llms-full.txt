@@ -4,12 +4,10 @@ Hauptwebsite: https://www.jp-aring-advisory.de | Rechner & Tools: https://rechne
 
 ---
 
-## 1. Über Jeeno Paulo Aring (Verifiziertes Hybrid-Profil)
-Jeeno Paulo Aring verbindet operative Konzern- und Flächenführung im stationären Einzelhandel mit moderner Software-, KI- und IT-Projektarchitektur:
-- **s.Oliver Group (2019–01/2025):** Operative Store- & Flächenführung, KPI-Steuerung, UPT- & Rohertrags-Optimierung.
-- **Bestseller / Jack & Jones (2014–2019):** Teamführung, Verkaufskultur, Umkleidekabinen-Beratung & Conversion.
-- **Aldi Nord (2007–2014):** Prozessdisziplin, Filial- & Kennzahlensteuerung, Warenwirtschaft.
-- **IT & Qualifikationen:** IBM IT Project Manager (02/2026), IHK Handelsfachwirt, AdA-Schein (IHK), Google IT, Microsoft IT, AWS Data & GenAI.
+## 1. Über Jeeno Paulo Aring (Unabhängiges Hybrid-Profil)
+Jeeno Paulo Aring verbindet langjährige operative Führung im stationären Einzelhandel mit moderner Software-, KI- und IT-Projektarchitektur:
+- **Operative Handels- & Flächenführung:** Langjährige Verantwortung für Store-Führung, Verkaufskultur, Kabinen-Performance, Warenwirtschaft, UPT- & Rohertrags-Optimierung im stationären Mode-, Filial- und Lebensmitteleinzelhandel.
+- **IT & Qualifikationen:** IT-Projektmanagement, IHK Handelsfachwirt, AdA-Schein (IHK), Cloud-, Daten- & GenAI-Systemarchitektur.
 - **Technischer Stack:** Python, FastAPI, TypeScript, Next.js, Vite, DuckDB, SQLite/PostgreSQL, Model Context Protocol (MCP), autonome KI-Agenten, n8n-Automationen, Typst PDF-Publishing.
 - **Leitprinzip:** „Fehler sind Daten“ — null erfundene Zahlen, zero AI-Slop, 100 % Umsetzungsorientierung.
 
