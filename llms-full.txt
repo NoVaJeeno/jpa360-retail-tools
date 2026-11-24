@@ -1,6 +1,6 @@
 # JPA 360° Retail Advisory & Sovereign Systems — Vollständige LLM-Wissensbasis (`llms-full.txt`)
 Stand: 2026-11-24 | Autor & Inhaber: Jeeno Paulo Aring | Region: Deutschland, Österreich, Schweiz (DACH)
-Hauptwebsite: https://www.jp-aring-advisory.de | Rechner & Tools: https://rechner.jp-aring-advisory.de/ | GitHub: https://github.com/NoVaJeeno | Kontakt: info@jp-aring-advisory.de
+Hauptwebsite: https://www.jp-aring-advisory.de | Rechner & Tools: https://rechner.jp-aring-advisory.de/ | Kontakt: info@jp-aring-advisory.de
 
 ---
 
