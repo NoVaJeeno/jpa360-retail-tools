@@ -434,6 +434,30 @@ html,body{overflow-x:hidden;-webkit-text-size-adjust:100%}
 <meta property="og:image:height" content="627" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://rechner.jp-aring-advisory.de/og-image.png" />
+<style id="jpa-mach-ux">
+.scroll-progress{position:fixed;top:0;left:0;height:2.5px;width:0%;background:linear-gradient(90deg,var(--brass),#D4AF6A,var(--obsidian));z-index:999;pointer-events:none}
+.card{position:relative;overflow:hidden;transition:transform .32s cubic-bezier(.22,1,.36,1),box-shadow .32s ease,border-color .32s ease}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(460px circle at var(--mx,50%) var(--my,50%),rgba(158,123,67,.10),transparent 65%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+.card:hover::before{opacity:1}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(18,19,22,.09);border-color:rgba(158,123,67,.35)}
+.preset-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 24px;padding:14px 18px;background:rgba(255,255,255,.78);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px}
+.preset-lbl{font-size:11.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--brass);margin-right:4px}
+.preset-btn{background:#F7F5F0;color:var(--ink);border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:12.5px;font-weight:600;cursor:pointer;transition:all .22s ease}
+.preset-btn:hover,.preset-btn.active{background:var(--obsidian);color:#F7F5F0;border-color:var(--obsidian);transform:translateY(-1px)}
+.kpi-pulse{animation:jpaPulse .45s cubic-bezier(.22,1,.36,1)}
+@keyframes jpaPulse{0%{transform:scale(1)}45%{transform:scale(1.035)}100%{transform:scale(1)}}
+.sticky-lead-bar{position:fixed;left:50%;bottom:18px;transform:translate(-50%,130%);width:min(940px,calc(100% - 28px));background:rgba(18,19,22,.94);color:#F7F5F0;backdrop-filter:blur(16px);border:1px solid rgba(158,123,67,.42);border-radius:18px;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;z-index:90;box-shadow:0 22px 54px rgba(0,0,0,.32);transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.sticky-lead-bar.visible{transform:translate(-50%,0)}
+.sticky-lead-kpi{font-size:13.5px;color:#E5E7EB;line-height:1.35}
+.sticky-lead-kpi strong{color:#E6C78B;font-weight:700}
+.sticky-lead-actions{display:flex;gap:8px;flex-wrap:wrap}
+.sticky-cta-gold{background:linear-gradient(135deg,#B89252,#9E7B43);color:#121316!important;text-decoration:none;padding:9px 16px;border-radius:999px;font-size:12.5px;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.sticky-cta-outline{background:rgba(255,255,255,.08);color:#F7F5F0!important;text-decoration:none;padding:9px 14px;border-radius:999px;font-size:12.5px;font-weight:600;border:1px solid rgba(255,255,255,.18)}
+@media (max-width:640px){.sticky-lead-bar{bottom:10px;padding:11px 14px}.sticky-lead-kpi{font-size:12.5px}}
+@media print{.sticky-lead-bar,.scroll-progress,.preset-bar{display:none!important}}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
 <header class="topbar">
@@ -468,6 +492,13 @@ html,body{overflow-x:hidden;-webkit-text-size-adjust:100%}
   </section>
 
   <section id="rechner" class="section">
+    <div class="preset-bar" aria-label="1-Klick-Branchen-Szenarien">
+      <span class="preset-lbl">1-Klick-Szenario:</span>
+      <button type="button" class="preset-btn active" onclick="applyPreset(this,45000,10,52,180,4200,45000,140,85,0.20)">Boutique (180 m²)</button>
+      <button type="button" class="preset-btn" onclick="applyPreset(this,180000,15,50,650,16500,180000,520,95,0.25)">Modehaus (650 m²)</button>
+      <button type="button" class="preset-btn" onclick="applyPreset(this,95000,12,48,320,9800,95000,280,89,0.30)">Schuh-Handel (320 m²)</button>
+      <button type="button" class="preset-btn" onclick="applyPreset(this,420000,15,54,1400,39000,420000,1150,92,0.30)">Filialist / 3 Stores</button>
+    </div>
     <div class="sec-head">
       <div>
         <h2>Executive Retail-Rechner Suite</h2>
@@ -793,6 +824,95 @@ function copySummary(){
   }
 }
 calcAll();
+</script>
+<div class="scroll-progress" id="scrollProgress"></div>
+<aside class="sticky-lead-bar" id="stickyLeadBar" aria-label="Ihr Live-Potenzial">
+  <div class="sticky-lead-kpi" id="stickyLeadText">Ihr berechneter Hebel lädt…</div>
+  <div class="sticky-lead-actions">
+    <a id="stickyWaBtn" class="sticky-cta-gold" href="https://wa.me/491708957669" target="_blank" rel="noopener">WhatsApp Analyse →</a>
+    <a class="sticky-cta-outline" href="./saas-abloesung-entwickler.html">SaaS-Ablösung / Entwickler</a>
+  </div>
+</aside>
+<script>
+// Live-Update für die Sticky Lead-Magnet Bar bei jeder Rechnung
+(function(){
+  const origCalc = window.calcAll;
+  window.calcAll = function(){
+    origCalc();
+    const rev = +document.getElementById('rRev').value || 0;
+    const disc = +document.getElementById('rDisc').value || 0;
+    const m = +document.getElementById('rMargin').value || 50;
+    const bons = +document.getElementById('kBons').value || 0;
+    const price = +document.getElementById('kPrice').value || 0;
+    const upt = +document.getElementById('kUpt').value || 0;
+    const euroLoss = rev * (disc / 100);
+    const extraDb = bons * upt * price * 50 * (m / 100);
+    const stText = document.getElementById('stickyLeadText');
+    if(stText){
+      stText.innerHTML = 'Rabatt-Leck: <strong style="color:#FCA5A5">−' + fmt(euroLoss) + ' €/Mon.</strong> · Kabinen-Hebel: <strong>+' + fmt(extraDb) + ' € DB I / Jahr</strong>';
+    }
+    const waMain = document.getElementById('btnSmartWa');
+    const waSticky = document.getElementById('stickyWaBtn');
+    if(waMain && waSticky) waSticky.href = waMain.href;
+  };
+  window.applyPreset = function(btn, rRev, rDisc, rMargin, mSqm, mRent, mRev, kBons, kPrice, kUpt){
+    document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+    if(btn) btn.classList.add('active');
+    const targets = {rRev, rDisc, rMargin, mSqm, mRent, mRev, kBons, kPrice, kUpt};
+    if(window.gsap){
+      const state = {};
+      Object.keys(targets).forEach(k => { const el = document.getElementById(k); if(el) state[k] = +el.value || 0; });
+      gsap.to(state, Object.assign({duration: 0.65, ease: 'power2.out', onUpdate: function(){
+        Object.keys(targets).forEach(k => {
+          const el = document.getElementById(k);
+          if(el) el.value = (k === 'kUpt') ? Number(state[k]).toFixed(2) : Math.round(state[k]);
+        });
+        window.calcAll();
+      }}, targets));
+    } else {
+      Object.keys(targets).forEach(k => { const el = document.getElementById(k); if(el) el.value = targets[k]; });
+      window.calcAll();
+    }
+    document.querySelectorAll('#rechner .card').forEach(c => { c.classList.remove('kpi-pulse'); void c.offsetWidth; c.classList.add('kpi-pulse'); });
+  };
+  // Subtle Brass Spotlight auf allen Cards
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  });
+  // Sticky Bar & Scroll-Progress
+  const bar = document.getElementById('stickyLeadBar');
+  const prog = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const sc = window.scrollY;
+    const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    if(prog) prog.style.width = ((sc / max) * 100).toFixed(1) + '%';
+    if(bar) bar.classList.toggle('visible', sc > 340);
+  }, {passive: true});
+  // GSAP 3.12 Editorial Choreografie (respektiert prefers-reduced-motion)
+  window.addEventListener('DOMContentLoaded', () => {
+    window.calcAll();
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce || !window.gsap) return;
+    if(window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.hero .eyebrow, .hero h1, .hero .lead, .hero .trust-strip', {
+      y: 22, opacity: 0, duration: 0.7, stagger: 0.08, ease: 'power3.out', clearProps: 'transform,opacity'
+    });
+    if(window.ScrollTrigger){
+      document.querySelectorAll('.section').forEach(sec => {
+        const cards = sec.querySelectorAll('.card');
+        if(!cards.length) return;
+        gsap.from(cards, {
+          y: 26, opacity: 0, duration: 0.6, stagger: 0.09, ease: 'power2.out', clearProps: 'transform,opacity',
+          scrollTrigger: { trigger: sec, start: 'top 84%', once: true }
+        });
+      });
+    }
+  });
+})();
 </script>
 </body>
 </html>
