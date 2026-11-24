@@ -226,6 +226,34 @@ footer{
 .social-btn.ig:hover{background:#121316;border-color:#121316;color:#fff}
 .social-btn.wa:hover{background:#0F5132;border-color:#0F5132;color:#fff}
 @media(max-width:600px){.social-bar{width:100%;justify-content:flex-start;margin-top:4px}}
+/* Exaktes JPA 360° Architektur-Logo */
+.jpa-logo{display:inline-flex;align-items:center;gap:14px;text-decoration:none;padding:4px 0;flex-shrink:0}
+.jpa-box{width:40px;height:40px;position:relative;display:flex;align-items:center;justify-content:center;border:2px solid #000000;border-radius:0;overflow:hidden;background:transparent}
+.jpa-box::after{content:"";position:absolute;inset:-8px;background:rgba(0,0,0,.06);transform:skewX(30deg) translateX(-160%);transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.jpa-logo:hover .jpa-box::after{transform:skewX(30deg) translateX(180%)}
+.jpa-box span{position:relative;z-index:1;font-size:13px;font-weight:300;letter-spacing:.2em;color:#000000;padding-left:.2em;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif}
+.jpa-word{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.jpa-360{font-size:16px;font-weight:700;letter-spacing:.15em;line-height:1;background:linear-gradient(135deg,#ef4444 0%,#dc2626 50%,#7f1d1d 100%);-webkit-background-clip:text;background-clip:text;color:transparent;border-bottom:.5px solid rgba(127,29,29,.15);padding-bottom:2px}
+.jpa-sub{font-size:7.5px;font-weight:500;letter-spacing:.38em;text-transform:uppercase;color:#1c1917;opacity:.65;line-height:1;margin-top:5px;padding-left:.38em}
+/* Mobile & Horizontal-Scroll Optimierung (alles 100 % lesbar & seitlich scrollbar) */
+html,body{max-width:100%;overflow-x:clip}
+@media (max-width:768px){
+  .wrap{padding:0 16px}
+  .hero{padding:38px 0 28px}
+  .topbar-in{padding:10px 16px;gap:10px;flex-direction:column;align-items:stretch}
+  .jpa-logo{gap:11px}
+  .jpa-box{width:34px;height:34px}
+  .jpa-box span{font-size:11.5px}
+  .jpa-360{font-size:14px}
+  .jpa-sub{font-size:6.8px}
+  nav{flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:14px;padding-bottom:4px;scrollbar-width:thin;max-width:100%}
+  nav>*{flex:0 0 auto;white-space:nowrap}
+  .preset-bar,.trust-strip,.social-bar,.btn-group{flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding-bottom:6px;max-width:100%}
+  .preset-bar>*,.trust-strip>*,.social-bar>*,.btn-group>*{flex:0 0 auto;white-space:nowrap}
+  table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}
+  .card,.calc-card,.result-box,.out-box,.kpi-box{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  input[type="number"],input[type="text"]{font-size:16px;max-width:100%}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -301,16 +329,17 @@ footer{
 
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="#top"><span class="brand-mark">J</span><span>JPA 360° RECHNER</span></a>
+    <a class="jpa-logo" href="#top" aria-label="JPA 360° Retail Advisory"><span class="jpa-box"><span>JPA</span></span><span class="jpa-word"><span class="jpa-360">360°</span><span class="jpa-sub">RETAIL ADVISORY</span></span></a>
     <nav aria-label="Hauptnavigation">
       <a href="#rechner">Rechner</a>
+      <a href="./saas-abloesung-entwickler.html" style="color:var(--brass);font-weight:700">SaaS-Ablösung</a>
       <a href="#store-manager-praxis">Fläche &amp; Team</a>
       <a href="#tabelle">Margen-Tabelle</a>
       <a href="#ratgeber">Ratgeber</a>
       <a href="#glossar">Glossar</a>
       <a href="#faq">FAQ</a>
       <a href="#standorte">Standorte</a>
-      <a href="https://rechner.jp-aring-advisory.de/en/">EN</a>
+      <a href="./en/">EN</a>
       <a class="btn-primary" href="#quick-check">360° Quick-Check</a>
     </nav>
   </div>
@@ -791,5 +820,6 @@ footer{
   calcR1(); calcR2(); calcR3();
 })();
 </script>
+<script defer src="./astro-bot.js"></script>
 </body>
 </html>
