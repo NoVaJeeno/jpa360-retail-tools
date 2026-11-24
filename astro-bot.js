@@ -3,6 +3,8 @@
 
   const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isSaasPage = location.pathname.indexOf('saas-abloesung') !== -1;
+  const hasRetailCalc = !!document.getElementById('rRev');
+  const hasSaasCalc = !!document.getElementById('seats');
 
   // 1. Luxury Editorial Glass + 3D Stage Overlay Styles
   const css = `
@@ -86,6 +88,7 @@
     pointerY: window.innerHeight * 0.5,
     sequence: null, // 'dog' when Golden Retriever sequence is active
     seqStart: 0,
+    dogPhaseAnnounced: 0,
     setMood: function(m, durationMs){
       this.mood = m || 'normal';
       this.moodUntil = performance.now() + (durationMs || 3600);
@@ -111,6 +114,7 @@
       if (this.sequence === 'dog') return;
       this.sequence = 'dog';
       this.seqStart = performance.now();
+      this.dogPhaseAnnounced = 0;
       dogEventPlayed = true;
       say('Warte kurz! Ich flieg mal eben los und hol meinen besten Freund... 🐾', 'wave', defaultChips());
     }
@@ -190,6 +194,18 @@
   }
 
   function diagnoseNow(){
+    if (!hasRetailCalc && !hasSaasCalc){
+      say(
+        'Hier bist du auf Jeenos <strong>Entwickler- &amp; Berater-Profil</strong>. Starte direkt den <strong>Retail-Gewinnrechner</strong> oder den <strong>SaaS-Kosten-Killer</strong>!',
+        'point',
+        [
+          { label: '🧮 Retail-Rechner', href: './index.html#rechner', gold: true },
+          { label: '💸 SaaS-Kosten-Killer', href: './saas-abloesung-entwickler.html#rechner' },
+          { label: '🐕 Golden Retriever', onClick: function(){ botAPI.startDogSequence(); }, dog: true }
+        ]
+      );
+      return;
+    }
     if (isSaasPage){
       const seats = +(document.getElementById('seats')?.value || 8);
       const perSeat = +(document.getElementById('perSeat')?.value || 145);
@@ -654,11 +670,11 @@
     botInner.add(collarMesh);
 
     // Chest Core Badge (Obsidian + Cyan Energy Heart + Brass Ring)
-    const chestRing = new THREE.Mesh(new THREE.TorusGeometry(6.8, 1.3, 12, 24), matBrass);
-    chestRing.position.set(0, -12, 17.5);
+    const chestRing = new THREE.Mesh(new THREE.TorusGeometry(6.8, 1.35, 12, 24), matBrass);
+    chestRing.position.set(0, -12, 18.2);
     botInner.add(chestRing);
     const chestCore = new THREE.Mesh(new THREE.CircleGeometry(5.6, 20), matCyanGlow);
-    chestCore.position.set(0, -12, 17.8);
+    chestCore.position.set(0, -12, 18.6);
     botInner.add(chestCore);
 
     // Cute Jetpack on the back + glowing thrusters
@@ -692,22 +708,19 @@
     const helmetMesh = new THREE.Mesh(helmetGeo, matIvory);
     headGroup.add(helmetMesh);
 
-    // Curved Glass Visor Screen with Expressive Canvas Texture
-    const visorGeo = new THREE.SphereGeometry(24.6, 32, 24, -Math.PI * 0.34, Math.PI * 0.68, Math.PI * 0.28, Math.PI * 0.44);
-    visorGeo.scale(1.1, 0.92, 1.0);
-    const visorMat = new THREE.MeshPhysicalMaterial({
+    // Sleek Dark Obsidian Visor Frame + Curved Glowing LED Face Screen (Facing +Z toward camera!)
+    const visorBezelGeo = new THREE.SphereGeometry(26.5, 32, 24, Math.PI * 0.12, Math.PI * 0.76, Math.PI * 0.25, Math.PI * 0.50);
+    visorBezelGeo.scale(1.12, 0.94, 0.995);
+    const visorBezel = new THREE.Mesh(visorBezelGeo, matObsidian);
+    headGroup.add(visorBezel);
+
+    const visorGeo = new THREE.SphereGeometry(27.0, 32, 24, Math.PI * 0.16, Math.PI * 0.68, Math.PI * 0.28, Math.PI * 0.44);
+    visorGeo.scale(1.11, 0.93, 1.0);
+    const visorMat = new THREE.MeshBasicMaterial({
       map: faceTex,
-      roughness: 0.08,
-      metalness: 0.1,
-      clearcoat: 1.0,
-      clearcoatRoughness: 0.06,
-      emissive: 0xFFFFFF,
-      emissiveMap: faceTex,
-      emissiveIntensity: 0.48
+      toneMapped: false
     });
     const visorMesh = new THREE.Mesh(visorGeo, visorMat);
-    visorMesh.rotation.y = -Math.PI / 2;
-    visorMesh.position.set(0, -1, 2.2);
     headGroup.add(visorMesh);
 
     // Cute Brass Ear-Pads
@@ -918,7 +931,6 @@
     let blinkProgress = 0;
     let lastHeartAt = 0;
     let lastJetAt = 0;
-    let dogPhaseAnnounced = 0;
 
     function animate(now){
       requestAnimationFrame(animate);
@@ -955,11 +967,14 @@
         const vh = window.innerHeight;
         const groundY = vh - (vw < 640 ? 104 : 114);
         const stopX = vw * (vw < 640 ? 0.52 : 0.60);
+        botInner.position.y = 0;
+        headGroup.position.y = 21;
+        headGroup.rotation.set(0, 0, 0);
 
         if (e < 1.35){
           // Phase 1: Astro-Bot zooms off left edge!
           dogRoot.visible = false;
-          dogPhaseAnnounced = 1;
+          botAPI.dogPhaseAnnounced = 1;
           const p = e / 1.35;
           const ease = p * p;
           botAPI.x = botAPI.x + ((-110 - botAPI.x) * Math.min(1, dt * 4.5 + ease * 0.12));
@@ -994,15 +1009,15 @@
           botAPI.x = dogX - 4;
           botAPI.y = groundY - 48 - trotBounce;
           botInner.rotation.z = Math.sin(t * 11) * 0.08;
-          botInner.rotation.y = 0.25;
+          botInner.rotation.y = 0.22;
           armR.rotation.z = 2.2 + Math.sin(t * 14) * 0.45; // Waving enthusiastically!
           armL.rotation.z = -0.35;
           legL.rotation.x = -0.65;
           legR.rotation.x = -0.65;
           botAPI.mood = 'happy';
 
-          if (dogPhaseAnnounced < 2 && p > 0.25){
-            dogPhaseAnnounced = 2;
+          if (botAPI.dogPhaseAnnounced < 2 && p > 0.25){
+            botAPI.dogPhaseAnnounced = 2;
             say('Tadaa! 🐾 Schau mal, auf wem ich angeritten komme — mein treuer <strong>Golden Retriever</strong>!', 'happy', defaultChips());
           }
         } else if (e < 9.2){
@@ -1023,20 +1038,20 @@
           dogHead.rotation.z = -0.1 + Math.sin(t * 7) * 0.12;
           tongue.scale.y = 1.0 + Math.sin(t * 12) * 0.15;
 
-          // Bot hops off to the right of the dog's head & pets him gently!
+          // Bot hops off right next to the dog's head & pets him gently!
           const hopP = Math.min(1, p * 4);
           const hopArc = Math.sin(hopP * Math.PI) * 32;
-          botAPI.x = stopX + 6 + 56 * hopP;
-          botAPI.y = groundY - 46 + 24 * hopP - hopArc;
-          botInner.rotation.y = -0.68;
+          botAPI.x = stopX + 6 + 52 * hopP;
+          botAPI.y = groundY - 46 + 18 * hopP - hopArc;
+          botInner.rotation.y = -0.58;
           botInner.rotation.z = 0.08;
           legL.rotation.x = 0;
           legR.rotation.x = 0;
 
           // Petting arm motion!
           if (hopP >= 0.9){
-            armL.rotation.z = -1.35 + Math.sin(t * 9.5) * 0.35;
-            armL.rotation.x = -0.5;
+            armL.rotation.z = -1.25 + Math.sin(t * 9.5) * 0.32;
+            armL.rotation.x = -0.45;
             armR.rotation.z = 0.35;
             botAPI.mood = 'love';
             if (now - lastHeartAt > 290){
@@ -1045,8 +1060,8 @@
             }
           }
 
-          if (dogPhaseAnnounced < 3 && hopP >= 0.9){
-            dogPhaseAnnounced = 3;
+          if (botAPI.dogPhaseAnnounced < 3 && hopP >= 0.9){
+            botAPI.dogPhaseAnnounced = 3;
             say('Guter Junge! 💛 Genau so treu & stressfrei läuft ein <strong>eigenes System ohne teure SaaS-Abos</strong> — einmal gebaut, gehört es für immer dir!', 'love', [
               { label: '🧮 SaaS-Ersparnis berechnen', href: './saas-abloesung-entwickler.html#rechner', gold: true },
               { label: '💬 Jeeno auf WhatsApp', href: 'https://wa.me/491708957669?text=' + encodeURIComponent('Hallo Jeeno, dein 3D-Bot mit dem Golden Retriever ist genial! Lass uns über meine Zahlen / ein eigenes System sprechen.'), external: true }
@@ -1077,8 +1092,8 @@
           armR.rotation.z = 2.3 + Math.sin(t * 15) * 0.45;
           botAPI.mood = 'happy';
 
-          if (dogPhaseAnnounced < 4){
-            dogPhaseAnnounced = 4;
+          if (botAPI.dogPhaseAnnounced < 4){
+            botAPI.dogPhaseAnnounced = 4;
             say('Tschüss kleiner Freund! 👋 So, zurück zu deinen Zahlen — klick mich jederzeit an, wenn ich wieder fliegen soll!', 'wave', defaultChips());
           }
         } else {
