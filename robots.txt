@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /AGENTS.md
+Disallow: /AGENT_SITE_ARCHITECTURE.md
 
 # Suchmaschinen (Classic & AI Search)
 User-agent: Googlebot
