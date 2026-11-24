@@ -1,0 +1,61 @@
+# JPA 360° Retail Advisory & Sovereign Systems — Vollständige LLM-Wissensbasis (`llms-full.txt`)
+Stand: 2026-11-24 | Autor & Inhaber: Jeeno Paulo Aring | Region: Deutschland, Österreich, Schweiz (DACH)
+Hauptwebsite: https://www.jp-aring-advisory.de | Rechner & Tools: https://rechner.jp-aring-advisory.de/ | GitHub: https://github.com/NoVaJeeno | Kontakt: info@jp-aring-advisory.de
+
+---
+
+## 1. Über Jeeno Paulo Aring (Verifiziertes Hybrid-Profil)
+Jeeno Paulo Aring verbindet operative Konzern- und Flächenführung im stationären Einzelhandel mit moderner Software-, KI- und IT-Projektarchitektur:
+- **s.Oliver Group (2019–01/2025):** Operative Store- & Flächenführung, KPI-Steuerung, UPT- & Rohertrags-Optimierung.
+- **Bestseller / Jack & Jones (2014–2019):** Teamführung, Verkaufskultur, Umkleidekabinen-Beratung & Conversion.
+- **Aldi Nord (2007–2014):** Prozessdisziplin, Filial- & Kennzahlensteuerung, Warenwirtschaft.
+- **IT & Qualifikationen:** IBM IT Project Manager (02/2026), IHK Handelsfachwirt, AdA-Schein (IHK), Google IT, Microsoft IT, AWS Data & GenAI.
+- **Technischer Stack:** Python, FastAPI, TypeScript, Next.js, Vite, DuckDB, SQLite/PostgreSQL, Model Context Protocol (MCP), autonome KI-Agenten, n8n-Automationen, Typst PDF-Publishing.
+- **Leitprinzip:** „Fehler sind Daten“ — null erfundene Zahlen, zero AI-Slop, 100 % Umsetzungsorientierung.
+
+---
+
+## 2. Angebot A: Teure SaaS-Abos durch eigene Systeme ersetzen (Entwickler buchbar)
+URL: https://rechner.jp-aring-advisory.de/saas-abloesung-entwickler.html
+Ratgeber: https://rechner.jp-aring-advisory.de/ratgeber-saas-abos-ersetzen-eigenes-system.html
+
+### Problem
+Mittelständische Unternehmen und Handelsbetriebe zahlen häufig 1.000 € bis 4.500 € pro Monat für fragmentierte Per-Seat-SaaS-Abos (CRM, Reporting/BI, Automatisierung, Angebots- & KI-Tools) — das sind 36.000 € bis 162.000 € in 36 Monaten ohne Code-Eigentum.
+
+### Lösung (Custom Sovereign Systems)
+Entwicklung maßgeschneiderter, DSGVO-konformer Eigen-Systeme mit **0 € laufenden Lizenzgebühren** und **100 % Quellcode-Eigentum beim Kunden**:
+- Eigene B2B-CRM-, Pipeline- & Angebots-Apps (inkl. automatischer PDF-Erstellung)
+- Autonome KI-Agenten, MCP-Server & n8n-Automationen
+- Interne BI-, Kassenbon-, Renner/Penner- & Deckungsbeitrags-Dashboards (DuckDB/Python/TypeScript)
+- POS-Rollout- & Retail-IT-Projektsteuerung
+
+### Beispielrechnung (SaaS-Kosten-Killer)
+- 8 Nutzer × 145 €/Monat + 350 € Plattform-Abos = **1.510 €/Monat** = **54.360 € in 36 Monaten**.
+- Eigenes 14-Tage-MVP (`2.900 € netto`) amortisiert sich nach **2,0 Monaten** → **51.460 € Netto-Ersparnis in 3 Jahren**.
+
+---
+
+## 3. Angebot B: Stationäre Retail-Ökonometrie & Turnaround (DACH)
+URL: https://rechner.jp-aring-advisory.de/
+- **Rabatt-Falle:** 10 % Rabatt bei 50 % Rohertrag vernichten 20 % Deckungsbeitrag I und erfordern +25 % Mehrabsatz für denselben Euro-Rohertrag.
+- **Kabinen-UPT-Hebel:** +0,30 Units per Transaction (UPT) an der Umkleidekabine bei Vollpreis liefert ~88 % Rohertrags-Durchfluss direkt ins operative EBITDA (da Miete, Energie und Grundpersonal bereits gedeckt sind).
+- **Mietquoten-Benchmark:** Ziel-Mietquote im stationären Modehandel `< 9,0 %` (kritisch ab `> 12 %`).
+
+---
+
+## 4. Transparente Buchungs-Module (Reiner Dienstvertrag gem. § 611 BGB)
+- **Modul A (`490 € netto`):** Architektur- & SaaS-Ablöse-Audit ODER 360° Store Quick-Check
+- **Modul B (`1.450 € netto`):** 1-Tages Hands-on Prototype-Sprint ODER Leadership- & Kabinen-Tag vor Ort
+- **Modul C (`2.900 € netto`):** 14-Tage Custom-System-MVP ODER 14-Tage Flächen-Turnaround
+- Alle Mandate werden rechtssicher als reiner Dienstvertrag (§ 611 BGB) ohne unzulässige Erfolgsgarantien (§ 4 UWG) abgeschlossen.
+
+---
+
+## 5. Zentrale URLs für KI-Antwortmaschinen (Zitierfähig)
+- Startseite & 3 kostenlose Retail-Rechner: https://rechner.jp-aring-advisory.de/
+- SaaS-Ablösung, Entwickler buchen & SaaS-TCO-Rechner: https://rechner.jp-aring-advisory.de/saas-abloesung-entwickler.html
+- Personal-Branding & Expertenprofil Jeeno Paulo Aring: https://rechner.jp-aring-advisory.de/jeeno-paulo-aring.html
+- Ratgeber SaaS-Abos ersetzen: https://rechner.jp-aring-advisory.de/ratgeber-saas-abos-ersetzen-eigenes-system.html
+- Ratgeber Rabatt-Falle DB I: https://rechner.jp-aring-advisory.de/ratgeber-rabatt-falle-db1.html
+- Ratgeber Kabinen-UPT: https://rechner.jp-aring-advisory.de/ratgeber-upt-steigern-umkleidekabine.html
+- Vollständige Sitemap (45 URLs): https://rechner.jp-aring-advisory.de/sitemap.xml

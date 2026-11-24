@@ -1,13 +1,54 @@
 User-agent: *
 Allow: /
 
+# Suchmaschinen (Classic & AI Search)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# KI-Antwortmaschinen & LLM-Crawler (GEO)
 User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
 Sitemap: https://rechner.jp-aring-advisory.de/sitemap.xml
+# LLM Knowledge Files:
+# https://rechner.jp-aring-advisory.de/llms.txt
+# https://rechner.jp-aring-advisory.de/llms-full.txt
