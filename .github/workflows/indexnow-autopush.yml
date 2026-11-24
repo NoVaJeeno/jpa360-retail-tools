@@ -1,0 +1,46 @@
+name: 24/7 Autonomous IndexNow Search Engine Push
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  indexnow-ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Wait 20s for GitHub Pages edge propagation
+        if: github.event_name == 'push'
+        run: sleep 20
+
+      - name: Extract all sitemap URLs and submit to IndexNow
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.request
+          xml = open('sitemap.xml', encoding='utf-8').read()
+          urls = re.findall(r'<loc>([^<]+)</loc>', xml)
+          urls += [
+              'https://rechner.jp-aring-advisory.de/llms.txt',
+              'https://rechner.jp-aring-advisory.de/llms-full.txt',
+              'https://rechner.jp-aring-advisory.de/feed.xml'
+          ]
+          payload = {
+              'host': 'rechner.jp-aring-advisory.de',
+              'key': '6b7ad6d6e7d380221d7309a374b54765',
+              'keyLocation': 'https://rechner.jp-aring-advisory.de/6b7ad6d6e7d380221d7309a374b54765.txt',
+              'urlList': list(dict.fromkeys(urls))
+          }
+          req = urllib.request.Request(
+              'https://api.indexnow.org/indexnow',
+              data=json.dumps(payload).encode('utf-8'),
+              headers={'Content-Type': 'application/json; charset=utf-8'},
+              method='POST'
+          )
+          with urllib.request.urlopen(req, timeout=20) as resp:
+              print(f'IndexNow submitted {len(payload["urlList"])} URLs -> HTTP {resp.status}')
+          PY

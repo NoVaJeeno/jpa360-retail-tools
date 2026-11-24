@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JPA 360° Retail &amp; SaaS-Ablösung Rechner (DE &amp; EN)</title>
+    <link>https://rechner.jp-aring-advisory.de/</link>
+    <description>Kostenlose Live-Rechner für stationären Einzelhandel (Rabatt vs. DB I, Mietquote, Kabinen-UPT) &amp; eigene Software-Systeme statt teurer SaaS-Abos von Jeeno Paulo Aring.</description>
+    <language>de-DE</language>
+    <atom:link href="https://rechner.jp-aring-advisory.de/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Retail Rechner (DACH): Rabatt vs. DB I, Mietquote &amp; Kabinen-UPT</title>
+      <link>https://rechner.jp-aring-advisory.de/</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/</guid>
+      <description>Interaktive Sofort-Rechner mit 3D JPA-Bot, 1-Klick-Szenarien und PDF-Export für den stationären Handel.</description>
+    </item>
+    <item>
+      <title>SaaS-Kosten-Killer: Teure SaaS-Abos durch eigene Systeme ersetzen</title>
+      <link>https://rechner.jp-aring-advisory.de/saas-abloesung-entwickler.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/saas-abloesung-entwickler.html</guid>
+      <description>3-Jahres-TCO-Rechner für CRM-, BI- und KI-Abos vs. eigene maßgeschneiderte Systeme ohne laufende Seat-Gebühren.</description>
+    </item>
+    <item>
+      <title>International Retail Margin &amp; SaaS Replacement Calculator (English)</title>
+      <link>https://rechner.jp-aring-advisory.de/en/</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/en/</guid>
+      <description>Free international calculator for retail margin vs. discount loss, fitting-room UPT gain, and 3-year SaaS replacement savings.</description>
+    </item>
+    <item>
+      <title>Teures CRM-Abo ersetzen: Eigenes B2B-CRM ohne Seat-Gebühren</title>
+      <link>https://rechner.jp-aring-advisory.de/crm-saas-abo-ersetzen-eigenes-crm.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/crm-saas-abo-ersetzen-eigenes-crm.html</guid>
+      <description>Direkter 3-Jahres-Vergleich zwischen laufender CRM-Miete und eigenem B2B-CRM.</description>
+    </item>
+    <item>
+      <title>BI- &amp; Reporting-Abos ersetzen: Eigenes Live-Dashboard für Retail &amp; KMU</title>
+      <link>https://rechner.jp-aring-advisory.de/bi-dashboard-saas-ersetzen-eigenes-reporting.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/bi-dashboard-saas-ersetzen-eigenes-reporting.html</guid>
+      <description>Eigenes Live-KPI-Dashboard für Deckungsbeitrag I, UPT und Mietquote ohne Pro-Nutzer-Lizenzkosten.</description>
+    </item>
+    <item>
+      <title>Kostenloses Rabatt-Rechner Embed-Widget für Blogs &amp; Fachportale</title>
+      <link>https://rechner.jp-aring-advisory.de/embed.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/embed.html</guid>
+      <description>1-Zeilen-iframe zum kostenlosen Einbetten des JPA 360° Rabatt-Rechners.</description>
+    </item>
+  </channel>
+</rss>
