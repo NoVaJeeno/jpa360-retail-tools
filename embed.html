@@ -4,58 +4,84 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="robots" content="index, follow" />
-<title>Kostenloses Retail- &amp; Rabatt-Rechner Embed-Widget | JPA 360°</title>
-<meta name="description" content="Binde den kostenlosen Rabatt-vs.-Marge-Rechner von JPA 360° per 1-Zeilen-Embed auf deinem Blog, Fachportal oder deiner Website ein (0 Cookies, sofort einsatzbereit)." />
+<meta name="referrer" content="no-referrer" />
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self';" />
+<title>Kostenloses Retail- &amp; Rabatt-Rechner Embed-Widget (DSGVO-sicher) | JPA 360°</title>
+<meta name="description" content="Hochsicheres, cookiefreies Rabatt-vs.-Marge-Rechner Embed-Widget von JPA 360° für Steuerberater, Verbände &amp; Fachportale (0 Cookies, 0 Tracker, 100 % DSGVO)." />
 <link rel="canonical" href="https://rechner.jp-aring-advisory.de/embed.html" />
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',Arial,sans-serif;background:#F7F5F0;color:#121316;padding:18px}
-  .card{max-width:540px;margin:0 auto;background:#FFFFFF;border:1px solid rgba(18,19,22,.12);border-radius:18px;padding:20px;box-shadow:0 12px 30px rgba(18,19,22,.06)}
-  h1{font-size:19px;margin-bottom:10px}
-  label{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#454A54;margin:10px 0 4px}
-  input[type=range]{width:100%;accent-color:#9E7B43}
-  .res{margin-top:14px;padding:12px 14px;border-radius:12px;background:#F7F5F0;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-  .loss{color:#9B1C2E;font-weight:800;font-size:20px}
-  .credit{margin-top:12px;font-size:11.5px;color:#6E737E;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',Inter,Arial,sans-serif;background:#F7F5F0;color:#121316;padding:14px}
+  .card{max-width:540px;margin:0 auto;background:#FFFFFF;border:1px solid rgba(18,19,22,.14);border-radius:18px;padding:18px 20px;box-shadow:0 12px 30px rgba(18,19,22,.07)}
+  .top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+  .kicker{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:#9E7B43;font-weight:800}
+  .trust{font-size:10px;background:#eefaf2;color:#14532d;border:1px solid #bbf7d0;padding:2px 8px;border-radius:999px;font-weight:700}
+  h1{font-size:18px;line-height:1.25;margin-bottom:10px}
+  label{display:flex;justify-content:space-between;font-size:12.5px;font-weight:600;color:#454A54;margin:9px 0 3px}
+  input[type=range]{width:100%;accent-color:#9E7B43;cursor:pointer}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .kpi{padding:10px 12px;border-radius:12px;background:#F7F5F0;border:1px solid rgba(18,19,22,.08)}
+  .kpi-lbl{font-size:11px;color:#454A54;font-weight:600;margin-bottom:3px}
+  .loss{color:#9B1C2E;font-weight:800;font-size:18px}
+  .warn{color:#9E7B43;font-weight:800;font-size:18px}
+  .cta{display:block;text-align:center;margin-top:12px;padding:10px 14px;border-radius:10px;background:#121316;color:#F7F5F0;text-decoration:none;font-size:12.5px;font-weight:700}
+  .cta:hover{background:#23262E}
+  .credit{margin-top:10px;font-size:10.5px;color:#6E737E;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
   .credit a{color:#9E7B43;font-weight:700;text-decoration:none}
-  .code-box{max-width:540px;margin:18px auto 0;background:#121316;color:#F7F5F0;border-radius:14px;padding:14px;font-size:12px;overflow-x:auto}
-  pre{white-space:pre-wrap;word-break:break-all;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#E6C78B}
+  @media (max-width:420px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
   <div class="card">
-    <h1>Rabatt-Verlust Schnellrechner (Live)</h1>
+    <div class="top">
+      <span class="kicker">JPA 360° · Live-Kennzahlen-Check</span>
+      <span class="trust">✓ 0 Cookies · 100 % DSGVO</span>
+    </div>
+    <h1>Was kostet dich dein Rabatt im Rohertrag (DB I)?</h1>
     <label>Monatsumsatz <strong id="wRev">45.000 €</strong></label>
     <input id="iRev" type="range" min="10000" max="250000" step="5000" value="45000" />
     <label>Durchschnittlicher Rabatt <strong id="wDisc">15 %</strong></label>
     <input id="iDisc" type="range" min="0" max="40" step="1" value="15" />
-    <div class="res">
-      <span>Direkter Rohertrags-Verlust / Monat:</span>
-      <span class="loss" id="wLoss">−6.750 €</span>
+    <div class="grid">
+      <div class="kpi">
+        <div class="kpi-lbl">DB-I-Verlust / Monat</div>
+        <div class="loss" id="wLoss">−6.750 €</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-lbl">Mehrumsatz nötig (50 % Spanne)</div>
+        <div class="warn" id="wNeed">+42,9 %</div>
+      </div>
     </div>
+    <a class="cta" href="https://rechner.jp-aring-advisory.de/?src=partner_embed" target="_blank" rel="noopener noreferrer">Komplette 3-fach Store-Auswertung &amp; PDF (0 €) →</a>
     <div class="credit">
-      <span>Powered by <a href="https://rechner.jp-aring-advisory.de/" target="_blank" rel="noopener">JPA 360° Retail &amp; SaaS Rechner</a></span>
-      <a href="https://rechner.jp-aring-advisory.de/saas-abloesung-entwickler.html" target="_blank" rel="noopener">Eigene Systeme statt SaaS →</a>
+      <span>Unverbindliche Modellrechnung (§ 611 BGB) · keine Datenübertragung</span>
+      <a href="https://www.jp-aring-advisory.de/legal?section=impressum" target="_blank" rel="noopener noreferrer">Impressum · JPA 360°</a>
     </div>
   </div>
-
-  <div class="code-box" id="embedSnippet">
-    <div style="margin-bottom:6px;font-weight:700">Kostenlos auf deiner Website / deinem Blog einbetten (1 Zeile):</div>
-    <pre>&lt;iframe src="https://rechner.jp-aring-advisory.de/embed.html?minimal=1" width="100%" height="295" style="border:0;border-radius:18px" loading="lazy" title="JPA 360° Rabatt-Rechner"&gt;&lt;/iframe&gt;</pre>
-  </div>
-
-<script>
-(function(){
-  if (location.search.indexOf('minimal=1') !== -1) document.getElementById('embedSnippet').style.display='none';
-  const r=document.getElementById('iRev'), d=document.getElementById('iDisc');
-  function u(){
-    const rv=+r.value, dv=+d.value;
-    document.getElementById('wRev').textContent=rv.toLocaleString('de-DE')+' €';
-    document.getElementById('wDisc').textContent=dv+' %';
-    document.getElementById('wLoss').textContent='−'+Math.round(rv*dv/100).toLocaleString('de-DE')+' €';
-  }
-  r.addEventListener('input',u); d.addEventListener('input',u); u();
-})();
-</script>
+  <script>
+    (function(){
+      var iRev = document.getElementById('iRev');
+      var iDisc = document.getElementById('iDisc');
+      var wRev = document.getElementById('wRev');
+      var wDisc = document.getElementById('wDisc');
+      var wLoss = document.getElementById('wLoss');
+      var wNeed = document.getElementById('wNeed');
+      function upd(){
+        var rev = Number(iRev.value) || 0;
+        var disc = Number(iDisc.value) || 0;
+        var loss = Math.round(rev * (disc / 100));
+        var margin = 50;
+        var need = disc >= margin ? 999 : ((disc / (margin - disc)) * 100);
+        wRev.textContent = rev.toLocaleString('de-DE') + ' €';
+        wDisc.textContent = disc + ' %';
+        wLoss.textContent = '−' + loss.toLocaleString('de-DE') + ' €';
+        wNeed.textContent = disc === 0 ? '0,0 %' : (need >= 999 ? '> 400 %' : '+' + need.toFixed(1).replace('.', ',') + ' %');
+      }
+      iRev.addEventListener('input', upd);
+      iDisc.addEventListener('input', upd);
+      upd();
+    })();
+  </script>
 </body>
 </html>
