@@ -85,13 +85,35 @@
   toggleBtn.addEventListener('click', function () { setOpen(!panel.classList.contains('open')); });
   closeBtn.addEventListener('click', function () { setOpen(false); });
 
-  // Cookiefreie B2B-Unternehmenserkennung (DSGVO Art. 6 Abs. 1 lit. f · 0 Cookies · keine IP-Speicherung)
+  // Cookiefreie B2B-Unternehmenserkennung inkl. SPA-Route-Tracking für HAUPTSEITE (DSGVO Art. 6 Abs. 1 lit. f · 0 Cookies)
+  var lastSentUrl = '';
+  function sendB2bSignal() {
+    try {
+      var cur = window.location.href;
+      if (!cur || cur === lastSentUrl) return;
+      lastSentUrl = cur;
+      fetch('https://jpa360-cloud-linux.vercel.app/api/b2b-visit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        keepalive: true,
+        body: JSON.stringify({
+          property: 'HAUPTSEITE',
+          page_url: cur,
+          referrer: document.referrer || ''
+        })
+      }).catch(function () {});
+    } catch (_e) {}
+  }
+  sendB2bSignal();
   try {
-    fetch('https://jpa360-cloud-linux.vercel.app/api/b2b-visit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      keepalive: true,
-      body: JSON.stringify({ page_url: window.location.href, referrer: document.referrer || '' })
-    }).catch(function () {});
-  } catch (_e) {}
+    var origPush = history.pushState;
+    if (typeof origPush === 'function') {
+      history.pushState = function () {
+        var r = origPush.apply(this, arguments);
+        setTimeout(sendB2bSignal, 120);
+        return r;
+      };
+    }
+    window.addEventListener('popstate', function () { setTimeout(sendB2bSignal, 120); });
+  } catch (_e2) {}
 })();
