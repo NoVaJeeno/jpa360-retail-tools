@@ -386,6 +386,32 @@ html,body{max-width:100%;overflow-x:clip}
       <button type="button" class="preset-btn" data-preset="filialist">Filialist / 3 Stores</button>
     </div>
 
+    <div id="jpaFitnessBar" style="margin:18px 0 22px;background:#fff;border:1px solid rgba(18,19,22,.12);border-radius:16px;padding:16px 20px;box-shadow:0 10px 26px rgba(18,19,22,.05)">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px">
+        <div>
+          <div style="font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:#9a7228;font-weight:700">Live Store-Fitness-Score · Zeigarnik-Check</div>
+          <div style="font-size:15px;font-weight:700;margin-top:2px" id="jpaProgressText">1 von 3 Bereichen geprüft (33 %) — bewege alle 3 Rechner für deinen 100-%-Score!</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:12px;color:#475569;font-weight:600">Dein Score:</span>
+          <span id="jpaFitnessScoreBadge" style="padding:6px 14px;border-radius:999px;background:#121316;color:#d4a853;font-weight:800;font-size:16px">72 / 100</span>
+        </div>
+      </div>
+      <div style="height:8px;background:#e2e8f0;border-radius:999px;overflow:hidden;margin-bottom:12px">
+        <div id="jpaProgressFill" style="width:33%;height:100%;background:linear-gradient(90deg,#9a7228,#16a34a);transition:width .35s ease"></div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:8px;border-top:1px solid #f1f5f9">
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12px">
+          <strong style="color:#334155">Branchen-Vergleich:</strong>
+          <button type="button" class="btn-mini jpa-bench-btn" data-bench="modehaus" style="background:#121316;color:#fff">Modehaus (Richtwert ≤ 9 % Miete)</button>
+          <button type="button" class="btn-mini jpa-bench-btn" data-bench="boutique">Boutique (≤ 10 %)</button>
+          <button type="button" class="btn-mini jpa-bench-btn" data-bench="schuh">Schuhhandel (≤ 8,5 %)</button>
+          <button type="button" class="btn-mini jpa-bench-btn" data-bench="sport">Sportfachhandel (≤ 8 %)</button>
+        </div>
+        <div id="jpaBenchmarkVerdict" style="font-size:12.5px;font-weight:700;color:#15803d">✓ Im grünen Bereich vs. Modehaus-Richtwert</div>
+      </div>
+    </div>
+
     <div class="calc-grid">
       <div class="card">
         <div class="card-num">01 / Preisnachlass-Realität</div>
@@ -496,6 +522,56 @@ html,body{max-width:100%;overflow-x:clip}
           <button type="button" class="btn-mini" data-copy="r3">Ergebnis kopieren</button>
           <button type="button" class="btn-mini" data-pdf="r3">Als PDF speichern</button>
         </div>
+      </div>
+    </div>
+
+    <div id="jpa12MonthContrast" style="margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+      <div style="background:#fff5f5;border:1px solid #fecaca;border-radius:16px;padding:16px 18px">
+        <div style="font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#991b1b;font-weight:700">12 Monate ohne Änderung (Rabatt-Abfluss)</div>
+        <div id="jpa12mLoss" style="font-size:22px;font-weight:800;color:#991b1b;margin:4px 0">−120.000 € / Jahr</div>
+        <div style="font-size:12px;color:#7f1d1d">Kumulierter DB-I-Verlust auf 12 Monate hochgerechnet</div>
+      </div>
+      <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:16px;padding:16px 18px">
+        <div style="font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#166534;font-weight:700">12 Monate mit Kabinen-UPT-Hebel</div>
+        <div id="jpa12mGain" style="font-size:22px;font-weight:800;color:#15803d;margin:4px 0">+150.696 € / Jahr</div>
+        <div style="font-size:12px;color:#14532d">Zusätzlicher Vollpreis-DB I ohne Preisnachlass</div>
+      </div>
+      <div style="background:#121316;color:#F7F5F0;border:1px solid rgba(212,168,83,.4);border-radius:16px;padding:16px 18px">
+        <div style="font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#d4a853;font-weight:700">Dein 12-Monats-Gesamthebel (Spanne)</div>
+        <div id="jpa12mDelta" style="font-size:22px;font-weight:800;color:#fbbf24;margin:4px 0">+270.696 € Unterschied</div>
+        <div style="font-size:12px;color:#cbd5e1">Zwischen Rabatt-Gewohnheit &amp; strukturiertem Kabinen-Fokus</div>
+      </div>
+    </div>
+
+    <div id="jpaQuickDiag" style="margin-top:20px;background:#fff;border:1px solid rgba(18,19,22,.12);border-radius:18px;padding:20px 22px">
+      <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#9a7228;font-weight:700;margin-bottom:4px">30-Sekunden Flächen-Diagnose · 3 Klicks</div>
+      <h3 style="margin:0 0 12px;font-size:18px">Wo liegt dein größter Sofort-Hebel auf der Fläche?</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px">
+        <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px">
+          <div style="font-size:12.5px;font-weight:700;margin-bottom:8px">1. Startet jede Schicht mit einem 5-Min. 10-to-10-Zahlenbriefing?</div>
+          <div style="display:flex;gap:8px">
+            <button type="button" class="btn-mini jpa-diag-btn" data-q="q1" data-a="yes">Ja, täglich</button>
+            <button type="button" class="btn-mini jpa-diag-btn" data-q="q1" data-a="no">Nein / unregelmäßig</button>
+          </div>
+        </div>
+        <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px">
+          <div style="font-size:12.5px;font-weight:700;margin-bottom:8px">2. Wird Kabinen-UPT (Teile pro Bon) aktiv gemessen &amp; gecoacht?</div>
+          <div style="display:flex;gap:8px">
+            <button type="button" class="btn-mini jpa-diag-btn" data-q="q2" data-a="yes">Ja, systematisch</button>
+            <button type="button" class="btn-mini jpa-diag-btn" data-q="q2" data-a="no">Nein, kaum Fokus</button>
+          </div>
+        </div>
+        <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px">
+          <div style="font-size:12.5px;font-weight:700;margin-bottom:8px">3. Folgt eure Personaleinsatzplanung (PEP) der echten Stundenfrequenz?</div>
+          <div style="display:flex;gap:8px">
+            <button type="button" class="btn-mini jpa-diag-btn" data-q="q3" data-a="yes">Ja, nach Frequenz</button>
+            <button type="button" class="btn-mini jpa-diag-btn" data-q="q3" data-a="no">Eher nach Gewohnheit</button>
+          </div>
+        </div>
+      </div>
+      <div id="jpaDiagResult" style="display:none;margin-top:14px;padding:14px 16px;border-radius:12px;background:#121316;color:#F7F5F0;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div id="jpaDiagText" style="font-size:13px;line-height:1.45;max-width:650px"></div>
+        <button type="button" id="jpaDiagPdfBtn" style="border:none;cursor:pointer;padding:10px 16px;border-radius:9px;background:#d4a853;color:#121316;font-weight:800;font-size:12.5px">Diagnose in meine PDF übernehmen (0 €) →</button>
       </div>
     </div>
 
@@ -829,6 +905,77 @@ html,body{max-width:100%;overflow-x:clip}
     n.addEventListener('input', () => sync(n.value));
   }
 
+  let touchedCalcs = { r1: true, r2: false, r3: false };
+  let activeBench = 'modehaus';
+  const benchRules = {
+    modehaus: { label: 'Modehaus-Richtwert (≤ 9,0 %)', maxMq: 9.0 },
+    boutique: { label: 'Boutique-Richtwert (≤ 10,0 %)', maxMq: 10.0 },
+    schuh:    { label: 'Schuhhandel-Richtwert (≤ 8,5 %)', maxMq: 8.5 },
+    sport:    { label: 'Sportfachhandel-Richtwert (≤ 8,0 %)', maxMq: 8.0 }
+  };
+  let diagAnswers = { q1: null, q2: null, q3: null };
+  let diagSummaryText = '';
+
+  function updateDwellBoosters(){
+    const ums = parseFloat(document.getElementById('nUmsatz')?.value) || 0;
+    const rab = parseFloat(document.getElementById('nRabatt')?.value) || 0;
+    const mar = Math.max(1, parseFloat(document.getElementById('nMarge')?.value) || 50);
+    const mi  = parseFloat(document.getElementById('nMiete')?.value) || 0;
+    const um2 = Math.max(1, parseFloat(document.getElementById('nUmsatz2')?.value) || 75000);
+    const mq  = (mi / um2) * 100;
+    const bons  = parseFloat(document.getElementById('nBons')?.value) || 0;
+    const preis = parseFloat(document.getElementById('nPreis')?.value) || 0;
+    const upt   = parseFloat(document.getElementById('nUpt')?.value) || 0;
+
+    // Hebel 3: 12-Monats-Kontrast (deterministische Modellrechnung)
+    const lossYear = Math.round(ums * (rab / 100) * 12);
+    const gainYear = Math.round(bons * upt * preis * 52 * 0.5);
+    const deltaYear = lossYear + gainYear;
+    const elLoss = document.getElementById('jpa12mLoss');
+    const elGain = document.getElementById('jpa12mGain');
+    const elDelta = document.getElementById('jpa12mDelta');
+    if (elLoss) elLoss.textContent = '−' + fmtEur(lossYear) + ' / Jahr';
+    if (elGain) elGain.textContent = '+' + fmtEur(gainYear) + ' / Jahr';
+    if (elDelta) elDelta.textContent = '+' + fmtEur(deltaYear) + ' Unterschied';
+
+    // Hebel 1: Live Store-Fitness-Score (0–100) + Zeigarnik-Fortschritt (33 % -> 66 % -> 100 %)
+    const doneCount = (touchedCalcs.r1 ? 1 : 0) + (touchedCalcs.r2 ? 1 : 0) + (touchedCalcs.r3 ? 1 : 0);
+    const pctDone = Math.round((doneCount / 3) * 100);
+    const progFill = document.getElementById('jpaProgressFill');
+    const progTxt = document.getElementById('jpaProgressText');
+    if (progFill) progFill.style.width = pctDone + '%';
+    if (progTxt) {
+      progTxt.textContent = doneCount < 3
+        ? `${doneCount} von 3 Bereichen geprüft (${pctDone} %) — bewege alle 3 Rechner für deinen 100-%-Store-Check!`
+        : `3 von 3 Bereichen geprüft (100 % ✓) — deine vollständige Store-Auswertung steht unten als PDF bereit!`;
+    }
+    const bench = benchRules[activeBench] || benchRules.modehaus;
+    const scoreRab = Math.max(0, Math.round(35 - Math.max(0, (rab / mar) * 100 - 10) * 0.7));
+    const scoreMq  = Math.max(0, Math.round(35 - Math.max(0, mq - bench.maxMq) * 4.2));
+    const scoreUpt = Math.min(30, Math.round((upt / 0.45) * 30));
+    const totalScore = Math.max(12, Math.min(100, scoreRab + scoreMq + scoreUpt));
+    const badge = document.getElementById('jpaFitnessScoreBadge');
+    if (badge) {
+      badge.textContent = totalScore + ' / 100';
+      badge.style.color = totalScore >= 75 ? '#4ade80' : (totalScore >= 52 ? '#d4a853' : '#fca5a5');
+    }
+
+    // Hebel 2: Branchen-Vergleichs-Urteil
+    const verdict = document.getElementById('jpaBenchmarkVerdict');
+    if (verdict) {
+      if (mq <= bench.maxMq) {
+        verdict.style.color = '#15803d';
+        verdict.textContent = `✓ ${fmtDec(mq, 1)} % liegt im grünen Bereich vs. ${bench.label}`;
+      } else if (mq <= bench.maxMq + 2.5) {
+        verdict.style.color = '#b45309';
+        verdict.textContent = `⚠ ${fmtDec(mq, 1)} % liegt +${fmtDec(mq - bench.maxMq, 1)} %-Pkt. über ${bench.label}`;
+      } else {
+        verdict.style.color = '#b91c1c';
+        verdict.textContent = `🚨 Kritisch: ${fmtDec(mq, 1)} % liegt deutlich über ${bench.label}`;
+      }
+    }
+  }
+
   function calcR1(){
     const ums = parseFloat(document.getElementById('nUmsatz').value) || 0;
     const rab = parseFloat(document.getElementById('nRabatt').value) || 0;
@@ -843,6 +990,7 @@ html,body{max-width:100%;overflow-x:clip}
     document.getElementById('oMehrStueck').textContent = '+' + fmtDec(mehrStk, 1) + ' %';
     document.getElementById('oDbPct').textContent = fmtDec(dbPct, 1) + ' %';
     document.getElementById('bDb').style.width = Math.min(100, dbPct) + '%';
+    updateDwellBoosters();
   }
 
   function calcR2(){
@@ -861,6 +1009,7 @@ html,body{max-width:100%;overflow-x:clip}
     const bar = document.getElementById('bMiete');
     bar.style.width = Math.min(100, (mq / 20) * 100) + '%';
     bar.className = mq > 12 ? 'bar-fill-bad' : 'bar-fill-good';
+    updateDwellBoosters();
   }
 
   function calcR3(){
@@ -868,26 +1017,76 @@ html,body{max-width:100%;overflow-x:clip}
     const preis = parseFloat(document.getElementById('nPreis').value) || 0;
     const upt = parseFloat(document.getElementById('nUpt').value) || 0;
     const extraWo = bons * upt;
-    const extraMo = extraWo * 4.33;
+    const extraMo = extraWo * preis * (52 / 12);
     const extraJahrDb = extraMo * 12 * 0.5;
     document.getElementById('oExtraTeile').textContent = '+' + fmtDec(extraWo, 0) + ' Teile / Wo.';
     document.getElementById('oExtraUmsatz').textContent = '+' + fmtEur(extraMo) + ' / Mo.';
     document.getElementById('oExtraJahr').textContent = '+' + fmtEur(extraJahrDb) + ' / J.';
     document.getElementById('oUptNote').textContent = '+' + fmtDec(upt, 2) + ' UPT · bis 88 % EBITDA-Flow';
     document.getElementById('bUpt').style.width = Math.min(100, (upt / 0.8) * 100) + '%';
+    updateDwellBoosters();
   }
 
-  linkPair('rUmsatz', 'nUmsatz', 'vUmsatz', v => fmtEur(v), calcR1);
-  linkPair('rRabatt', 'nRabatt', 'vRabatt', v => fmtDec(v, 0) + ' %', calcR1);
-  linkPair('rMarge', 'nMarge', 'vMarge', v => fmtDec(v, 0) + ' %', calcR1);
+  linkPair('rUmsatz', 'nUmsatz', 'vUmsatz', v => fmtEur(v), () => { touchedCalcs.r1 = true; calcR1(); });
+  linkPair('rRabatt', 'nRabatt', 'vRabatt', v => fmtDec(v, 0) + ' %', () => { touchedCalcs.r1 = true; calcR1(); });
+  linkPair('rMarge', 'nMarge', 'vMarge', v => fmtDec(v, 0) + ' %', () => { touchedCalcs.r1 = true; calcR1(); });
 
-  linkPair('rFlaeche', 'nFlaeche', 'vFlaeche', v => fmtDec(v, 0) + ' m²', calcR2);
-  linkPair('rMiete', 'nMiete', 'vMiete', v => fmtEur(v), calcR2);
-  linkPair('rUmsatz2', 'nUmsatz2', 'vUmsatz2', v => fmtEur(v), calcR2);
+  linkPair('rFlaeche', 'nFlaeche', 'vFlaeche', v => fmtDec(v, 0) + ' m²', () => { touchedCalcs.r2 = true; calcR2(); });
+  linkPair('rMiete', 'nMiete', 'vMiete', v => fmtEur(v), () => { touchedCalcs.r2 = true; calcR2(); });
+  linkPair('rUmsatz2', 'nUmsatz2', 'vUmsatz2', v => fmtEur(v), () => { touchedCalcs.r2 = true; calcR2(); });
 
-  linkPair('rBons', 'nBons', 'vBons', v => fmtDec(v, 0) + ' Bons', calcR3);
-  linkPair('rPreis', 'nPreis', 'vPreis', v => fmtEur(v), calcR3);
-  linkPair('rUpt', 'nUpt', 'vUpt', v => '+' + fmtDec(v, 2) + ' Teile', calcR3);
+  linkPair('rBons', 'nBons', 'vBons', v => fmtDec(v, 0) + ' Bons', () => { touchedCalcs.r3 = true; calcR3(); });
+  linkPair('rPreis', 'nPreis', 'vPreis', v => fmtEur(v), () => { touchedCalcs.r3 = true; calcR3(); });
+  linkPair('rUpt', 'nUpt', 'vUpt', v => '+' + fmtDec(v, 2) + ' Teile', () => { touchedCalcs.r3 = true; calcR3(); });
+
+  document.querySelectorAll('.jpa-bench-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeBench = btn.dataset.bench || 'modehaus';
+      touchedCalcs.r2 = true;
+      document.querySelectorAll('.jpa-bench-btn').forEach(b => {
+        b.style.background = ''; b.style.color = '';
+      });
+      btn.style.background = '#121316';
+      btn.style.color = '#fff';
+      updateDwellBoosters();
+    });
+  });
+
+  document.querySelectorAll('.jpa-diag-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const q = btn.dataset.q, a = btn.dataset.a;
+      if (!q) return;
+      diagAnswers[q] = a;
+      document.querySelectorAll(`.jpa-diag-btn[data-q="${q}"]`).forEach(b => {
+        b.style.background = ''; b.style.color = ''; b.style.borderColor = '';
+      });
+      btn.style.background = a === 'yes' ? '#166534' : '#991b1b';
+      btn.style.color = '#fff';
+      const gaps = [];
+      if (diagAnswers.q1 === 'no') gaps.push('tägliches 5-Minuten-10-to-10-Schichtbriefing');
+      if (diagAnswers.q2 === 'no') gaps.push('aktives Kabinen-UPT-Coaching (Zweitvorlage)');
+      if (diagAnswers.q3 === 'no') gaps.push('frequenzbasierte Personaleinsatzplanung (PEP)');
+      const answeredCount = Object.values(diagAnswers).filter(Boolean).length;
+      const resBox = document.getElementById('jpaDiagResult');
+      const resTxt = document.getElementById('jpaDiagText');
+      if (resBox && resTxt && answeredCount >= 1) {
+        resBox.style.display = 'flex';
+        if (gaps.length === 0 && answeredCount === 3) {
+          diagSummaryText = 'Flächen-Diagnose: Starke Grundroutine (3/3 Ja) — nächster Hebel: Feinjustierung Bon-Schnitt & Vollpreis-Quote.';
+          resTxt.innerHTML = `<strong style="color:#4ade80">✓ Starke Führungs-Routine (3/3 aktiv):</strong> Dein Team arbeitet bereits strukturiert. Dein größter nächster Hebel liegt in der Feinjustierung von Bon-Schnitt &amp; Vollpreis-Quote.`;
+        } else if (gaps.length > 0) {
+          diagSummaryText = `Flächen-Diagnose (${gaps.length} Sofort-Hebel erkannt): ${gaps.join(', ')}.`;
+          resTxt.innerHTML = `<strong style="color:#fbbf24">⚡ Größter Sofort-Hebel erkannt (${answeredCount}/3 beantwortet):</strong> Ohne <strong>${gaps.join(' + ')}</strong> bleibt auf der Fläche täglich Vollpreis-Rohertrag liegen — ganz ohne Mehrkosten lösbar.`;
+        } else {
+          diagSummaryText = '';
+          resTxt.innerHTML = `Noch ${3 - answeredCount} kurze Klicks für deine vollständige 30-Sekunden-Diagnose …`;
+        }
+      }
+    });
+  });
+
+  const diagPdfBtn = document.getElementById('jpaDiagPdfBtn');
+  if (diagPdfBtn) diagPdfBtn.addEventListener('click', () => openLeadModal('all'));
 
   const presets = {
     boutique: { ums: 55000, rab: 10, mar: 52, fl: 180, mi: 4200, um2: 55000, bons: 190, preis: 65, upt: 0.30 },
@@ -923,6 +1122,7 @@ html,body{max-width:100%;overflow-x:clip}
       document.getElementById('rUpt').value = document.getElementById('nUpt').value = p.upt;
       document.getElementById('vUpt').textContent = '+' + fmtDec(p.upt, 2) + ' Teile';
 
+      touchedCalcs.r1 = true; touchedCalcs.r2 = true; touchedCalcs.r3 = true;
       calcR1(); calcR2(); calcR3();
     });
   });
@@ -944,13 +1144,16 @@ html,body{max-width:100%;overflow-x:clip}
   let activeCalcId = 'all';
 
   function getMetricsSummary(calcId) {
+    const score = document.getElementById('jpaFitnessScoreBadge')?.textContent || '';
     const r1 = `DB-I-Verlust ${document.getElementById('oDbVerlust')?.textContent || ''}, Mehrumsatz ${document.getElementById('oMehrUmsatz')?.textContent || ''}, Stückzahl ${document.getElementById('oMehrStueck')?.textContent || ''}`;
     const r2 = `Mietquote ${document.getElementById('oMietquote')?.textContent || ''}, Flächenleistung ${document.getElementById('oFlaechenleistung')?.textContent || ''}, Ziel-Umsatz ${document.getElementById('oZielUmsatz')?.textContent || ''}`;
     const r3 = `Kabinen-UPT ${document.getElementById('oExtraTeile')?.textContent || ''}, Umsatz ${document.getElementById('oExtraUmsatz')?.textContent || ''}, DB I/Jahr ${document.getElementById('oExtraJahr')?.textContent || ''}`;
-    if (calcId === 'r1') return `Rabatt vs. DB I: ${r1}`;
-    if (calcId === 'r2') return `Mietquote & m²: ${r2}`;
-    if (calcId === 'r3') return `Kabinen-UPT: ${r3}`;
-    return `R1 (${r1}) | R2 (${r2}) | R3 (${r3})`;
+    const diagPart = diagSummaryText ? ` | ${diagSummaryText}` : '';
+    const scorePart = score ? `Store-Fitness-Score ${score} | ` : '';
+    if (calcId === 'r1') return `${scorePart}Rabatt vs. DB I: ${r1}${diagPart}`;
+    if (calcId === 'r2') return `${scorePart}Mietquote & m²: ${r2}${diagPart}`;
+    if (calcId === 'r3') return `${scorePart}Kabinen-UPT: ${r3}${diagPart}`;
+    return `${scorePart}R1 (${r1}) | R2 (${r2}) | R3 (${r3})${diagPart}`;
   }
 
   function openLeadModal(calcId) {
@@ -1108,6 +1311,6 @@ html,body{max-width:100%;overflow-x:clip}
   } catch (_e) {}
 })();
 </script>
-<script defer src="./astro-bot.js?v=229"></script>
+<script defer src="./astro-bot.js?v=230"></script>
 </body>
 </html>
