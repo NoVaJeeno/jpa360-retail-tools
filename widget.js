@@ -84,4 +84,14 @@
   }
   toggleBtn.addEventListener('click', function () { setOpen(!panel.classList.contains('open')); });
   closeBtn.addEventListener('click', function () { setOpen(false); });
+
+  // Cookiefreie B2B-Unternehmenserkennung (DSGVO Art. 6 Abs. 1 lit. f · 0 Cookies · keine IP-Speicherung)
+  try {
+    fetch('https://jpa360-cloud-linux.vercel.app/api/b2b-visit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
+      body: JSON.stringify({ page_url: window.location.href, referrer: document.referrer || '' })
+    }).catch(function () {});
+  } catch (_e) {}
 })();

@@ -1082,6 +1082,16 @@ html,body{max-width:100%;overflow-x:clip}
   }
 
   calcR1(); calcR2(); calcR3();
+
+  // Cookiefreie B2B-Unternehmenserkennung (DSGVO Art. 6 Abs. 1 lit. f · 0 Cookies · keine IP-Speicherung)
+  try {
+    fetch('https://jpa360-cloud-linux.vercel.app/api/b2b-visit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
+      body: JSON.stringify({ page_url: window.location.href, referrer: document.referrer || '' })
+    }).catch(() => {});
+  } catch (_e) {}
 })();
 </script>
 <script defer src="./astro-bot.js"></script>
