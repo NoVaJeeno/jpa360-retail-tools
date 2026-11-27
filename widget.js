@@ -82,16 +82,34 @@
     if (state) { panel.classList.add('open'); toggleBtn.setAttribute('aria-expanded', 'true'); }
     else { panel.classList.remove('open'); toggleBtn.setAttribute('aria-expanded', 'false'); }
   }
-  toggleBtn.addEventListener('click', function () { setOpen(!panel.classList.contains('open')); });
-  closeBtn.addEventListener('click', function () { setOpen(false); });
+  function trackEvt(name) {
+    try {
+      fetch('https://jpa360-cloud-linux.vercel.app/api/analytics', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        keepalive: true,
+        body: JSON.stringify({ event: name, property: 'HAUPTSEITE', page_url: window.location.href, referrer: document.referrer || '' })
+      }).catch(function () {});
+    } catch (_e) {}
+  }
 
-  // Cookiefreie B2B-Unternehmenserkennung inkl. SPA-Route-Tracking für HAUPTSEITE (DSGVO Art. 6 Abs. 1 lit. f · 0 Cookies)
+  toggleBtn.addEventListener('click', function () {
+    var opening = !panel.classList.contains('open');
+    setOpen(opening);
+    if (opening) trackEvt('widget_open');
+  });
+  closeBtn.addEventListener('click', function () { setOpen(false); });
+  var ctaEl = shadow.querySelector('.cta');
+  if (ctaEl) ctaEl.addEventListener('click', function () { trackEvt('widget_cta_click'); });
+
+  // Cookiefreie B2B-Unternehmenserkennung + First-Party Analytics inkl. SPA-Route-Tracking für HAUPTSEITE (DSGVO Art. 6 Abs. 1 lit. f · 0 Cookies)
   var lastSentUrl = '';
   function sendB2bSignal() {
     try {
       var cur = window.location.href;
       if (!cur || cur === lastSentUrl) return;
       lastSentUrl = cur;
+      trackEvt('pageview');
       fetch('https://jpa360-cloud-linux.vercel.app/api/b2b-visit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

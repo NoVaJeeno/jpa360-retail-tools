@@ -1083,13 +1083,27 @@ html,body{max-width:100%;overflow-x:clip}
 
   calcR1(); calcR2(); calcR3();
 
-  // Cookiefreie B2B-Unternehmenserkennung (DSGVO Art. 6 Abs. 1 lit. f · 0 Cookies · keine IP-Speicherung)
+  // Cookiefreie B2B-Unternehmenserkennung + First-Party Funnel-Analytics (DSGVO Art. 6 Abs. 1 lit. f · 0 Cookies · keine IP-Speicherung)
+  function trackRechnerEvt(name) {
+    try {
+      fetch('https://jpa360-cloud-linux.vercel.app/api/analytics', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        keepalive: true,
+        body: JSON.stringify({ event: name, property: 'RECHNER', page_url: window.location.href, referrer: document.referrer || '' })
+      }).catch(() => {});
+    } catch (_e) {}
+  }
+  trackRechnerEvt('pageview');
+  document.querySelectorAll('[data-pdf], #openLeadModalBtn').forEach(b => b.addEventListener('click', () => trackRechnerEvt('pdf_modal_open')));
+  const waUpBtn = document.getElementById('jpaLeadWaUpgrade');
+  if (waUpBtn) waUpBtn.addEventListener('click', () => trackRechnerEvt('whatsapp_upgrade_click'));
   try {
     fetch('https://jpa360-cloud-linux.vercel.app/api/b2b-visit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       keepalive: true,
-      body: JSON.stringify({ page_url: window.location.href, referrer: document.referrer || '' })
+      body: JSON.stringify({ property: 'RECHNER', page_url: window.location.href, referrer: document.referrer || '' })
     }).catch(() => {});
   } catch (_e) {}
 })();
