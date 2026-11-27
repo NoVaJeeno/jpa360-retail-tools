@@ -766,6 +766,50 @@ html,body{max-width:100%;overflow-x:clip}
   </div>
 </footer>
 
+<div id="jpaLeadModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(12,14,18,.72);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:18px">
+  <div style="background:#fff;color:#121316;max-width:490px;width:100%;max-height:92vh;overflow-y:auto;border-radius:18px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,.35);position:relative;border:1px solid rgba(18,19,22,.12)">
+    <button type="button" id="jpaLeadClose" aria-label="Schließen" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;width:32px;height:32px;border-radius:999px;font-size:18px;cursor:pointer;color:#121316">×</button>
+    <div id="jpaLeadFormBox">
+      <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#9a7228;font-weight:700;margin-bottom:4px">JPA 360° · Kostenlose 1-Seiten-Auswertung (PDF)</div>
+      <h3 style="margin:0 0 8px;font-size:20px;line-height:1.25">Deine persönliche PDF-Auswertung erhalten</h3>
+      <div id="jpaLeadMetricsPreview" style="font-size:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin-bottom:14px;color:#334155;line-height:1.45"></div>
+      <form id="jpaLeadForm" novalidate>
+        <input type="text" id="jpaLeadHp" name="website_hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" />
+        <label style="display:block;font-size:12px;font-weight:700;margin-bottom:4px">Geschäftliche E-Mail *</label>
+        <input type="email" id="jpaLeadEmail" required placeholder="inhaber@mein-store.de" style="width:100%;box-sizing:border-box;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:14px;margin-bottom:10px" />
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+          <div>
+            <label style="display:block;font-size:12px;font-weight:700;margin-bottom:4px">Laden / Unternehmen</label>
+            <input type="text" id="jpaLeadCompany" placeholder="z. B. Modehaus Muster" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:13.5px" />
+          </div>
+          <div>
+            <label style="display:block;font-size:12px;font-weight:700;margin-bottom:4px">Stadt / Ort</label>
+            <input type="text" id="jpaLeadCity" placeholder="z. B. Paderborn" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:13.5px" />
+          </div>
+        </div>
+        <label style="display:flex;align-items:flex-start;gap:8px;font-size:11.5px;color:#334155;line-height:1.45;margin-bottom:10px;cursor:pointer">
+          <input type="checkbox" id="jpaLeadConsent" required style="margin-top:2px" />
+          <span>Ich fordere die kostenlose 1-Seiten-Auswertung an und bin einverstanden (Art. 6 Abs. 1 lit. a/b DSGVO, § 7 UWG), dass <b>JPA 360° Retail Advisory (Jeeno Paulo Aring)</b> meine Angaben zur Erstellung der Auswertung speichert und mich einmalig per E-Mail zu meinen Zahlen kontaktieren darf. Kein Newsletter-Spam. Widerruf jederzeit formlos an <b>info@jp-aring-advisory.de</b>. Es gelten <a href="https://www.jp-aring-advisory.de/legal?section=datenschutz" target="_blank" rel="noopener" style="color:#9a7228;font-weight:700">Datenschutz</a> &amp; <a href="https://www.jp-aring-advisory.de/legal?section=impressum" target="_blank" rel="noopener" style="color:#9a7228;font-weight:700">Impressum</a>.</span>
+        </label>
+        <div style="font-size:10.5px;color:#64748b;line-height:1.4;margin-bottom:12px">Hinweis: Unverbindliche Modellrechnung auf Basis eigener Eingaben. Keine Steuerberatung (§ 2 StBerG), keine Rechtsberatung (§ 2 RDG), keine Umsatz- oder Erfolgsgarantie. Beratungsmandate ausschließlich als Dienstvertrag (§ 611 BGB).</div>
+        <div id="jpaLeadError" style="display:none;color:#b91c1c;background:#fef2f2;border:1px solid #fecaca;padding:8px 10px;border-radius:8px;font-size:12px;margin-bottom:10px"></div>
+        <button type="submit" id="jpaLeadSubmitBtn" style="width:100%;padding:12px 16px;border:none;border-radius:10px;background:#121316;color:#F7F5F0;font-weight:700;font-size:14px;cursor:pointer">PDF jetzt erzeugen &amp; herunterladen →</button>
+      </form>
+    </div>
+    <div id="jpaLeadSuccessBox" style="display:none;text-align:center;padding:8px 0">
+      <div style="font-size:28px;margin-bottom:6px;color:#16a34a">✓</div>
+      <h3 style="margin:0 0 8px;font-size:20px">Deine 1-Seiten-PDF ist bereit!</h3>
+      <p id="jpaLeadSuccessMsg" style="font-size:13.5px;color:#475569;line-height:1.5;margin:0 0 14px"></p>
+      <a id="jpaLeadDownloadBtn" href="#" download="JPA360_Store_Auswertung.pdf" style="display:block;text-align:center;padding:12px 16px;border-radius:10px;background:#d4a853;color:#121316;font-weight:800;font-size:14px;text-decoration:none;margin-bottom:14px">PDF erneut herunterladen ↓</a>
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px;text-align:left;margin-bottom:6px">
+        <div style="font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#9a7228;font-weight:700;margin-bottom:4px">Nächster Schritt (optional · 0 €)</div>
+        <div style="font-size:13px;color:#1e293b;line-height:1.45;margin-bottom:10px">Willst du meinen ehrlichen 2-Minuten-Blick aus 10+ Jahren Store-Management? Schick mir 2 Fotos (Schaufenster + Blick zur Kabine) — deine berechneten Zahlen sind schon vorausgefüllt:</div>
+        <a id="jpaLeadWaUpgrade" href="https://wa.me/491708957669" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;padding:11px 14px;border-radius:10px;background:#16a34a;color:#fff;font-weight:700;font-size:13.5px;text-decoration:none">2-Fotos-Check per WhatsApp starten (0 €) →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 (function(){
   const fmtEur = n => new Intl.NumberFormat('de-DE', {maximumFractionDigits:0}).format(Math.round(n)) + ' €';
@@ -1040,49 +1084,6 @@ html,body{max-width:100%;overflow-x:clip}
   calcR1(); calcR2(); calcR3();
 })();
 </script>
-<div id="jpaLeadModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(12,14,18,.72);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:18px">
-  <div style="background:#fff;color:#121316;max-width:490px;width:100%;max-height:92vh;overflow-y:auto;border-radius:18px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,.35);position:relative;border:1px solid rgba(18,19,22,.12)">
-    <button type="button" id="jpaLeadClose" aria-label="Schließen" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;width:32px;height:32px;border-radius:999px;font-size:18px;cursor:pointer;color:#121316">×</button>
-    <div id="jpaLeadFormBox">
-      <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#9a7228;font-weight:700;margin-bottom:4px">JPA 360° · Kostenlose 1-Seiten-Auswertung (PDF)</div>
-      <h3 style="margin:0 0 8px;font-size:20px;line-height:1.25">Deine persönliche PDF-Auswertung erhalten</h3>
-      <div id="jpaLeadMetricsPreview" style="font-size:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin-bottom:14px;color:#334155;line-height:1.45"></div>
-      <form id="jpaLeadForm" novalidate>
-        <input type="text" id="jpaLeadHp" name="website_hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" />
-        <label style="display:block;font-size:12px;font-weight:700;margin-bottom:4px">Geschäftliche E-Mail *</label>
-        <input type="email" id="jpaLeadEmail" required placeholder="inhaber@mein-store.de" style="width:100%;box-sizing:border-box;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:14px;margin-bottom:10px" />
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
-          <div>
-            <label style="display:block;font-size:12px;font-weight:700;margin-bottom:4px">Laden / Unternehmen</label>
-            <input type="text" id="jpaLeadCompany" placeholder="z. B. Modehaus Muster" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:13.5px" />
-          </div>
-          <div>
-            <label style="display:block;font-size:12px;font-weight:700;margin-bottom:4px">Stadt / Ort</label>
-            <input type="text" id="jpaLeadCity" placeholder="z. B. Paderborn" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:13.5px" />
-          </div>
-        </div>
-        <label style="display:flex;align-items:flex-start;gap:8px;font-size:11.5px;color:#334155;line-height:1.45;margin-bottom:10px;cursor:pointer">
-          <input type="checkbox" id="jpaLeadConsent" required style="margin-top:2px" />
-          <span>Ich fordere die kostenlose 1-Seiten-Auswertung an und bin einverstanden (Art. 6 Abs. 1 lit. a/b DSGVO, § 7 UWG), dass <b>JPA 360° Retail Advisory (Jeeno Paulo Aring)</b> meine Angaben zur Erstellung der Auswertung speichert und mich einmalig per E-Mail zu meinen Zahlen kontaktieren darf. Kein Newsletter-Spam. Widerruf jederzeit formlos an <b>info@jp-aring-advisory.de</b>. Es gelten <a href="https://www.jp-aring-advisory.de/legal?section=datenschutz" target="_blank" rel="noopener" style="color:#9a7228;font-weight:700">Datenschutz</a> &amp; <a href="https://www.jp-aring-advisory.de/legal?section=impressum" target="_blank" rel="noopener" style="color:#9a7228;font-weight:700">Impressum</a>.</span>
-        </label>
-        <div style="font-size:10.5px;color:#64748b;line-height:1.4;margin-bottom:12px">Hinweis: Unverbindliche Modellrechnung auf Basis eigener Eingaben. Keine Steuerberatung (§ 2 StBerG), keine Rechtsberatung (§ 2 RDG), keine Umsatz- oder Erfolgsgarantie. Beratungsmandate ausschließlich als Dienstvertrag (§ 611 BGB).</div>
-        <div id="jpaLeadError" style="display:none;color:#b91c1c;background:#fef2f2;border:1px solid #fecaca;padding:8px 10px;border-radius:8px;font-size:12px;margin-bottom:10px"></div>
-        <button type="submit" id="jpaLeadSubmitBtn" style="width:100%;padding:12px 16px;border:none;border-radius:10px;background:#121316;color:#F7F5F0;font-weight:700;font-size:14px;cursor:pointer">PDF jetzt erzeugen &amp; herunterladen →</button>
-      </form>
-    </div>
-    <div id="jpaLeadSuccessBox" style="display:none;text-align:center;padding:8px 0">
-      <div style="font-size:28px;margin-bottom:6px;color:#16a34a">✓</div>
-      <h3 style="margin:0 0 8px;font-size:20px">Deine 1-Seiten-PDF ist bereit!</h3>
-      <p id="jpaLeadSuccessMsg" style="font-size:13.5px;color:#475569;line-height:1.5;margin:0 0 14px"></p>
-      <a id="jpaLeadDownloadBtn" href="#" download="JPA360_Store_Auswertung.pdf" style="display:block;text-align:center;padding:12px 16px;border-radius:10px;background:#d4a853;color:#121316;font-weight:800;font-size:14px;text-decoration:none;margin-bottom:14px">PDF erneut herunterladen ↓</a>
-      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px;text-align:left;margin-bottom:6px">
-        <div style="font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#9a7228;font-weight:700;margin-bottom:4px">Nächster Schritt (optional · 0 €)</div>
-        <div style="font-size:13px;color:#1e293b;line-height:1.45;margin-bottom:10px">Willst du meinen ehrlichen 2-Minuten-Blick aus 10+ Jahren Store-Management? Schick mir 2 Fotos (Schaufenster + Blick zur Kabine) — deine berechneten Zahlen sind schon vorausgefüllt:</div>
-        <a id="jpaLeadWaUpgrade" href="https://wa.me/491708957669" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;padding:11px 14px;border-radius:10px;background:#16a34a;color:#fff;font-weight:700;font-size:13.5px;text-decoration:none">2-Fotos-Check per WhatsApp starten (0 €) →</a>
-      </div>
-    </div>
-  </div>
-</div>
 <script defer src="./astro-bot.js"></script>
 </body>
 </html>
