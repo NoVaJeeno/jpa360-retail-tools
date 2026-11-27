@@ -6,7 +6,7 @@
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://rechner.jp-aring-advisory.de; connect-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me mailto:;" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://rechner.jp-aring-advisory.de; connect-src 'self' https://cdn.jsdelivr.net https://jpa360-cloud-linux.vercel.app; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me mailto:;" />
 <title>Retail Rechner &amp; Einzelhandel Rechner (DACH): Rabatt, DB I, Mietquote &amp; UPT | JPA 360°</title>
 <meta name="description" content="Kostenloser Retail Rechner &amp; Einzelhandel Rechner für Deutschland, Österreich &amp; Schweiz (DACH): Rabatt vs. Deckungsbeitrag I (DB I), Mietquote pro m² &amp; Kabinen-UPT (+0,30) inkl. PDF-Export." />
 <meta property="og:type" content="website" />
@@ -499,6 +499,15 @@ html,body{max-width:100%;overflow-x:clip}
       </div>
     </div>
 
+    <div id="lead-magnet-bar" style="margin-top:26px;background:linear-gradient(135deg,#121316 0%,#1f232b 100%);color:#F7F5F0;border-radius:18px;padding:24px 26px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;border:1px solid rgba(196,154,82,.35)">
+      <div style="max-width:620px">
+        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#d4a853;font-weight:700;margin-bottom:6px">B2B-Lead-Magnet · 0 € · Sofort-Auswertung</div>
+        <div style="font-size:20px;font-weight:700;line-height:1.25;margin-bottom:6px">Deine 1-Seiten-Store-Auswertung (PDF) + 30-Tage-Sofort-Hebel</div>
+        <div style="font-size:13.5px;color:#cbd5e1;line-height:1.5">Sichere dir alle 3 oben berechneten Kennzahlen (DB I, Mietquote &amp; Kabinen-UPT) als sauberes 1-Seiten-PDF für deine Unterlagen — inkl. der 3 praxiserprobten Flächen-Hebel ohne Rabattverlust. Kein Newsletter-Spam.</div>
+      </div>
+      <button type="button" id="openLeadModalBtn" class="btn-light" style="border:none;cursor:pointer;padding:13px 20px;border-radius:10px;font-weight:700;font-size:13.5px;background:#d4a853;color:#121316">PDF-Auswertung freischalten (0 €) →</button>
+    </div>
+
     <div class="legal-note">
       <b>Methodischer &amp; rechtlicher Hinweis:</b> Alle Berechnungen stellen unverbindliche betriebswirtschaftliche Modellrechnungen auf Basis Ihrer eigenen Eingaben dar (im Kabinen-UPT-Modell gilt der Richtwert von bis zu 88 % Netto-Rohertrags-Durchfluss ins EBITDA bei gezielter Umsetzung ohne Rabattverlust). Sie ersetzen keine Steuer- oder Rechtsberatung und stellen keine Umsatz- oder Erfolgsgarantie dar. Beratungsmandate erfolgen ausschließlich als reiner Dienstvertrag gemäß § 611 BGB.
     </div>
@@ -876,13 +885,147 @@ html,body{max-width:100%;overflow-x:clip}
     });
   });
 
+  const LEAD_API_URL = 'https://jpa360-cloud-linux.vercel.app/api/lead';
+  let activeCalcId = 'all';
+
+  function getMetricsSummary(calcId) {
+    const r1 = `DB-I-Verlust ${document.getElementById('oDbVerlust')?.textContent || ''}, Mehrumsatz ${document.getElementById('oMehrUmsatz')?.textContent || ''}, Stückzahl ${document.getElementById('oMehrStueck')?.textContent || ''}`;
+    const r2 = `Mietquote ${document.getElementById('oMietquote')?.textContent || ''}, Flächenleistung ${document.getElementById('oFlaechenleistung')?.textContent || ''}, Ziel-Umsatz ${document.getElementById('oZielUmsatz')?.textContent || ''}`;
+    const r3 = `Kabinen-UPT ${document.getElementById('oExtraTeile')?.textContent || ''}, Umsatz ${document.getElementById('oExtraUmsatz')?.textContent || ''}, DB I/Jahr ${document.getElementById('oExtraJahr')?.textContent || ''}`;
+    if (calcId === 'r1') return `Rabatt vs. DB I: ${r1}`;
+    if (calcId === 'r2') return `Mietquote & m²: ${r2}`;
+    if (calcId === 'r3') return `Kabinen-UPT: ${r3}`;
+    return `R1 (${r1}) | R2 (${r2}) | R3 (${r3})`;
+  }
+
+  function openLeadModal(calcId) {
+    activeCalcId = calcId || 'all';
+    const modal = document.getElementById('jpaLeadModal');
+    const preview = document.getElementById('jpaLeadMetricsPreview');
+    const errEl = document.getElementById('jpaLeadError');
+    const formBox = document.getElementById('jpaLeadFormBox');
+    const successBox = document.getElementById('jpaLeadSuccessBox');
+    if (preview) preview.textContent = getMetricsSummary(activeCalcId);
+    if (errEl) { errEl.style.display = 'none'; errEl.textContent = ''; }
+    if (formBox) formBox.style.display = 'block';
+    if (successBox) successBox.style.display = 'none';
+    if (modal) modal.style.display = 'flex';
+  }
+
   document.querySelectorAll('[data-pdf]').forEach(btn => {
-    btn.addEventListener('click', () => window.print());
+    btn.addEventListener('click', () => openLeadModal(btn.dataset.pdf || 'all'));
   });
+  const openBtn = document.getElementById('openLeadModalBtn');
+  if (openBtn) openBtn.addEventListener('click', () => openLeadModal('all'));
+
+  const closeBtn = document.getElementById('jpaLeadClose');
+  if (closeBtn) closeBtn.addEventListener('click', () => {
+    const m = document.getElementById('jpaLeadModal');
+    if (m) m.style.display = 'none';
+  });
+
+  const leadForm = document.getElementById('jpaLeadForm');
+  if (leadForm) {
+    leadForm.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const errEl = document.getElementById('jpaLeadError');
+      const submitBtn = document.getElementById('jpaLeadSubmitBtn');
+      const email = (document.getElementById('jpaLeadEmail')?.value || '').trim();
+      const company = (document.getElementById('jpaLeadCompany')?.value || '').trim();
+      const city = (document.getElementById('jpaLeadCity')?.value || '').trim();
+      const consent = !!document.getElementById('jpaLeadConsent')?.checked;
+      const website_hp = (document.getElementById('jpaLeadHp')?.value || '').trim();
+      const metrics = getMetricsSummary(activeCalcId);
+
+      if (!email || !email.includes('@')) {
+        errEl.textContent = 'Bitte eine gültige geschäftliche E-Mail-Adresse eingeben.';
+        errEl.style.display = 'block';
+        return;
+      }
+      if (!consent) {
+        errEl.textContent = 'Bitte kurz die DSGVO-Einwilligung bestätigen.';
+        errEl.style.display = 'block';
+        return;
+      }
+      errEl.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Wird freigeschaltet …';
+
+      try {
+        await fetch(LEAD_API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email, company, city,
+            calculator_id: activeCalcId,
+            metrics_summary: metrics,
+            source_url: window.location.href,
+            consent: true,
+            website_hp
+          })
+        });
+      } catch (_e) {
+        // Non-blocking: user still receives immediate PDF export
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'PDF jetzt freischalten & speichern →';
+      }
+
+      const waLink = document.getElementById('jpaLeadWaUpgrade');
+      if (waLink) {
+        const waText = `Hallo Jeeno, ich habe gerade meine Store-Auswertung auf rechner.jp-aring-advisory.de erstellt (${company || 'mein Store'}${city ? ', ' + city : ''}): ${metrics}. Hier sind meine 2 Fotos (Schaufenster + Weg zur Kabine) für deine ehrliche 2-Minuten-Sprachnachricht.`;
+        waLink.href = 'https://wa.me/491708957669?text=' + encodeURIComponent(waText);
+      }
+      document.getElementById('jpaLeadFormBox').style.display = 'none';
+      document.getElementById('jpaLeadSuccessBox').style.display = 'block';
+      setTimeout(() => window.print(), 350);
+    });
+  }
 
   calcR1(); calcR2(); calcR3();
 })();
 </script>
+<div id="jpaLeadModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(12,14,18,.72);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:18px">
+  <div style="background:#fff;color:#121316;max-width:480px;width:100%;border-radius:18px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,.35);position:relative;border:1px solid rgba(18,19,22,.12)">
+    <button type="button" id="jpaLeadClose" aria-label="Schließen" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;width:32px;height:32px;border-radius:999px;font-size:18px;cursor:pointer;color:#121316">×</button>
+    <div id="jpaLeadFormBox">
+      <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#9a7228;font-weight:700;margin-bottom:4px">JPA 360° · Kostenlose 1-Seiten-Auswertung</div>
+      <h3 style="margin:0 0 8px;font-size:20px;line-height:1.25">Deine PDF-Auswertung freischalten</h3>
+      <div id="jpaLeadMetricsPreview" style="font-size:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin-bottom:14px;color:#334155;line-height:1.45"></div>
+      <form id="jpaLeadForm" novalidate>
+        <input type="text" id="jpaLeadHp" name="website_hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" />
+        <label style="display:block;font-size:12px;font-weight:700;margin-bottom:4px">Geschäftliche E-Mail *</label>
+        <input type="email" id="jpaLeadEmail" required placeholder="inhaber@mein-store.de" style="width:100%;box-sizing:border-box;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:14px;margin-bottom:10px" />
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+          <div>
+            <label style="display:block;font-size:12px;font-weight:700;margin-bottom:4px">Laden / Unternehmen</label>
+            <input type="text" id="jpaLeadCompany" placeholder="z. B. Modehaus Muster" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:13.5px" />
+          </div>
+          <div>
+            <label style="display:block;font-size:12px;font-weight:700;margin-bottom:4px">Stadt / Ort</label>
+            <input type="text" id="jpaLeadCity" placeholder="z. B. Paderborn" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:13.5px" />
+          </div>
+        </div>
+        <label style="display:flex;align-items:flex-start;gap:8px;font-size:11.5px;color:#475569;line-height:1.4;margin-bottom:12px;cursor:pointer">
+          <input type="checkbox" id="jpaLeadConsent" required style="margin-top:2px" />
+          <span>Einverstanden mit der Speicherung meiner Auswertung (DSGVO Art. 6 Abs. 1 lit. a) &amp; einer einmaligen, unverbindlichen Rückfrage durch Jeeno Paulo Aring. Kein Newsletter-Spam.</span>
+        </label>
+        <div id="jpaLeadError" style="display:none;color:#b91c1c;background:#fef2f2;border:1px solid #fecaca;padding:8px 10px;border-radius:8px;font-size:12px;margin-bottom:10px"></div>
+        <button type="submit" id="jpaLeadSubmitBtn" style="width:100%;padding:12px 16px;border:none;border-radius:10px;background:#121316;color:#F7F5F0;font-weight:700;font-size:14px;cursor:pointer">PDF jetzt freischalten &amp; speichern →</button>
+      </form>
+    </div>
+    <div id="jpaLeadSuccessBox" style="display:none;text-align:center;padding:8px 0">
+      <div style="font-size:28px;margin-bottom:6px">✓</div>
+      <h3 style="margin:0 0 8px;font-size:20px">Auswertung freigeschaltet!</h3>
+      <p style="font-size:13.5px;color:#475569;line-height:1.5;margin:0 0 16px">Der PDF-Druckdialog öffnet sich jetzt automatisch (einfach <b>„Als PDF sichern“</b> wählen). Deine Kennzahlen wurden sicher hinterlegt.</p>
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px;text-align:left;margin-bottom:14px">
+        <div style="font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#9a7228;font-weight:700;margin-bottom:4px">Nächster Schritt (optional · 0 €)</div>
+        <div style="font-size:13px;color:#1e293b;line-height:1.45;margin-bottom:10px">Willst du meinen ehrlichen 2-Minuten-Blick aus 10+ Jahren Store-Management? Schick mir 2 Fotos (Schaufenster + Blick zur Kabine) — deine berechneten Zahlen sind schon vorausgefüllt:</div>
+        <a id="jpaLeadWaUpgrade" href="https://wa.me/491708957669" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;padding:11px 14px;border-radius:10px;background:#16a34a;color:#fff;font-weight:700;font-size:13.5px;text-decoration:none">2-Fotos-Check per WhatsApp starten (0 €) →</a>
+      </div>
+    </div>
+  </div>
+</div>
 <script defer src="./astro-bot.js"></script>
 </body>
 </html>
