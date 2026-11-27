@@ -3,11 +3,11 @@
   <channel>
     <title>JPA 360° Retail &amp; SaaS-Ablösung Rechner (DE &amp; EN)</title>
     <link>https://rechner.jp-aring-advisory.de/</link>
-    <description>Kostenlose Live-Rechner für stationären Einzelhandel (Rabatt vs. DB I, Mietquote, Kabinen-UPT) &amp; eigene Software-Systeme statt teurer SaaS-Abos von Jeeno Paulo Aring.</description>
+    <description>Kostenlose Live-Rechner für stationären Einzelhandel (Mietquote, Rabatt vs. DB I, Kabinen-UPT, Warenumschlag, Flächenproduktivität, PEP, Kalkulationsfaktor, Inventur) &amp; eigene Software-Systeme statt teurer SaaS-Abos von Jeeno Paulo Aring.</description>
     <language>de-DE</language>
     <atom:link href="https://rechner.jp-aring-advisory.de/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Retail Rechner (DACH): Rabatt vs. DB I, Mietquote &amp; Kabinen-UPT</title>
+      <title>Retail Rechner Suite (DACH): Rabatt vs. DB I, Mietquote &amp; Kabinen-UPT</title>
       <link>https://rechner.jp-aring-advisory.de/</link>
       <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/</guid>
       <description>Interaktive Sofort-Rechner mit 3D JPA-Bot, 1-Klick-Szenarien und PDF-Export für den stationären Handel.</description>
@@ -25,22 +25,64 @@
       <description>Free international calculator for retail margin vs. discount loss, fitting-room UPT gain, and 3-year SaaS replacement savings.</description>
     </item>
     <item>
-      <title>Teures CRM-Abo ersetzen: Eigenes B2B-CRM ohne Seat-Gebühren</title>
-      <link>https://rechner.jp-aring-advisory.de/crm-saas-abo-ersetzen-eigenes-crm.html</link>
-      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/crm-saas-abo-ersetzen-eigenes-crm.html</guid>
-      <description>Direkter 3-Jahres-Vergleich zwischen laufender CRM-Miete und eigenem B2B-CRM.</description>
+      <title>Mietquote im Einzelhandel berechnen: Rechner, Formel &amp; Richtwerte</title>
+      <link>https://rechner.jp-aring-advisory.de/mietquote-einzelhandel-rechner.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/mietquote-einzelhandel-rechner.html</guid>
+      <description>Kostenloser Mietquote-Rechner für Mode-, Schuh- und Fachhandel: Warmmiete im Verhältnis zum Netto-Monatsumsatz, Umsatz pro m² und Break-even-Umsatz sofort berechnen (0 Cookies).</description>
     </item>
     <item>
-      <title>BI- &amp; Reporting-Abos ersetzen: Eigenes Live-Dashboard für Retail &amp; KMU</title>
-      <link>https://rechner.jp-aring-advisory.de/bi-dashboard-saas-ersetzen-eigenes-reporting.html</link>
-      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/bi-dashboard-saas-ersetzen-eigenes-reporting.html</guid>
-      <description>Eigenes Live-KPI-Dashboard für Deckungsbeitrag I, UPT und Mietquote ohne Pro-Nutzer-Lizenzkosten.</description>
+      <title>Rabatt &amp; Deckungsbeitrag I Rechner: Wieviel Mehrabsatz kostet ein Preisnachlass?</title>
+      <link>https://rechner.jp-aring-advisory.de/rabatt-deckungsbeitrag-rechner.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/rabatt-deckungsbeitrag-rechner.html</guid>
+      <description>Interaktiver Rabatt-Rechner für Einzelhändler: Berechnen Sie sofort, wie viel Deckungsbeitrag I durch 10 %, 15 % oder 20 % Rabatt verloren geht und wie viel Mehrabsatz nötig wäre.</description>
     </item>
     <item>
-      <title>Kostenloses Rabatt-Rechner Embed-Widget für Blogs &amp; Fachportale</title>
-      <link>https://rechner.jp-aring-advisory.de/embed.html</link>
-      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/embed.html</guid>
-      <description>1-Zeilen-iframe zum kostenlosen Einbetten des JPA 360° Rabatt-Rechners.</description>
+      <title>UPT Rechner Einzelhandel: Teile pro Bon &amp; Kabinen-Conversion berechnen</title>
+      <link>https://rechner.jp-aring-advisory.de/upt-kabinen-conversion-rechner.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/upt-kabinen-conversion-rechner.html</guid>
+      <description>Kostenloser UPT-Rechner (Units per Transaction) für Mode- und Fachgeschäfte: Berechnen Sie Teile pro Bon, Durchschnittsbon (ATV) und den Rohertragshebel an der Umkleidekabine.</description>
+    </item>
+    <item>
+      <title>Warenumschlag &amp; durchschnittliche Lagerdauer berechnen: Formel &amp; Rechner</title>
+      <link>https://rechner.jp-aring-advisory.de/warenumschlag-lagerdauer-rechner.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/warenumschlag-lagerdauer-rechner.html</guid>
+      <description>Kostenloser Warenumschlag-Rechner für Einzelhandel &amp; IHK-Praxis: Lagerumschlagshäufigkeit, durchschnittliche Lagerdauer (360 Tage) und GMROI (Kapitalrendite) sofort berechnen.</description>
+    </item>
+    <item>
+      <title>Flächenproduktivität &amp; Umsatz pro m² berechnen: Einzelhandel-Rechner</title>
+      <link>https://rechner.jp-aring-advisory.de/flaechenproduktivitaet-quadratmeterumsatz-rechner.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/flaechenproduktivitaet-quadratmeterumsatz-rechner.html</guid>
+      <description>Kostenloser Flächenproduktivitäts-Rechner für den Einzelhandel: Berechnen Sie Jahresumsatz pro m², Deckungsbeitrag I pro m² und Flächenertrag nach Abzug der Warmmiete.</description>
+    </item>
+    <item>
+      <title>Personalkostenquote &amp; Umsatz pro Mitarbeiterstunde im Einzelhandel berechnen</title>
+      <link>https://rechner.jp-aring-advisory.de/personalkostenquote-stundenleistung-rechner.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/personalkostenquote-stundenleistung-rechner.html</guid>
+      <description>Kostenloser Personalkostenquote- &amp; PEP-Rechner für den Einzelhandel: Personalkosten inkl. AG-Anteilen in % vom Umsatz sowie Netto-Umsatz pro Verkaufsstunde sofort berechnen.</description>
+    </item>
+    <item>
+      <title>Kalkulationsfaktor, Kalkulationszuschlag &amp; Handelsspanne berechnen (Rechner)</title>
+      <link>https://rechner.jp-aring-advisory.de/kalkulationsfaktor-handelsspanne-rechner.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/kalkulationsfaktor-handelsspanne-rechner.html</guid>
+      <description>Kostenloser Handelskalkulations-Rechner für Einzelhändler: Aus EK netto und Kalkulationsfaktor sofort VK brutto, Netto-VK, Kalkulationszuschlag (%) und echte Handelsspanne (%) berechnen.</description>
+    </item>
+    <item>
+      <title>Inventurdifferenz &amp; Schwundquote berechnen: Was Ladendiebstahl real kostet</title>
+      <link>https://rechner.jp-aring-advisory.de/inventurdifferenz-schwundquote-rechner.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/inventurdifferenz-schwundquote-rechner.html</guid>
+      <description>Kostenloser Inventurdifferenz-Rechner für den Einzelhandel: Schwundquote (%) berechnen und sofort sehen, wie viel Neu-Umsatz nötig ist, um Inventurverluste auszugleichen.</description>
+    </item>
+    <item>
+      <title>Conversion Rate im stationären Einzelhandel berechnen: Kundenfrequenz zu Kassenbons</title>
+      <link>https://rechner.jp-aring-advisory.de/conversion-rate-laden-rechner.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/conversion-rate-laden-rechner.html</guid>
+      <description>Kostenloser Laden-Conversion-Rechner für stationäre Einzelhändler: Abschlussquote (Kassenbons ÷ Ladenbesucher), Schaufenster-Stopp-Quote und Umsatzpotenzial live berechnen.</description>
+    </item>
+    <item>
+      <title>Break-Even-Umsatz im Einzelhandel berechnen: Ab welchem Tagesumsatz verdienen Sie Geld?</title>
+      <link>https://rechner.jp-aring-advisory.de/break-even-einzelhandel-rechner.html</link>
+      <guid isPermaLink="true">https://rechner.jp-aring-advisory.de/break-even-einzelhandel-rechner.html</guid>
+      <description>Kostenloser Break-Even-Rechner für Ladeninhaber &amp; Gründer: Berechnen Sie aus Miete, Personal, sonstigen Fixkosten und Rohertragsspanne Ihren exakten Mindest-Monats- und Tagesumsatz.</description>
     </item>
   </channel>
 </rss>

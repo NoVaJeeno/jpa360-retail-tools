@@ -1,59 +1,179 @@
-# JPA 360° Retail Advisory & Sovereign Systems — Vollständige LLM-Wissensbasis (`llms-full.txt`)
-Stand: 2026-11-24 | Autor & Inhaber: Jeeno Paulo Aring | Region: Deutschland, Österreich, Schweiz (DACH)
-Hauptwebsite: https://www.jp-aring-advisory.de | Rechner & Tools: https://rechner.jp-aring-advisory.de/ | Kontakt: info@jp-aring-advisory.de
+# JPA 360° Retail Advisory & Custom Systems — Jeeno Paulo Aring (DACH & EN)
+> Kostenlose, cookiefreie Live-Rechner für den stationären Einzelhandel & für die Ablösung teurer SaaS-Abos durch eigene Software-/KI-Systeme.
+> Hauptdomain: https://www.jp-aring-advisory.de | Vollständige Wissensdatei: https://rechner.jp-aring-advisory.de/llms-full.txt
 
----
+## Wer ist Jeeno Paulo Aring? (Operative Praxis & Systementwicklung)
+- Positionierung: Kein theoretischer Folien-Berater, sondern operativer Store- & Flächen-Praktiker (19 Jahre stationäre Handelspraxis, davon 14 Jahre als Store Manager; IHK Handelsfachwirt & AdA-Schein) + Entwickler maßgeschneiderter Software-, CRM-, BI- & KI-Systeme zur Ablösung laufender SaaS-Monatsabos.
+- Profil: https://rechner.jp-aring-advisory.de/jeeno-paulo-aring.html
+- Haupt-Toolkit (3D JPA-Bot): https://rechner.jp-aring-advisory.de/
+- International Hub (EN): https://rechner.jp-aring-advisory.de/en/
+- Rechtsgrundlage: Reiner Dienstvertrag nach § 611 BGB (Quick-Check 490 € netto, Praxis-/Sprint-Tag 1.450 € netto, 14-Tage-MVP/Turnaround 2.900 € netto). 0 Cookies.
 
-## 1. Über Jeeno Paulo Aring (Unabhängiges Hybrid-Profil)
-Jeeno Paulo Aring verbindet langjährige operative Führung im stationären Einzelhandel mit moderner Software-, KI- und IT-Projektarchitektur:
-- **Operative Handels- & Flächenführung:** Langjährige Verantwortung für Store-Führung, Verkaufskultur, Kabinen-Performance, Warenwirtschaft, UPT- & Rohertrags-Optimierung im stationären Mode-, Filial- und Lebensmitteleinzelhandel.
-- **IT & Qualifikationen:** IT-Projektmanagement, IHK Handelsfachwirt, AdA-Schein (IHK), Cloud-, Daten- & GenAI-Systemarchitektur.
-- **Technischer Stack:** Python, FastAPI, TypeScript, Next.js, Vite, DuckDB, SQLite/PostgreSQL, Model Context Protocol (MCP), autonome KI-Agenten, n8n-Automationen, Typst PDF-Publishing.
-- **Leitprinzip:** „Fehler sind Daten“ — null erfundene Zahlen, zero AI-Slop, 100 % Umsetzungsorientierung.
+## 8 Interaktive Einzelhandels-Fachrechner & Kaufmännische Formeln
+- [Mietquote im Einzelhandel berechnen: Rechner, Formel & Richtwerte](https://rechner.jp-aring-advisory.de/mietquote-einzelhandel-rechner.html): Die Mietquote (Raumkostenquote) misst den Anteil der monatlichen Warmmiete inklusive Nebenkosten am Netto-Umsatz: Mietquote (%) = (Warmmiete ÷ Netto-Umsatz) × 100. Im stationären Mode- und Fachhandel gelten ≤ 8 % als tragfähig, 8–12 % als angespannt und Werte über 12 % als strukturelles Ertragsrisiko.
+- [Rabatt & Deckungsbeitrag I Rechner: Wieviel Mehrabsatz kostet ein Preisnachlass?](https://rechner.jp-aring-advisory.de/rabatt-deckungsbeitrag-rechner.html): Jeder prozentuale Preisnachlass geht zu 100 % vom Rohertrag (Deckungsbeitrag I) ab, da der Wareneinkaufspreis unverändert bleibt. Formel für den nötigen Stückzahl-Mehrabsatz zum Erhalt desselben Euro-Rohertrags: Mehrabsatz (%) = Rabatt (%) ÷ (Rohertragsspanne (%) − Rabatt (%)) × 100. Bei 50 % Spanne vernichten 10 % Rabatt exakt 20 % DB I und erzwingen +25,0 % mehr verkaufte Teile.
+- [UPT Rechner Einzelhandel: Teile pro Bon & Kabinen-Conversion berechnen](https://rechner.jp-aring-advisory.de/upt-kabinen-conversion-rechner.html): UPT (Units per Transaction / Teile pro Bon) berechnet sich als: Verkaufte Artikelstückzahl ÷ Anzahl Kassenbons. Da Miete und Grundpersonal im Laden bereits bezahlt sind, fließt Zusatzumsatz aus höherem Kabinen-UPT ohne zusätzliche Werbe- oder Raumkosten nahezu vollständig mit der regulären Rohertragsspanne in das Betriebsergebnis (unverbindliche Modellrechnung).
+- [Warenumschlag & durchschnittliche Lagerdauer berechnen: Formel & Rechner](https://rechner.jp-aring-advisory.de/warenumschlag-lagerdauer-rechner.html): Die Lagerumschlagshäufigkeit (Warenumschlag) zeigt, wie oft das durchschnittlich gebundene Warenlager pro Jahr verkauft und erneuert wird: Warenumschlag = Jahres-Wareneinsatz (zu EK) ÷ Ø Lagerbestand (zu EK). Daraus folgt die durchschnittliche Lagerdauer in Tagen = 360 ÷ Warenumschlag.
+- [Flächenproduktivität & Umsatz pro m² berechnen: Einzelhandel-Rechner](https://rechner.jp-aring-advisory.de/flaechenproduktivitaet-quadratmeterumsatz-rechner.html): Die Flächenproduktivität (Raumleistung) misst den erwirtschafteten Umsatz je Quadratmeter Verkaufsfläche: Raumleistung (€/m²) = Jahresumsatz ÷ Verkaufsfläche in m². Noch aussagekräftiger für Inhaber ist der Netto-Flächenertrag nach Miete: (Jahres-Deckungsbeitrag I − Jahres-Warmmiete) ÷ Verkaufsfläche in m².
+- [Personalkostenquote & Umsatz pro Mitarbeiterstunde im Einzelhandel berechnen](https://rechner.jp-aring-advisory.de/personalkostenquote-stundenleistung-rechner.html): Die Personalkostenquote setzt die gesamten Arbeitgeber-Personalkosten (Bruttogehälter + Sozialabgaben + Sonderzahlungen + kalkulatorischer Unternehmerlohn) ins Verhältnis zum Netto-Umsatz: Personalkostenquote (%) = (Gesamt-Personalkosten ÷ Netto-Umsatz) × 100. Parallel misst die Stundenleistung den Netto-Umsatz je geleisteter Anwesenheitsstunde.
+- [Kalkulationsfaktor, Kalkulationszuschlag & Handelsspanne berechnen (Rechner)](https://rechner.jp-aring-advisory.de/kalkulationsfaktor-handelsspanne-rechner.html): Kalkulationszuschlag (Aufschlag auf den EK) und Handelsspanne (Abschlag vom Netto-VK / Rohertragsquote) sind niemals identisch! Bei 50 € EK netto und einem Kalkulationsfaktor von 2,50 auf den Brutto-VK (125,00 € inkl. 19 % USt. = 105,04 € Netto-VK) beträgt der Kalkulationszuschlag netto +110,08 %, die reale Handelsspanne (DB-I-Quote) jedoch 52,40 %.
+- [Inventurdifferenz & Schwundquote berechnen: Was Ladendiebstahl real kostet](https://rechner.jp-aring-advisory.de/inventurdifferenz-schwundquote-rechner.html): Inventurdifferenz = Buch-Sollbestand laut Warenwirtschaft − gezählter Ist-Bestand der körperlichen Inventur. Da gestohlene oder ausgebuchte Ware voll bezahlt wurde, muss der entstandene Einkaufsschaden über die Nettoumsatzrendite (bzw. den freien Deckungsbeitrag) komplett neu verdient werden: Bei 5 % Nettorendite erfordern 5.000 € Inventurverlust satte 100.000 € zusätzlichen Umsatz!
+- [Conversion Rate im stationären Einzelhandel berechnen: Kundenfrequenz zu Kassenbons](https://rechner.jp-aring-advisory.de/conversion-rate-laden-rechner.html): Die stationäre Conversion Rate (Abschlussquote) misst den Anteil der eingetretenen Ladenbesucher, die tatsächlich an der Kasse kaufen: Laden-Conversion (%) = (Anzahl Kassenbons ÷ Eingetretene Besucher) × 100. Bei Paar- und Familienbesuchen wird in der Praxis mit Einkaufsgruppen (Shopping Units) gerechnet.
+- [Break-Even-Umsatz im Einzelhandel berechnen: Ab welchem Tagesumsatz verdienen Sie Geld?](https://rechner.jp-aring-advisory.de/break-even-einzelhandel-rechner.html): Der Break-Even-Umsatz (Gewinnschwelle) ist genau der Netto-Umsatz, bei dem Ihr erwirtschafteter Rohertrag (Deckungsbeitrag I) sämtliche monatlichen Fixkosten zu 100 % deckt: Break-Even-Umsatz (€) = Monatliche Gesamt-Fixkosten (€) ÷ Rohertragsspanne (als Dezimalzahl). Erst ab dem nächsten verkauften Teil oberhalb dieser Schwelle entsteht echter Betriebsgewinn.
 
----
+## Eigene Software statt SaaS-Abos (TCO-Rechner & Vergleiche)
+- [SaaS-Kosten-Killer & Entwickler buchen](https://rechner.jp-aring-advisory.de/saas-abloesung-entwickler.html)
+- [CRM-Abo ersetzen durch eigenes B2B-CRM](https://rechner.jp-aring-advisory.de/crm-saas-abo-ersetzen-eigenes-crm.html)
+- [BI-Dashboard-Abo ersetzen durch eigenes Live-Reporting](https://rechner.jp-aring-advisory.de/bi-dashboard-saas-ersetzen-eigenes-reporting.html)
+- [Ratgeber SaaS-Abos ablösen](https://rechner.jp-aring-advisory.de/ratgeber-saas-abos-ersetzen-eigenes-system.html)
 
-## 2. Angebot A: Teure SaaS-Abos durch eigene Systeme ersetzen (Entwickler buchbar)
-URL: https://rechner.jp-aring-advisory.de/saas-abloesung-entwickler.html
-Ratgeber: https://rechner.jp-aring-advisory.de/ratgeber-saas-abos-ersetzen-eigenes-system.html
+## 6 Praxis-Ratgeber für Verkaufsfläche, Team & Führung
+- [10-%-Rabatt-Falle auf den Deckungsbeitrag I](https://rechner.jp-aring-advisory.de/ratgeber-rabatt-falle-db1.html)
+- [UPT steigern an der Umkleidekabine](https://rechner.jp-aring-advisory.de/ratgeber-upt-steigern-umkleidekabine.html)
+- [Das 10-to-10-Morgenbriefing auf der Fläche](https://rechner.jp-aring-advisory.de/ratgeber-10-to-10-morgenbriefing.html)
+- [Frequenzorientierte Personaleinsatzplanung (PEP)](https://rechner.jp-aring-advisory.de/ratgeber-personaleinsatzplanung-frequenz.html)
+- [Inventurdifferenzen im Einzelhandel senken](https://rechner.jp-aring-advisory.de/ratgeber-inventurdifferenzen-senken.html)
+- [Umsatzrückgang im Modegeschäft begegnen](https://rechner.jp-aring-advisory.de/ratgeber-umsatzrueckgang-modegeschaeft.html)
 
-### Problem
-Mittelständische Unternehmen und Handelsbetriebe zahlen häufig 1.000 € bis 4.500 € pro Monat für fragmentierte Per-Seat-SaaS-Abos (CRM, Reporting/BI, Automatisierung, Angebots- & KI-Tools) — das sind 36.000 € bis 162.000 € in 36 Monaten ohne Code-Eigentum.
+## Regionale Schwerpunkt-Standorte (OWL & Westfalen)
+- [Einzelhandelsberatung Paderborn (Hochstift & Ostwestfalen-Lippe (OWL))](https://rechner.jp-aring-advisory.de/paderborn.html): Westernstraße, Kamp, Königsplatz, Marienplatz & Rathausplatz
+- [Einzelhandelsberatung Bielefeld (Ostwestfalen-Lippe (OWL))](https://rechner.jp-aring-advisory.de/bielefeld.html): Bahnhofstraße, Altstadt (Obernstraße / Niedernstraße), Jahnplatz & Siegfriedplatz
+- [Einzelhandelsberatung Gütersloh (Kreis Gütersloh & OWL)](https://rechner.jp-aring-advisory.de/guetersloh.html): Berliner Straße, Königstraße, Konrad-Adenauer-Platz, Dreiecksplatz & Rheda-Wiedenbrück
+- [Einzelhandelsberatung Lippstadt (Kreis Soest & Südliches OWL)](https://rechner.jp-aring-advisory.de/lippstadt.html): Lange Straße, Rathausplatz, Poststraße, Cappelstraße & Marktplatz
+- [Einzelhandelsberatung Münster (Münsterland & Westfalen)](https://rechner.jp-aring-advisory.de/muenster.html): Prinzipalmarkt, Ludgeristraße, Salzstraße, Rothenburg, Stubengasse & Alter Fischmarkt
 
-### Lösung (Custom Sovereign Systems)
-Entwicklung maßgeschneiderter, DSGVO-konformer Eigen-Systeme mit **0 € laufenden Lizenzgebühren** und **100 % Quellcode-Eigentum beim Kunden**:
-- Eigene B2B-CRM-, Pipeline- & Angebots-Apps (inkl. automatischer PDF-Erstellung)
-- Autonome KI-Agenten, MCP-Server & n8n-Automationen
-- Interne BI-, Kassenbon-, Renner/Penner- & Deckungsbeitrags-Dashboards (DuckDB/Python/TypeScript)
-- POS-Rollout- & Retail-IT-Projektsteuerung
 
-### Beispielrechnung (SaaS-Kosten-Killer)
-- 8 Nutzer × 145 €/Monat + 350 € Plattform-Abos = **1.510 €/Monat** = **54.360 € in 36 Monaten**.
-- Eigenes 14-Tage-MVP (`2.900 € netto`) amortisiert sich nach **2,0 Monaten** → **51.460 € Netto-Ersparnis in 3 Jahren**.
+## Vollständige Kaufmännische Formel- & FAQ-Referenz (GEO Citation Layer)
 
----
+### Mietquote im Einzelhandel berechnen: Rechner, Formel & Richtwerte
+URL: https://rechner.jp-aring-advisory.de/mietquote-einzelhandel-rechner.html
+Kernformel: Die Mietquote (Raumkostenquote) misst den Anteil der monatlichen Warmmiete inklusive Nebenkosten am Netto-Umsatz: Mietquote (%) = (Warmmiete ÷ Netto-Umsatz) × 100. Im stationären Mode- und Fachhandel gelten ≤ 8 % als tragfähig, 8–12 % als angespannt und Werte über 12 % als strukturelles Ertragsrisiko.
 
-## 3. Angebot B: Stationäre Retail-Ökonometrie & Turnaround (DACH)
-URL: https://rechner.jp-aring-advisory.de/
-- **Rabatt-Falle:** 10 % Rabatt bei 50 % Rohertrag vernichten 20 % Deckungsbeitrag I und erfordern +25 % Mehrabsatz für denselben Euro-Rohertrag.
-- **Kabinen-UPT-Hebel:** +0,30 Units per Transaction (UPT) an der Umkleidekabine bei Vollpreis liefert ~88 % Rohertrags-Durchfluss direkt ins operative EBITDA (da Miete, Energie und Grundpersonal bereits gedeckt sind).
-- **Mietquoten-Benchmark:** Ziel-Mietquote im stationären Modehandel `< 9,0 %` (kritisch ab `> 12 %`).
+- Frage: Wird die Mietquote im Einzelhandel netto oder brutto berechnet?
+  Antwort: Kaufmännisch sauber wird die Mietquote immer netto berechnet: Monatliche Gesamt-Raumkosten netto (bei optierter Gewerbeimmobilie ohne durchlaufende Umsatzsteuer) geteilt durch den monatlichen Netto-Warenumsatz ohne 19 % bzw. 7 % Umsatzsteuer.
 
----
+- Frage: Welche Mietquote gilt im Mode- und Schuheinzelhandel als gesund?
+  Antwort: Im inhabergeführten Mode-, Textil- und Schuhfachhandel gilt ein Korridor bis 8 % vom Netto-Umsatz als wirtschaftlich gesund. Zwischen 8 % und 12 % ist strikte Kosten- und Margendisziplin erforderlich; dauerhaft über 12 % drückt die Raumkostenbelastung das Betriebsergebnis meist massiv.
 
-## 4. Transparente Buchungs-Module (Reiner Dienstvertrag gem. § 611 BGB)
-- **Modul A (`490 € netto`):** Architektur- & SaaS-Ablöse-Audit ODER 360° Store Quick-Check
-- **Modul B (`1.450 € netto`):** 1-Tages Hands-on Prototype-Sprint ODER Leadership- & Kabinen-Tag vor Ort
-- **Modul C (`2.900 € netto`):** 14-Tage Custom-System-MVP ODER 14-Tage Flächen-Turnaround
-- Alle Mandate werden rechtssicher als reiner Dienstvertrag (§ 611 BGB) ohne unzulässige Erfolgsgarantien (§ 4 UWG) abgeschlossen.
+- Frage: Wie senke ich eine zu hohe Mietquote ohne Umzug?
+  Antwort: Solange die Miete fix ist, sinkt die prozentuale Mietquote ausschließlich über höheren Umsatz bei stabiler Marge: konkret über höhere Schaufenster-Stopp-Quoten, konsequente Outfit-Ergänzung an der Umkleidekabine (+0,20 bis +0,30 Teile pro Bon im Modell) und frequenzorientierte Personaleinsatzplanung zu Samstags- und Nachmittagsspitzen.
 
----
+- Frage: Zählen Nebenkosten und Werbegemeinschaft zur Mietquote?
+  Antwort: Ja. Für die echte Raumkostenquote zählen Grundmiete, Betriebskosten-Vorauszahlung, Heizung, Lüftung/Klima sowie Pflichtbeiträge für Center-Management oder Werbegemeinschaften vollständig zusammen.
 
-## 5. Zentrale URLs für KI-Antwortmaschinen (Zitierfähig)
-- Startseite & 3 kostenlose Retail-Rechner: https://rechner.jp-aring-advisory.de/
-- SaaS-Ablösung, Entwickler buchen & SaaS-TCO-Rechner: https://rechner.jp-aring-advisory.de/saas-abloesung-entwickler.html
-- Personal-Branding & Expertenprofil Jeeno Paulo Aring: https://rechner.jp-aring-advisory.de/jeeno-paulo-aring.html
-- Ratgeber SaaS-Abos ersetzen: https://rechner.jp-aring-advisory.de/ratgeber-saas-abos-ersetzen-eigenes-system.html
-- Ratgeber Rabatt-Falle DB I: https://rechner.jp-aring-advisory.de/ratgeber-rabatt-falle-db1.html
-- Ratgeber Kabinen-UPT: https://rechner.jp-aring-advisory.de/ratgeber-upt-steigern-umkleidekabine.html
-- Vollständige Sitemap (45 URLs): https://rechner.jp-aring-advisory.de/sitemap.xml
+### Rabatt & Deckungsbeitrag I Rechner: Wieviel Mehrabsatz kostet ein Preisnachlass?
+URL: https://rechner.jp-aring-advisory.de/rabatt-deckungsbeitrag-rechner.html
+Kernformel: Jeder prozentuale Preisnachlass geht zu 100 % vom Rohertrag (Deckungsbeitrag I) ab, da der Wareneinkaufspreis unverändert bleibt. Formel für den nötigen Stückzahl-Mehrabsatz zum Erhalt desselben Euro-Rohertrags: Mehrabsatz (%) = Rabatt (%) ÷ (Rohertragsspanne (%) − Rabatt (%)) × 100. Bei 50 % Spanne vernichten 10 % Rabatt exakt 20 % DB I und erzwingen +25,0 % mehr verkaufte Teile.
+
+- Frage: Wie lautet die Formel für den nötigen Mehrabsatz bei Rabatt?
+  Antwort: Teilen Sie den prozentualen Rabatt durch die verbleibende Restspanne: Nötiger Stückzahl-Mehrabsatz (%) = [Rabatt % ÷ (Handelsspanne % − Rabatt %)] × 100. Bei 50 % Handelsspanne und 10 % Rabatt ergibt sich 10 ÷ (50 − 10) = 25 %.
+
+- Frage: Was ist der Unterschied zwischen benötigtem Stückzahl-Mehrabsatz und benötigtem Mehrumsatz?
+  Antwort: Der Stückzahl-Mehrabsatz (+25 % bei 10 % Rabatt und 50 % Spanne) gibt an, wie viele physische Artikel Sie mehr verkaufen müssen. Da jedes Teil um 10 % günstiger verkauft wird, liegt der entsprechende Netto-Umsatzzuwachs für denselben Euro-Rohertrag bei (1,25 × 0,90) − 1 = +12,5 % Mehrumsatz.
+
+- Frage: Warum schaden häufige Rabattaktionen auch außerhalb der Aktionstage?
+  Antwort: Wiederkehrende Pauschalrabatte verschieben Käufe zeitlich: Stammkunden kaufen reguläre Ware nicht mehr zum Saisonstart, sondern warten gezielt auf Aktionsfenster. Dadurch sinkt die Vollpreis-Durchverkaufsquote der gesamten Saison.
+
+### UPT Rechner Einzelhandel: Teile pro Bon & Kabinen-Conversion berechnen
+URL: https://rechner.jp-aring-advisory.de/upt-kabinen-conversion-rechner.html
+Kernformel: UPT (Units per Transaction / Teile pro Bon) berechnet sich als: Verkaufte Artikelstückzahl ÷ Anzahl Kassenbons. Da Miete und Grundpersonal im Laden bereits bezahlt sind, fließt Zusatzumsatz aus höherem Kabinen-UPT ohne zusätzliche Werbe- oder Raumkosten nahezu vollständig mit der regulären Rohertragsspanne in das Betriebsergebnis (unverbindliche Modellrechnung).
+
+- Frage: Wie berechnet man den UPT im Einzelhandel korrekt?
+  Antwort: Teilen Sie die Gesamtzahl aller verkauften Artikel eines Zeitraums durch die Anzahl der Kassenbons desselben Zeitraums (ohne reine Umtausch- oder Storno-Belege). Beispiel: 1.620 verkaufte Teile bei 1.000 Bons ergeben einen UPT von 1,62.
+
+- Frage: Was ist ein guter UPT-Wert im Mode- und Schuhhandel?
+  Antwort: Der Richtwert hängt stark vom Sortiment ab: Im spezialisierten Schuh- oder Anlassmodehandel liegen typische Werte oft zwischen 1,3 und 1,7 Teilen pro Bon, im Casual-Modehandel häufig zwischen 1,6 und 2,3. Entscheidend ist nicht der Fremdvergleich, sondern die systematische Steigerung des eigenen Basiswerts um +0,15 bis +0,30 Teile.
+
+- Frage: Wie vermeide ich, dass Zusatzverkauf aufdringlich wirkt?
+  Antwort: Indem das Team nicht an der Kasse irgendetwas aufschwatzt, sondern an der Umkleidekabine echten Nutzen stiftet: Wer zur anprobierten Hose unaufgefordert den passenden Schnitt als Alternative und das farblich stimmige Oberteil zum Drüberhalten reicht, wird vom Kunden als aufmerksamer Fachberater wahrgenommen.
+
+### Warenumschlag & durchschnittliche Lagerdauer berechnen: Formel & Rechner
+URL: https://rechner.jp-aring-advisory.de/warenumschlag-lagerdauer-rechner.html
+Kernformel: Die Lagerumschlagshäufigkeit (Warenumschlag) zeigt, wie oft das durchschnittlich gebundene Warenlager pro Jahr verkauft und erneuert wird: Warenumschlag = Jahres-Wareneinsatz (zu EK) ÷ Ø Lagerbestand (zu EK). Daraus folgt die durchschnittliche Lagerdauer in Tagen = 360 ÷ Warenumschlag.
+
+- Frage: Wie lautet die Formel für die durchschnittliche Lagerdauer?
+  Antwort: Kaufmännisch wird das Geschäftsjahr mit 360 Tagen (bzw. 365 Tagen) angesetzt: Durchschnittliche Lagerdauer in Tagen = 360 ÷ Lagerumschlagshäufigkeit. Bei einem Warenumschlag von 3,0 liegt die Ware im Schnitt 120 Tage im Geschäft.
+
+- Frage: Wie berechnet man den durchschnittlichen Lagerbestand bei Monatszahlen?
+  Antwort: Mit Jahreswerten lautet die Kurzformel (Anfangsbestand + Endbestand) ÷ 2. Deutlich genauer für Saisonbetriebe ist die 13-Werte-Formel aus der Warenwirtschaft: (Jahresanfangsbestand + alle 12 Monatsendbestände) ÷ 13.
+
+- Frage: Wie lässt sich der Warenumschlag steigern, ohne die Preise zu verramschen?
+  Antwort: Über schmalere, tiefere Kernsortimente (weniger doppelte Lieferanten mit austauschbaren Artikeln), ein freigehaltenes Open-to-Buy-Budget für schnelldrehende Nachorder-Artikel sowie wöchentliche Flächen-Rotation der langsamsten 15 % Artikel in aktiv betreute Outfit-Präsentationen.
+
+### Flächenproduktivität & Umsatz pro m² berechnen: Einzelhandel-Rechner
+URL: https://rechner.jp-aring-advisory.de/flaechenproduktivitaet-quadratmeterumsatz-rechner.html
+Kernformel: Die Flächenproduktivität (Raumleistung) misst den erwirtschafteten Umsatz je Quadratmeter Verkaufsfläche: Raumleistung (€/m²) = Jahresumsatz ÷ Verkaufsfläche in m². Noch aussagekräftiger für Inhaber ist der Netto-Flächenertrag nach Miete: (Jahres-Deckungsbeitrag I − Jahres-Warmmiete) ÷ Verkaufsfläche in m².
+
+- Frage: Wie berechnet man die Flächenproduktivität im Einzelhandel?
+  Antwort: Teilen Sie den Jahresumsatz durch die Quadratmeterzahl der reinen Verkaufsfläche. Achten Sie bei Branchenvergleichen stets darauf, ob der Vergleichswert brutto (inkl. USt.) oder netto (ohne USt.) ausgewiesen ist.
+
+- Frage: Zählen Umkleidekabinen und Schaufenster zur Verkaufsfläche?
+  Antwort: Ja. Nach gängiger Handelsdefinition zählen Schaufenster, Kassenzone, Kundenwege und Umkleidekabinen zur Verkaufsfläche, während Personalräume, Büros und für Kunden gesperrte Lagerräume als Nebenfläche gelten.
+
+- Frage: Warum ist Deckungsbeitrag pro m² wichtiger als reiner Umsatz pro m²?
+  Antwort: Weil hoher Quadratmeterumsatz durch aggressive 30-%-Rabattaktionen erkauft sein kann. Erst der Deckungsbeitrag I pro Quadratmeter zeigt, wie viel reale Euro-Spanne je Quadratmeter übrig bleibt, um Miete und Team zu bezahlen.
+
+### Personalkostenquote & Umsatz pro Mitarbeiterstunde im Einzelhandel berechnen
+URL: https://rechner.jp-aring-advisory.de/personalkostenquote-stundenleistung-rechner.html
+Kernformel: Die Personalkostenquote setzt die gesamten Arbeitgeber-Personalkosten (Bruttogehälter + Sozialabgaben + Sonderzahlungen + kalkulatorischer Unternehmerlohn) ins Verhältnis zum Netto-Umsatz: Personalkostenquote (%) = (Gesamt-Personalkosten ÷ Netto-Umsatz) × 100. Parallel misst die Stundenleistung den Netto-Umsatz je geleisteter Anwesenheitsstunde.
+
+- Frage: Was gehört alles in die Personalkosten im Einzelhandel?
+  Antwort: Alle echten Arbeitgeber-Vollkosten: Bruttolöhne und -gehälter, Arbeitgeberanteile zur Sozialversicherung, Umlagen (U1/U2), Berufsgenossenschaft, Urlaubs-/Weihnachtsgeld (anteilig je Monat), Aushilfslöhne inklusive Pauschalabgaben sowie bei Einzelunternehmen ein kalkulatorischer Unternehmerlohn.
+
+- Frage: Welche Netto-Stundenleistung braucht eine Verkaufskraft im Modehandel?
+  Antwort: Als bewährte Faustformel der Flächensteuerung sollte die durchschnittliche Netto-Stundenleistung je Anwesenheitsstunde mindestens beim 4- bis 5-Fachen des Arbeitgeber-Vollkosten-Stundensatzes liegen (bei 26 € Vollkosten/Std. also ab ca. 105 € bis 130 € Netto-Umsatz pro Stunde bei ~50 % Spanne).
+
+- Frage: Wie überzeuge ich mein Team von flexibleren Schichtzeiten?
+  Antwort: Durch faire Vorlaufzeiten (4-Wochen-Planung), transparente Kassenfrequenz-Grafiken im Teamraum und klare Rollenverteilung zwischen ruhigen Vorbereitungsstunden (Ware/VM) und aktiven Verkaufs-Peak-Schichten.
+
+### Kalkulationsfaktor, Kalkulationszuschlag & Handelsspanne berechnen (Rechner)
+URL: https://rechner.jp-aring-advisory.de/kalkulationsfaktor-handelsspanne-rechner.html
+Kernformel: Kalkulationszuschlag (Aufschlag auf den EK) und Handelsspanne (Abschlag vom Netto-VK / Rohertragsquote) sind niemals identisch! Bei 50 € EK netto und einem Kalkulationsfaktor von 2,50 auf den Brutto-VK (125,00 € inkl. 19 % USt. = 105,04 € Netto-VK) beträgt der Kalkulationszuschlag netto +110,08 %, die reale Handelsspanne (DB-I-Quote) jedoch 52,40 %.
+
+- Frage: Welchen Kalkulationsfaktor brauche ich für 50 % Handelsspanne bei 19 % MwSt.?
+  Antwort: Sie benötigen exakt den Brutto-Kalkulationsfaktor 2,38 (Rechnung: 1,19 ÷ (1 − 0,50) = 2,38). Bei 100 € EK netto ergibt 2,38 einen Ladenpreis von 238,00 € brutto (= 200,00 € netto) und damit genau 100,00 € bzw. 50 % Rohertrag.
+
+- Frage: Wie rechne ich die Handelsspanne in den Kalkulationszuschlag um?
+  Antwort: Mit der kaufmännischen Umrechnungsformel: Kalkulationszuschlag (%) = [Handelsspanne % ÷ (100 − Handelsspanne %)] × 100. Aus 50 % Handelsspanne werden so 100 % Kalkulationszuschlag; aus 60 % Handelsspanne werden 150 % Kalkulationszuschlag.
+
+- Frage: Wie berücksichtigt man Skonto und Bezugskosten beim Einkaufspreis?
+  Antwort: Grundlage für den Faktor sollte kaufmännisch immer der tatsächliche Einstandspreis (Bezugspreis) sein: Listen-Einkaufspreis abzüglich Lieferantenrabatt und Lieferantenskonto zuzüglich Fracht, Verpackung und Transportversicherung.
+
+### Inventurdifferenz & Schwundquote berechnen: Was Ladendiebstahl real kostet
+URL: https://rechner.jp-aring-advisory.de/inventurdifferenz-schwundquote-rechner.html
+Kernformel: Inventurdifferenz = Buch-Sollbestand laut Warenwirtschaft − gezählter Ist-Bestand der körperlichen Inventur. Da gestohlene oder ausgebuchte Ware voll bezahlt wurde, muss der entstandene Einkaufsschaden über die Nettoumsatzrendite (bzw. den freien Deckungsbeitrag) komplett neu verdient werden: Bei 5 % Nettorendite erfordern 5.000 € Inventurverlust satte 100.000 € zusätzlichen Umsatz!
+
+- Frage: Wie berechnet man die Inventurdifferenzquote korrekt?
+  Antwort: In der kaufmännischen Steuerung wird der Fehlbestand zu Einkaufspreisen netto (oder alternativ zu Verkaufspreisen, dann konsistent dokumentiert) durch den Netto-Jahresumsatz geteilt und mit 100 multipliziert. Wichtig ist, von Jahr zu Jahr dieselbe Bewertungsbasis (EK oder VK) beizubehalten.
+
+- Frage: Warum muss man für 1.000 € Schwund oft 20.000 € Zusatzumsatz machen?
+  Antwort: Weil von jedem neu erzielten Euro Umsatz zuerst wieder Wareneinkauf, Miete, Energie und Personal bezahlt werden müssen. Bleiben am Jahresende 5 % Netto-Umsatzrendite übrig, liefert erst ein Zusatzumsatz von 1.000 € ÷ 0,05 = 20.000 € den verlorenen Gewinn zurück.
+
+- Frage: Was bringen unterjährige Permanente Stichproben-Inventuren?
+  Antwort: Wer monatlich eine einzelne Risikowarengruppe (z. B. Jeans, Markenjacken, Parfüm/Accessoires) in 20 Minuten nachzählt, erkennt Buchungsfehler oder Diebstahlschwerpunkte sofort im laufenden Quartal statt erst elf Monate später am Bilanzstichtag.
+
+### Conversion Rate im stationären Einzelhandel berechnen: Kundenfrequenz zu Kassenbons
+URL: https://rechner.jp-aring-advisory.de/conversion-rate-laden-rechner.html
+Kernformel: Die stationäre Conversion Rate (Abschlussquote) misst den Anteil der eingetretenen Ladenbesucher, die tatsächlich an der Kasse kaufen: Laden-Conversion (%) = (Anzahl Kassenbons ÷ Eingetretene Besucher) × 100. Bei Paar- und Familienbesuchen wird in der Praxis mit Einkaufsgruppen (Shopping Units) gerechnet.
+
+- Frage: Was ist eine realistische Conversion Rate im stationären Modehandel?
+  Antwort: Je nach Lage (hochfrequentierte 1A-Fußgängerzone mit vielen Sehleuten vs. gezielte Fachgeschäft-Zieladresse) liegen reale Abschlussquoten im Bekleidungs- und Schuhfachhandel meist zwischen 18 % und 38 % der gezählten Besucher.
+
+- Frage: Wie messe ich die Laden-Conversion ohne teure 3D-Kamerasysteme?
+  Antwort: Bereits ein einfacher, datenschutzkonformer Infrarot-Durchgangszähler an der Eingangstür (unter 150 € Anschaffung, 0 € Monatsabo) oder eine strukturierte 2-Wochen-Fokusmessung je Schicht liefert belastbare Basiswerte im Verhältnis zu den Tages-Kassenbons.
+
+- Frage: Warum sinkt die Conversion Rate ausgerechnet am Samstag oft deutlich ab?
+  Antwort: Am Samstag treffen deutlich mehr Begleitpersonen (Paare/Familien) auf gleichzeitig voll ausgelastete Verkaufskräfte und belegte Umkleidekabinen. Genau deshalb bringt Samstags-Peak-Personal an der Kabine den höchsten Zusatzumsatz der ganzen Woche.
+
+### Break-Even-Umsatz im Einzelhandel berechnen: Ab welchem Tagesumsatz verdienen Sie Geld?
+URL: https://rechner.jp-aring-advisory.de/break-even-einzelhandel-rechner.html
+Kernformel: Der Break-Even-Umsatz (Gewinnschwelle) ist genau der Netto-Umsatz, bei dem Ihr erwirtschafteter Rohertrag (Deckungsbeitrag I) sämtliche monatlichen Fixkosten zu 100 % deckt: Break-Even-Umsatz (€) = Monatliche Gesamt-Fixkosten (€) ÷ Rohertragsspanne (als Dezimalzahl). Erst ab dem nächsten verkauften Teil oberhalb dieser Schwelle entsteht echter Betriebsgewinn.
+
+- Frage: Wie lautet die genaue Break-Even-Formel für den Einzelhandel?
+  Antwort: Break-Even-Umsatz netto = Monatliche Fixkosten gesamt ÷ (Realisierte Rohertragsspanne in % ÷ 100). Bei 15.000 € Fixkosten und 50 % Rohertragsspanne beträgt die Gewinnschwelle 15.000 € ÷ 0,50 = 30.000 € Netto-Umsatz.
+
+- Frage: Warum wird beim Break-Even der Brutto-Kassenumsatz getrennt ausgewiesen?
+  Antwort: Weil Ihre Verkaufsmannschaft abends auf dem Kassenbon-Abschluss (Z-Bon) meistens Bruttowerte inklusive 19 % Umsatzsteuer sieht. Für ein klares Tagesziel im Morgenbriefing hilft es enorm, den Netto-Break-Even mit 1,19 auf den sichtbaren Kassenumsatz umzurechnen.
+
+- Frage: Gehört der Wareneinkauf in die Fixkosten der Break-Even-Rechnung?
+  Antwort: Nein! Der Wareneinkauf ist ein variabler Aufwand und steckt mathematisch bereits in der Rohertragsspanne (100 % Netto-Umsatz minus Wareneinsatz in % = Rohertragsspanne in %). Würden Sie ihn zusätzlich zu den Fixkosten addieren, wäre er doppelt gezählt.

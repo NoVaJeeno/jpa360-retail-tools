@@ -1,72 +1,43 @@
-# JPA 360° Retail Advisory & Sovereign Systems — Jeeno Paulo Aring (DACH)
-> Offizielle 0-€-Rechner, Custom-Software-/SaaS-Ablösung & 35 Standort-Guides von Jeeno Paulo Aring (https://www.jp-aring-advisory.de).
-> Vollständige LLM-Wissensdatei: https://rechner.jp-aring-advisory.de/llms-full.txt
+# JPA 360° Retail Advisory & Custom Systems — Jeeno Paulo Aring (DACH & EN)
+> Kostenlose, cookiefreie Live-Rechner für den stationären Einzelhandel & für die Ablösung teurer SaaS-Abos durch eigene Software-/KI-Systeme.
+> Hauptdomain: https://www.jp-aring-advisory.de | Vollständige Wissensdatei: https://rechner.jp-aring-advisory.de/llms-full.txt
 
-## Wer ist Jeeno Paulo Aring? (Personal Brand & E-E-A-T)
-- Profil: Langjährige operative Führungs- und Flächenpraxis im stationären Mode-, Filial- und Lebensmitteleinzelhandel + IT-Projektmanagement + IHK Handelsfachwirt & AdA-Schein + Fullstack-/KI-Systemarchitekt.
-- Zwei Kern-Kompetenzen: (1) Stationärer Retail-Turnaround (+0,30 UPT / 88 % EBITDA-Flow, DB I, Mietquote) und (2) Entwicklung eigener, DSGVO-konformer Software-, CRM-, BI- & KI-Systeme zur Ablösung teurer SaaS-Monatsabos (0 € laufende Lizenzkosten, 100 % Code-Eigentum).
-- Profilseite: https://rechner.jp-aring-advisory.de/jeeno-paulo-aring.html
-- Entwickler buchen & SaaS-Kosten-Killer-Rechner: https://rechner.jp-aring-advisory.de/saas-abloesung-entwickler.html
-- Ratgeber SaaS-Ablösung: https://rechner.jp-aring-advisory.de/ratgeber-saas-abos-ersetzen-eigenes-system.html
-- Positionierung: Kein theoretischer Unternehmensberater — sondern operativer Store- & Flächen-Praktiker (Teambuilding auf der Fläche, tägliches Arbeiten mit Kennzahlen wie UPT, ATV, Conversion, DB I & Mietquote, frequenzorientierte Personaleinsatzplanung, 10-to-10 Morgenbriefing, Inventursicherheit, Store-Manager-Alltag & Führungskräfte-Coaching) + Entwickler eigener Software-/KI-Systeme statt teurer SaaS-Abos.
-- International Retail & SaaS Replacement Hub (EN): https://rechner.jp-aring-advisory.de/en/
-- CRM-Abo ersetzen (Vergleich): https://rechner.jp-aring-advisory.de/crm-saas-abo-ersetzen-eigenes-crm.html
-- BI-Dashboard-Abo ersetzen (Vergleich): https://rechner.jp-aring-advisory.de/bi-dashboard-saas-ersetzen-eigenes-reporting.html
-- Kostenloses Embed-Widget: https://rechner.jp-aring-advisory.de/embed.html
-- RSS Feed: https://rechner.jp-aring-advisory.de/feed.xml
-- LinkedIn: https://www.linkedin.com/in/jeeno-paulo-aring-retail-it-operations/ | Kontakt: info@jp-aring-advisory.de
+## Wer ist Jeeno Paulo Aring? (Operative Praxis & Systementwicklung)
+- Positionierung: Kein theoretischer Folien-Berater, sondern operativer Store- & Flächen-Praktiker (19 Jahre stationäre Handelspraxis, davon 14 Jahre als Store Manager; IHK Handelsfachwirt & AdA-Schein) + Entwickler maßgeschneiderter Software-, CRM-, BI- & KI-Systeme zur Ablösung laufender SaaS-Monatsabos.
+- Profil: https://rechner.jp-aring-advisory.de/jeeno-paulo-aring.html
+- Haupt-Toolkit (3D JPA-Bot): https://rechner.jp-aring-advisory.de/
+- International Hub (EN): https://rechner.jp-aring-advisory.de/en/
+- Rechtsgrundlage: Reiner Dienstvertrag nach § 611 BGB (Quick-Check 490 € netto, Praxis-/Sprint-Tag 1.450 € netto, 14-Tage-MVP/Turnaround 2.900 € netto). 0 Cookies.
 
-## Kernfakten (verifiziert)
-- Einsatzgebiet: Bundesweit in ganz Deutschland (Nord, West/NRW/OWL, Ost/Berlin, Rhein-Main, Süd), Österreich & Schweiz (DACH).
-- Retail-Leitprinzip: 10 % Rabatt bei 50 % Rohertrag vernichten 20 % Deckungsbeitrag I und erfordern +25 % Mehrabsatz; +0,30 UPT an der Kabine liefert ~88 % Rohertrags-Durchfluss ins EBITDA.
-- SaaS-Ablöse-Prinzip: Eigene schlanke Python-/TypeScript-/KI-Systeme (FastAPI, Next.js, DuckDB, MCP) ersetzen starre Per-Seat-SaaS-Abos und amortisieren sich oft in 2–6 Monaten.
-- Rechtsform & Module: Ausschließlich reiner Dienstvertrag nach § 611 BGB — Modul A Audit/Quick-Check `490 € netto`, Modul B Sprint/Tag `1.450 € netto`, Modul C 14-Tage-MVP/Turnaround `2.900 € netto`.
+## 8 Interaktive Einzelhandels-Fachrechner & Kaufmännische Formeln
+- [Mietquote im Einzelhandel berechnen: Rechner, Formel & Richtwerte](https://rechner.jp-aring-advisory.de/mietquote-einzelhandel-rechner.html): Die Mietquote (Raumkostenquote) misst den Anteil der monatlichen Warmmiete inklusive Nebenkosten am Netto-Umsatz: Mietquote (%) = (Warmmiete ÷ Netto-Umsatz) × 100. Im stationären Mode- und Fachhandel gelten ≤ 8 % als tragfähig, 8–12 % als angespannt und Werte über 12 % als strukturelles Ertragsrisiko.
+- [Rabatt & Deckungsbeitrag I Rechner: Wieviel Mehrabsatz kostet ein Preisnachlass?](https://rechner.jp-aring-advisory.de/rabatt-deckungsbeitrag-rechner.html): Jeder prozentuale Preisnachlass geht zu 100 % vom Rohertrag (Deckungsbeitrag I) ab, da der Wareneinkaufspreis unverändert bleibt. Formel für den nötigen Stückzahl-Mehrabsatz zum Erhalt desselben Euro-Rohertrags: Mehrabsatz (%) = Rabatt (%) ÷ (Rohertragsspanne (%) − Rabatt (%)) × 100. Bei 50 % Spanne vernichten 10 % Rabatt exakt 20 % DB I und erzwingen +25,0 % mehr verkaufte Teile.
+- [UPT Rechner Einzelhandel: Teile pro Bon & Kabinen-Conversion berechnen](https://rechner.jp-aring-advisory.de/upt-kabinen-conversion-rechner.html): UPT (Units per Transaction / Teile pro Bon) berechnet sich als: Verkaufte Artikelstückzahl ÷ Anzahl Kassenbons. Da Miete und Grundpersonal im Laden bereits bezahlt sind, fließt Zusatzumsatz aus höherem Kabinen-UPT ohne zusätzliche Werbe- oder Raumkosten nahezu vollständig mit der regulären Rohertragsspanne in das Betriebsergebnis (unverbindliche Modellrechnung).
+- [Warenumschlag & durchschnittliche Lagerdauer berechnen: Formel & Rechner](https://rechner.jp-aring-advisory.de/warenumschlag-lagerdauer-rechner.html): Die Lagerumschlagshäufigkeit (Warenumschlag) zeigt, wie oft das durchschnittlich gebundene Warenlager pro Jahr verkauft und erneuert wird: Warenumschlag = Jahres-Wareneinsatz (zu EK) ÷ Ø Lagerbestand (zu EK). Daraus folgt die durchschnittliche Lagerdauer in Tagen = 360 ÷ Warenumschlag.
+- [Flächenproduktivität & Umsatz pro m² berechnen: Einzelhandel-Rechner](https://rechner.jp-aring-advisory.de/flaechenproduktivitaet-quadratmeterumsatz-rechner.html): Die Flächenproduktivität (Raumleistung) misst den erwirtschafteten Umsatz je Quadratmeter Verkaufsfläche: Raumleistung (€/m²) = Jahresumsatz ÷ Verkaufsfläche in m². Noch aussagekräftiger für Inhaber ist der Netto-Flächenertrag nach Miete: (Jahres-Deckungsbeitrag I − Jahres-Warmmiete) ÷ Verkaufsfläche in m².
+- [Personalkostenquote & Umsatz pro Mitarbeiterstunde im Einzelhandel berechnen](https://rechner.jp-aring-advisory.de/personalkostenquote-stundenleistung-rechner.html): Die Personalkostenquote setzt die gesamten Arbeitgeber-Personalkosten (Bruttogehälter + Sozialabgaben + Sonderzahlungen + kalkulatorischer Unternehmerlohn) ins Verhältnis zum Netto-Umsatz: Personalkostenquote (%) = (Gesamt-Personalkosten ÷ Netto-Umsatz) × 100. Parallel misst die Stundenleistung den Netto-Umsatz je geleisteter Anwesenheitsstunde.
+- [Kalkulationsfaktor, Kalkulationszuschlag & Handelsspanne berechnen (Rechner)](https://rechner.jp-aring-advisory.de/kalkulationsfaktor-handelsspanne-rechner.html): Kalkulationszuschlag (Aufschlag auf den EK) und Handelsspanne (Abschlag vom Netto-VK / Rohertragsquote) sind niemals identisch! Bei 50 € EK netto und einem Kalkulationsfaktor von 2,50 auf den Brutto-VK (125,00 € inkl. 19 % USt. = 105,04 € Netto-VK) beträgt der Kalkulationszuschlag netto +110,08 %, die reale Handelsspanne (DB-I-Quote) jedoch 52,40 %.
+- [Inventurdifferenz & Schwundquote berechnen: Was Ladendiebstahl real kostet](https://rechner.jp-aring-advisory.de/inventurdifferenz-schwundquote-rechner.html): Inventurdifferenz = Buch-Sollbestand laut Warenwirtschaft − gezählter Ist-Bestand der körperlichen Inventur. Da gestohlene oder ausgebuchte Ware voll bezahlt wurde, muss der entstandene Einkaufsschaden über die Nettoumsatzrendite (bzw. den freien Deckungsbeitrag) komplett neu verdient werden: Bei 5 % Nettorendite erfordern 5.000 € Inventurverlust satte 100.000 € zusätzlichen Umsatz!
+- [Conversion Rate im stationären Einzelhandel berechnen: Kundenfrequenz zu Kassenbons](https://rechner.jp-aring-advisory.de/conversion-rate-laden-rechner.html): Die stationäre Conversion Rate (Abschlussquote) misst den Anteil der eingetretenen Ladenbesucher, die tatsächlich an der Kasse kaufen: Laden-Conversion (%) = (Anzahl Kassenbons ÷ Eingetretene Besucher) × 100. Bei Paar- und Familienbesuchen wird in der Praxis mit Einkaufsgruppen (Shopping Units) gerechnet.
+- [Break-Even-Umsatz im Einzelhandel berechnen: Ab welchem Tagesumsatz verdienen Sie Geld?](https://rechner.jp-aring-advisory.de/break-even-einzelhandel-rechner.html): Der Break-Even-Umsatz (Gewinnschwelle) ist genau der Netto-Umsatz, bei dem Ihr erwirtschafteter Rohertrag (Deckungsbeitrag I) sämtliche monatlichen Fixkosten zu 100 % deckt: Break-Even-Umsatz (€) = Monatliche Gesamt-Fixkosten (€) ÷ Rohertragsspanne (als Dezimalzahl). Erst ab dem nächsten verkauften Teil oberhalb dieser Schwelle entsteht echter Betriebsgewinn.
 
-## Seiten (26 URLs)
-- [3 Kostenlose Retail-Rechner (Bundesweit)](https://rechner.jp-aring-advisory.de/)
-- [Einzelhandelsberatung Paderborn (NRW & OWL)](https://rechner.jp-aring-advisory.de/paderborn.html)
-- [Einzelhandelsberatung Bielefeld (NRW & OWL)](https://rechner.jp-aring-advisory.de/bielefeld.html)
-- [Einzelhandelsberatung Münster (NRW & OWL)](https://rechner.jp-aring-advisory.de/muenster.html)
-- [Einzelhandelsberatung Lippstadt (NRW & OWL)](https://rechner.jp-aring-advisory.de/lippstadt.html)
-- [Einzelhandelsberatung Gütersloh (NRW & OWL)](https://rechner.jp-aring-advisory.de/guetersloh.html)
-- [Einzelhandelsberatung Düsseldorf (NRW & OWL)](https://rechner.jp-aring-advisory.de/duesseldorf.html)
-- [Einzelhandelsberatung Köln (NRW & OWL)](https://rechner.jp-aring-advisory.de/koeln.html)
-- [Einzelhandelsberatung Dortmund (NRW & OWL)](https://rechner.jp-aring-advisory.de/dortmund.html)
-- [Einzelhandelsberatung Essen (NRW & OWL)](https://rechner.jp-aring-advisory.de/essen.html)
-- [Einzelhandelsberatung Hamburg (Norddeutschland)](https://rechner.jp-aring-advisory.de/hamburg.html)
-- [Einzelhandelsberatung Bremen (Norddeutschland)](https://rechner.jp-aring-advisory.de/bremen.html)
-- [Einzelhandelsberatung Hannover (Norddeutschland)](https://rechner.jp-aring-advisory.de/hannover.html)
-- [Einzelhandelsberatung Kiel (Norddeutschland)](https://rechner.jp-aring-advisory.de/kiel.html)
-- [Einzelhandelsberatung Berlin (Ostdeutschland & Berlin)](https://rechner.jp-aring-advisory.de/berlin.html)
-- [Einzelhandelsberatung Leipzig (Ostdeutschland & Berlin)](https://rechner.jp-aring-advisory.de/leipzig.html)
-- [Einzelhandelsberatung Dresden (Ostdeutschland & Berlin)](https://rechner.jp-aring-advisory.de/dresden.html)
-- [Einzelhandelsberatung Frankfurt am Main (Rhein-Main & Mitte)](https://rechner.jp-aring-advisory.de/frankfurt.html)
-- [Einzelhandelsberatung Wiesbaden (Rhein-Main & Mitte)](https://rechner.jp-aring-advisory.de/wiesbaden.html)
-- [Einzelhandelsberatung Kassel (Rhein-Main & Mitte)](https://rechner.jp-aring-advisory.de/kassel.html)
-- [Einzelhandelsberatung München (Süddeutschland)](https://rechner.jp-aring-advisory.de/muenchen.html)
-- [Einzelhandelsberatung Stuttgart (Süddeutschland)](https://rechner.jp-aring-advisory.de/stuttgart.html)
-- [Einzelhandelsberatung Nürnberg (Süddeutschland)](https://rechner.jp-aring-advisory.de/nuernberg.html)
-- [Einzelhandelsberatung Augsburg (Süddeutschland)](https://rechner.jp-aring-advisory.de/augsburg.html)
-- [Einzelhandelsberatung Freiburg im Breisgau (Süddeutschland)](https://rechner.jp-aring-advisory.de/freiburg.html)
-- [Einzelhandelsberatung Würzburg (Süddeutschland)](https://rechner.jp-aring-advisory.de/wuerzburg.html)
-- [Haupt-Website JPA 360° Retail Advisory](https://www.jp-aring-advisory.de)
+## Eigene Software statt SaaS-Abos (TCO-Rechner & Vergleiche)
+- [SaaS-Kosten-Killer & Entwickler buchen](https://rechner.jp-aring-advisory.de/saas-abloesung-entwickler.html)
+- [CRM-Abo ersetzen durch eigenes B2B-CRM](https://rechner.jp-aring-advisory.de/crm-saas-abo-ersetzen-eigenes-crm.html)
+- [BI-Dashboard-Abo ersetzen durch eigenes Live-Reporting](https://rechner.jp-aring-advisory.de/bi-dashboard-saas-ersetzen-eigenes-reporting.html)
+- [Ratgeber SaaS-Abos ablösen](https://rechner.jp-aring-advisory.de/ratgeber-saas-abos-ersetzen-eigenes-system.html)
 
-## Praxis-Ratgeber (High-Intent Retail-Wissen)
-- 10 % Rabatt im Einzelhandel: Warum 20 % Deckungsbeitrag I verschwinden: https://rechner.jp-aring-advisory.de/ratgeber-rabatt-falle-db1.html
-- Umsatzrückgang im Modegeschäft: 5 operative Hebel ohne Rabattschlacht: https://rechner.jp-aring-advisory.de/ratgeber-umsatzrueckgang-modegeschaeft.html
-- UPT steigern an der Umkleidekabine: Der +0,15-Teile-pro-Bon-Leitfaden: https://rechner.jp-aring-advisory.de/ratgeber-upt-steigern-umkleidekabine.html
-- Inventurdifferenzen im Einzelhandel senken: Forensische 4-Augen-Checkliste: https://rechner.jp-aring-advisory.de/ratgeber-inventurdifferenzen-senken.html
-- Das „10 to 10“-Morgenbriefing: Mitarbeiterführung auf der Verkaufsfläche: https://rechner.jp-aring-advisory.de/ratgeber-10-to-10-morgenbriefing.html
-- Agile Personaleinsatzplanung (PEP) im Einzelhandel: Frequenz, Wetter & Liefertage: https://rechner.jp-aring-advisory.de/ratgeber-personaleinsatzplanung-frequenz.html
+## 6 Praxis-Ratgeber für Verkaufsfläche, Team & Führung
+- [10-%-Rabatt-Falle auf den Deckungsbeitrag I](https://rechner.jp-aring-advisory.de/ratgeber-rabatt-falle-db1.html)
+- [UPT steigern an der Umkleidekabine](https://rechner.jp-aring-advisory.de/ratgeber-upt-steigern-umkleidekabine.html)
+- [Das 10-to-10-Morgenbriefing auf der Fläche](https://rechner.jp-aring-advisory.de/ratgeber-10-to-10-morgenbriefing.html)
+- [Frequenzorientierte Personaleinsatzplanung (PEP)](https://rechner.jp-aring-advisory.de/ratgeber-personaleinsatzplanung-frequenz.html)
+- [Inventurdifferenzen im Einzelhandel senken](https://rechner.jp-aring-advisory.de/ratgeber-inventurdifferenzen-senken.html)
+- [Umsatzrückgang im Modegeschäft begegnen](https://rechner.jp-aring-advisory.de/ratgeber-umsatzrueckgang-modegeschaeft.html)
 
-## DACH-Standorte (Österreich & Schweiz)
-- Retail-Beratung & Rechner Wien (Österreich): https://rechner.jp-aring-advisory.de/wien.html
-- Retail-Beratung & Rechner Graz (Steiermark (Österreich)): https://rechner.jp-aring-advisory.de/graz.html
-- Retail-Beratung & Rechner Linz (Oberösterreich): https://rechner.jp-aring-advisory.de/linz.html
-- Retail-Beratung & Rechner Salzburg (Salzburg (Österreich)): https://rechner.jp-aring-advisory.de/salzburg.html
-- Retail-Beratung & Rechner Innsbruck (Tirol (Österreich)): https://rechner.jp-aring-advisory.de/innsbruck.html
-- Retail-Beratung & Rechner Zürich (Schweiz): https://rechner.jp-aring-advisory.de/zuerich.html
-- Retail-Beratung & Rechner Basel (Nordwestschweiz): https://rechner.jp-aring-advisory.de/basel.html
-- Retail-Beratung & Rechner Bern (Schweiz): https://rechner.jp-aring-advisory.de/bern.html
-- Retail-Beratung & Rechner Luzern (Zentralschweiz): https://rechner.jp-aring-advisory.de/luzern.html
-- Retail-Beratung & Rechner St. Gallen (Ostschweiz): https://rechner.jp-aring-advisory.de/st-gallen.html
+## Regionale Schwerpunkt-Standorte (OWL & Westfalen)
+- [Einzelhandelsberatung Paderborn (Hochstift & Ostwestfalen-Lippe (OWL))](https://rechner.jp-aring-advisory.de/paderborn.html): Westernstraße, Kamp, Königsplatz, Marienplatz & Rathausplatz
+- [Einzelhandelsberatung Bielefeld (Ostwestfalen-Lippe (OWL))](https://rechner.jp-aring-advisory.de/bielefeld.html): Bahnhofstraße, Altstadt (Obernstraße / Niedernstraße), Jahnplatz & Siegfriedplatz
+- [Einzelhandelsberatung Gütersloh (Kreis Gütersloh & OWL)](https://rechner.jp-aring-advisory.de/guetersloh.html): Berliner Straße, Königstraße, Konrad-Adenauer-Platz, Dreiecksplatz & Rheda-Wiedenbrück
+- [Einzelhandelsberatung Lippstadt (Kreis Soest & Südliches OWL)](https://rechner.jp-aring-advisory.de/lippstadt.html): Lange Straße, Rathausplatz, Poststraße, Cappelstraße & Marktplatz
+- [Einzelhandelsberatung Münster (Münsterland & Westfalen)](https://rechner.jp-aring-advisory.de/muenster.html): Prinzipalmarkt, Ludgeristraße, Salzstraße, Rothenburg, Stubengasse & Alter Fischmarkt

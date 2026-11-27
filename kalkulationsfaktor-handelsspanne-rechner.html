@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<title>Kalkulationsfaktor, Kalkulationszuschlag &amp; Handelsspanne berechnen (Rechner) | JPA 360°</title>
+<meta name="description" content="Kostenloser Handelskalkulations-Rechner für Einzelhändler: Aus EK netto und Kalkulationsfaktor sofort VK brutto, Netto-VK, Kalkulationszuschlag (%) und echte Handelsspanne (%) berechnen." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Kalkulationsfaktor, Kalkulationszuschlag &amp; Handelsspanne berechnen (Rechner)" />
+<meta property="og:description" content="Kostenloser Handelskalkulations-Rechner für Einzelhändler: Aus EK netto und Kalkulationsfaktor sofort VK brutto, Netto-VK, Kalkulationszuschlag (%) und echte Handelsspanne (%) berechnen." />
+<meta property="og:url" content="https://rechner.jp-aring-advisory.de/kalkulationsfaktor-handelsspanne-rechner.html" />
+<meta property="og:image" content="https://rechner.jp-aring-advisory.de/og-astro-bot.jpg" />
+<meta property="og:image:secure_url" content="https://rechner.jp-aring-advisory.de/og-astro-bot.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Kalkulationsfaktor, Kalkulationszuschlag &amp; Handelsspanne berechnen (Rechner)" />
+<meta name="twitter:description" content="Kostenloser Handelskalkulations-Rechner für Einzelhändler: Aus EK netto und Kalkulationsfaktor sofort VK brutto, Netto-VK, Kalkulationszuschlag (%) und echte Handelsspanne (%) berechnen." />
+<meta name="twitter:image" content="https://rechner.jp-aring-advisory.de/og-astro-bot.jpg" />
+<link rel="canonical" href="https://rechner.jp-aring-advisory.de/kalkulationsfaktor-handelsspanne-rechner.html" />
+<link rel="alternate" type="application/rss+xml" href="https://rechner.jp-aring-advisory.de/feed.xml" title="JPA 360° Retail &amp; SaaS Rechner Feed" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://rechner.jp-aring-advisory.de; connect-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me mailto:;" />
+<style>
+:root{
+  --bg:#F7F5F0; --surface:#FFFFFF; --ink:#121316; --ink-soft:#4B505B;
+  --muted:#6E737E; --line:rgba(18,19,22,.11); --brass:#9E7B43;
+  --brass-soft:rgba(158,123,67,.12); --emerald:#0F5132; --emerald-bg:#ECF6F0;
+  --crimson:#9B1C2E; --crimson-bg:#FDF0F2; --obsidian:#121316;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{max-width:100%;overflow-x:clip;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;
+  line-height:1.68; -webkit-font-smoothing:antialiased;
+}
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(247,245,240,.94); backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-in{
+  max-width:1160px; margin:0 auto; padding:14px 24px;
+  display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;
+}
+.jpa-logo{display:inline-flex;align-items:center;gap:14px;text-decoration:none;padding:4px 0}
+.jpa-box{
+  width:40px;height:40px;position:relative;display:flex;align-items:center;justify-content:center;
+  border:2px solid #000000;border-radius:0;overflow:hidden;background:transparent;
+}
+.jpa-box::after{
+  content:"";position:absolute;inset:-8px;background:rgba(0,0,0,.06);
+  transform:skewX(30deg) translateX(-160%);transition:transform .7s cubic-bezier(.22,1,.36,1);
+}
+.jpa-logo:hover .jpa-box::after{transform:skewX(30deg) translateX(180%)}
+.jpa-box span{
+  position:relative;z-index:1;font-size:13px;font-weight:300;letter-spacing:.2em;
+  color:#000000;padding-left:.2em;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;
+}
+.jpa-word{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.jpa-360{
+  font-size:16px;font-weight:700;letter-spacing:.15em;line-height:1;
+  background:linear-gradient(135deg,#ef4444 0%,#dc2626 50%,#7f1d1d 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  border-bottom:.5px solid rgba(127,29,29,.15);padding-bottom:2px;
+}
+.jpa-sub{
+  font-size:7.5px;font-weight:500;letter-spacing:.38em;text-transform:uppercase;
+  color:#1c1917;opacity:.65;line-height:1;margin-top:5px;padding-left:.38em;
+}
+nav{display:flex; align-items:center; gap:18px; flex-wrap:wrap}
+nav a{color:var(--ink-soft); text-decoration:none; font-size:13.5px; font-weight:500; transition:color .2s}
+nav a:hover{color:var(--ink)}
+.btn-primary{
+  background:var(--obsidian); color:#F7F5F0!important; text-decoration:none;
+  padding:11px 20px; border-radius:999px; font-size:13px; font-weight:600; letter-spacing:.3px;
+  display:inline-flex; align-items:center; gap:8px; border:none; cursor:pointer;
+}
+.btn-primary:hover{background:#23262E}
+.btn-ghost{
+  background:transparent; color:var(--ink); border:1px solid var(--line);
+  padding:9px 16px; border-radius:999px; font-size:12.5px; font-weight:600;
+  text-decoration:none; display:inline-flex; align-items:center; gap:6px;
+}
+.btn-ghost:hover{border-color:var(--ink); background:#fff}
+.wrap{max-width:1160px; margin:0 auto; padding:0 24px}
+.hero{padding:56px 0 38px; border-bottom:1px solid var(--line)}
+.breadcrumb{font-size:12.5px; color:var(--muted); margin-bottom:16px}
+.breadcrumb a{color:var(--ink-soft); text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:11.5px; letter-spacing:2px; text-transform:uppercase; font-weight:700;
+  color:var(--brass); margin-bottom:16px;
+}
+.eyebrow::before{content:""; width:28px; height:1px; background:var(--brass)}
+h1{
+  font-family:Georgia,'Times New Roman',serif; font-weight:400;
+  font-size:clamp(32px,4.6vw,52px); line-height:1.12; letter-spacing:-.02em;
+  color:var(--ink); max-width:900px; margin-bottom:18px;
+}
+h1 em{font-style:italic; color:var(--brass)}
+.lead{font-size:17px; color:var(--ink-soft); max-width:780px; margin-bottom:24px}
+.section{padding:48px 0; border-bottom:1px solid var(--line)}
+h2{
+  font-family:Georgia,'Times New Roman',serif; font-weight:400;
+  font-size:clamp(24px,3vw,32px); line-height:1.22; color:var(--ink); margin-bottom:14px;
+}
+h3{font-family:Georgia,'Times New Roman',serif; font-weight:400; font-size:20px; margin-bottom:12px; color:var(--ink)}
+.calc-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:22px}
+.card{
+  background:var(--surface); border:1px solid var(--line); border-radius:20px;
+  padding:26px; box-shadow:0 4px 24px rgba(18,19,22,.04);
+}
+.card-num{font-size:11px; letter-spacing:1.8px; text-transform:uppercase; color:var(--brass); font-weight:700; margin-bottom:6px}
+.field{margin-bottom:14px}
+.field-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:6px}
+.field label{font-size:12.5px; font-weight:600; color:var(--ink-soft)}
+input[type=number],input[type=text]{
+  width:100%; padding:10px 12px; border-radius:10px;
+  border:1px solid var(--line); background:var(--bg); color:var(--ink);
+  font-size:16px; font-weight:600; font-variant-numeric:tabular-nums;
+}
+input[type=number]:focus{outline:none; border-color:var(--obsidian); background:#fff}
+.kpi-box{
+  margin-top:16px; padding:16px; border-radius:14px; background:var(--bg);
+  border:1px solid var(--line); font-variant-numeric:tabular-nums;
+}
+.kpi-row{display:flex; justify-content:space-between; align-items:baseline; padding:7px 0; font-size:14px; gap:10px}
+.kpi-row + .kpi-row{border-top:1px solid rgba(18,19,22,.08)}
+.kpi-bad{color:var(--crimson); font-weight:700}
+.kpi-good{color:var(--emerald); font-weight:700}
+.kpi-warn{color:var(--brass); font-weight:700}
+.formula-box{
+  background:var(--surface); border-left:4px solid var(--brass); border-top:1px solid var(--line);
+  border-right:1px solid var(--line); border-bottom:1px solid var(--line);
+  border-radius:0 14px 14px 0; padding:18px 22px; margin:20px 0; font-size:15px;
+}
+.article-body{max-width:860px}
+.article-body p{font-size:16px; line-height:1.75; color:#2b2e34; margin:0 0 16px}
+.article-body ul{margin:0 0 18px 20px; color:#2b2e34; font-size:15.5px}
+.article-body li{margin-bottom:8px}
+.table-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch; margin:18px 0}
+table{width:100%; border-collapse:collapse; background:var(--surface); border-radius:14px; overflow:hidden; border:1px solid var(--line); font-size:14px}
+th,td{padding:13px 16px; text-align:left; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums}
+th{background:var(--obsidian); color:#F7F5F0; font-size:11.5px; letter-spacing:1.1px; text-transform:uppercase; font-weight:600}
+tr:last-child td{border-bottom:none}
+details{
+  background:var(--surface); border:1px solid var(--line); border-radius:14px;
+  padding:16px 20px; margin-bottom:10px;
+}
+summary{font-weight:600; font-size:15px; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center}
+summary::after{content:"+"; font-size:18px; color:var(--brass)}
+details[open] summary::after{content:"−"}
+details p{margin-top:10px; font-size:14.5px; color:var(--ink-soft)}
+.cities{display:flex; flex-wrap:wrap; gap:8px}
+.cities a{
+  background:var(--surface); border:1px solid var(--line); color:var(--ink);
+  padding:8px 14px; border-radius:999px; text-decoration:none; font-size:13px; font-weight:500;
+}
+.cities a:hover{border-color:var(--obsidian); background:var(--obsidian); color:#F7F5F0}
+.legal-note{
+  margin-top:16px; padding:12px 16px; border-radius:10px; background:rgba(18,19,22,.03);
+  border-left:3px solid var(--brass); font-size:12px; color:var(--muted);
+}
+.cta-band{
+  margin-top:36px; background:var(--obsidian); color:#F7F5F0; border-radius:24px;
+  padding:36px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:22px;
+}
+.cta-band h2{color:#F7F5F0; font-size:clamp(22px,2.8vw,28px); margin-bottom:8px}
+.cta-band p{color:#C8CDD6; font-size:14.5px; max-width:580px}
+.btn-light{
+  background:#F7F5F0; color:var(--obsidian); text-decoration:none;
+  padding:13px 22px; border-radius:999px; font-weight:700; font-size:13.5px; display:inline-block;
+}
+.social-bar{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
+.social-btn{
+  display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;
+  border:1px solid var(--line);background:var(--surface);color:var(--ink);
+  font-size:12.5px;font-weight:600;text-decoration:none;min-height:38px;
+}
+.cta-band .social-btn{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.24);color:#fff}
+.cta-actions{display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+footer{
+  max-width:1160px; margin:40px auto 0; padding:24px 24px 44px;
+  border-top:1px solid var(--line); font-size:12.5px; color:var(--muted);
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px;
+}
+footer a{color:var(--ink-soft); text-decoration:none}
+footer a:hover{color:var(--ink); text-decoration:underline}
+@media (max-width:768px){
+  .topbar-in{padding:10px 16px;flex-direction:column;align-items:stretch;gap:10px}
+  header.topbar nav{display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;padding-bottom:2px}
+  header.topbar nav a{flex:0 0 auto;white-space:nowrap;padding:8px 12px;border-radius:999px;background:rgba(18,19,22,.05);font-size:13px}
+  header.topbar nav a.btn-primary{background:var(--ink);color:#fff}
+  .wrap{padding:0 16px}
+  .hero{padding:28px 0 24px}
+  .calc-grid{grid-template-columns:1fr !important}
+  .cta-band{flex-direction:column;align-items:stretch;padding:24px 18px}
+  .cta-actions{align-items:stretch;width:100%}
+  footer{padding:24px 16px;flex-direction:column}
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Kalkulationsfaktor, Kalkulationszuschlag & Handelsspanne berechnen (Rechner)", "url": "https://rechner.jp-aring-advisory.de/kalkulationsfaktor-handelsspanne-rechner.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "inLanguage": "de-DE", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "author": {"@type": "Person", "name": "Jeeno Paulo Aring", "url": "https://rechner.jp-aring-advisory.de/jeeno-paulo-aring.html"}}, {"@type": "Article", "headline": "Kalkulationsfaktor, Kalkulationszuschlag & Handelsspanne berechnen (Rechner)", "description": "Kostenloser Handelskalkulations-Rechner für Einzelhändler: Aus EK netto und Kalkulationsfaktor sofort VK brutto, Netto-VK, Kalkulationszuschlag (%) und echte Handelsspanne (%) berechnen.", "datePublished": "2026-11-24", "dateModified": "2026-11-27", "inLanguage": "de-DE", "mainEntityOfPage": "https://rechner.jp-aring-advisory.de/kalkulationsfaktor-handelsspanne-rechner.html", "author": {"@type": "Person", "name": "Jeeno Paulo Aring", "jobTitle": "Store Operations Praktiker & IT-Systemarchitekt", "url": "https://www.jp-aring-advisory.de"}, "publisher": {"@type": "Organization", "name": "JPA 360° Retail Advisory", "url": "https://www.jp-aring-advisory.de"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Retail-Rechner Suite", "item": "https://rechner.jp-aring-advisory.de/"}, {"@type": "ListItem", "position": 2, "name": "Fach-Rechner Einzelhandel", "item": "https://rechner.jp-aring-advisory.de/#fachrechner"}, {"@type": "ListItem", "position": 3, "name": "Kalkulationsfaktor & Spanne", "item": "https://rechner.jp-aring-advisory.de/kalkulationsfaktor-handelsspanne-rechner.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Welchen Kalkulationsfaktor brauche ich für 50 % Handelsspanne bei 19 % MwSt.?", "acceptedAnswer": {"@type": "Answer", "text": "Sie benötigen exakt den Brutto-Kalkulationsfaktor 2,38 (Rechnung: 1,19 ÷ (1 − 0,50) = 2,38). Bei 100 € EK netto ergibt 2,38 einen Ladenpreis von 238,00 € brutto (= 200,00 € netto) und damit genau 100,00 € bzw. 50 % Rohertrag."}}, {"@type": "Question", "name": "Wie rechne ich die Handelsspanne in den Kalkulationszuschlag um?", "acceptedAnswer": {"@type": "Answer", "text": "Mit der kaufmännischen Umrechnungsformel: Kalkulationszuschlag (%) = [Handelsspanne % ÷ (100 − Handelsspanne %)] × 100. Aus 50 % Handelsspanne werden so 100 % Kalkulationszuschlag; aus 60 % Handelsspanne werden 150 % Kalkulationszuschlag."}}, {"@type": "Question", "name": "Wie berücksichtigt man Skonto und Bezugskosten beim Einkaufspreis?", "acceptedAnswer": {"@type": "Answer", "text": "Grundlage für den Faktor sollte kaufmännisch immer der tatsächliche Einstandspreis (Bezugspreis) sein: Listen-Einkaufspreis abzüglich Lieferantenrabatt und Lieferantenskonto zuzüglich Fracht, Verpackung und Transportversicherung."}}]}]}</script>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="jpa-logo" href="./index.html" aria-label="JPA 360° Retail Advisory">
+      <span class="jpa-box"><span>JPA</span></span>
+      <span class="jpa-word">
+        <span class="jpa-360">360°</span>
+        <span class="jpa-sub">RETAIL ADVISORY</span>
+      </span>
+    </a>
+    <nav>
+      <a href="./index.html#rechner">Haupt-Rechner</a>
+      <a href="./index.html#fachrechner">10 Fach-Rechner</a>
+      <a href="./index.html#ratgeber">Praxis-Ratgeber</a>
+      <a href="./saas-abloesung-entwickler.html">SaaS-Ablösung</a>
+      <a class="btn-primary" href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">360° Quick-Check →</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div class="breadcrumb"><a href="./index.html">Startseite</a> · <a href="./index.html#fachrechner">Einzelhandel Fach-Rechner</a> · <strong>Kalkulationsfaktor &amp; Spanne</strong></div>
+    <div class="eyebrow">Fach-Rechner · Handelskalkulation · EK zu VK &amp; Rohertrag</div>
+    <h1>Kalkulationsfaktor &amp; <em>Handelsspanne</em> berechnen: Einkaufspreis zu Verkaufspreis</h1>
+    <p class="lead">Kostenloser Handelskalkulations-Rechner für Einzelhändler: Aus EK netto und Kalkulationsfaktor sofort VK brutto, Netto-VK, Kalkulationszuschlag (%) und echte Handelsspanne (%) berechnen.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn-primary" href="#live-tool">Sofort berechnen ↓</a>
+      <a class="btn-ghost" href="./index.html#rechner">Zur 3er-Gesamt-Suite mit 3D-Bot →</a>
+    </div>
+  </section>
+
+  <section class="section" id="live-tool">
+    <div class="calc-grid">
+      
+        <div class="card">
+          <div class="card-num">Interaktiver Handelskalkulations-Rechner</div>
+          <h3>EK netto ↔ Kalkulationsfaktor ↔ Handelsspanne berechnen</h3>
+          <div class="field"><div class="field-top"><label for="kfEk">Einkaufspreis / Einstandspreis netto (€)</label></div><input id="kfEk" type="number" value="40" min="0.5" step="1" /></div>
+          <div class="field"><div class="field-top"><label for="kfFaktor">Brutto-Kalkulationsfaktor (z. B. 2,50 oder 2,70)</label></div><input id="kfFaktor" type="number" value="2.60" min="1.2" max="8.0" step="0.05" /></div>
+          <div class="field"><div class="field-top"><label for="kfUst">Umsatzsteuersatz (%)</label></div><input id="kfUst" type="number" value="19" min="0" max="25" step="1" /></div>
+          <div class="kpi-box">
+            <div class="kpi-row"><span>Brutto-Verkaufspreis (Ladenpreis inkl. USt.):</span><strong id="kfOutVkBrutto" class="kpi-good">104,00 €</strong></div>
+            <div class="kpi-row"><span>Netto-Verkaufspreis (ohne USt.):</span><strong id="kfOutVkNetto">87,39 €</strong></div>
+            <div class="kpi-row"><span>Rohertrag / Deckungsbeitrag I pro Stück:</span><strong id="kfOutRohertrag" class="kpi-good">47,39 €</strong></div>
+            <div class="kpi-row"><span>Kalkulationszuschlag (Aufschlag auf EK netto):</span><strong id="kfOutZuschlag">+118,49 %</strong></div>
+            <div class="kpi-row"><span>Echte Handelsspanne / DB-I-Quote (vom Netto-VK):</span><strong id="kfOutSpanne" class="kpi-good">54,23 %</strong></div>
+          </div>
+          <p class="legal-note">Exakte kaufmännische Vorwärts- und Spannenrechnung (DE: 19 % / 7 % USt., AT: 20 %, CH: 8,1 % einstellbar).</p>
+        </div>
+      <div class="card">
+        <div class="card-num">Kaufmännische Kurzformel (ZDF-Referenz)</div>
+        <h3>Auf einen Blick für Laden, BWA &amp; IHK-Praxis</h3>
+        <div class="formula-box">Kalkulationszuschlag (Aufschlag auf den EK) und Handelsspanne (Abschlag vom Netto-VK / Rohertragsquote) sind niemals identisch! Bei 50 € EK netto und einem Kalkulationsfaktor von 2,50 auf den Brutto-VK (125,00 € inkl. 19 % USt. = 105,04 € Netto-VK) beträgt der Kalkulationszuschlag netto +110,08 %, die reale Handelsspanne (DB-I-Quote) jedoch 52,40 %.</div>
+        <p style="font-size:14.5px;color:var(--ink-soft);margin-bottom:14px">Entwickelt aus <strong>19 Jahren echter stationärer Handelspraxis</strong> (davon 14 Jahre als Store Manager auf der Fläche, im Team-Coaching und in der täglichen Kennzahlen-Arbeit) — 100 % cookiefrei direkt in Ihrem Browser berechnet.</p>
+        <p style="font-size:14.5px;color:var(--ink-soft)"><strong>Tipp für mehrere Filialen oder eigene Auswertungen:</strong> Wenn Sie diese Kennzahlen dauerhaft automatisiert aus Kasse und Warenwirtschaft sehen wollen — ohne monatliche Pro-Nutzer-SaaS-Abos — prüfen Sie unseren <a href="./saas-abloesung-entwickler.html" style="color:var(--brass);font-weight:600">SaaS-Ablöse-Rechner für eigene Reporting-Systeme</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <article class="article-body">
+      <h2>Der teure Irrtum auf Messen: Warum Faktor 2,0 bei 19 % USt. keine 50 % Spanne ergibt</h2>
+<p>Auf Ordermessen im Textil-, Schuh- und Geschenkartikelhandel wird im Gespräch häufig mit dem sogenannten Brutto-Kalkulationsfaktor gerechnet (EK netto mal Faktor = Laden-Verkaufspreis brutto). Viele Einsteiger glauben irrtümlich, ein Faktor von 2,0 bedeute eine Verdopplung und damit 50 % Handelsspanne. Das Gegenteil ist richtig: Kaufen Sie für 50,00 € netto ein und verkaufen für 100,00 € brutto inklusive 19 % Umsatzsteuer, führt das Finanzamt zunächst 15,97 € Umsatzsteuer ab. Ihr Netto-Verkaufspreis beträgt nur 84,03 €. Abzüglich 50,00 € EK bleiben lediglich 34,03 € Rohertrag — das entspricht einer mageren Handelsspanne von nur 40,50 %!</p>
+<h2>Unterschied zwischen Kalkulationszuschlag und Handelsspanne sauber beherrschen</h2>
+<p>In der kaufmännischen Steuerung (sowie in jeder IHK-Handelsfachwirt-Prüfung) gelten zwei strikt getrennte Bezugsgrößen: Beim Kalkulationszuschlag (Aufschlagssatz) bildet der Einstandspreis netto die 100-%-Basis: Kalkulationszuschlag (%) = [(Netto-VK − EK netto) ÷ EK netto] × 100. Bei der Handelsspanne (Rohertragsquote) bildet dagegen der Netto-Verkaufspreis die 100-%-Basis: Handelsspanne (%) = [(Netto-VK − EK netto) ÷ Netto-VK] × 100. Um bei 19 % Umsatzsteuer exakt 50,0 % Netto-Handelsspanne vor Abschriften zu erreichen, benötigen Sie bereits einen Brutto-Kalkulationsfaktor von exakt 2,38!</p>
+<h2>Eingangsspanne vs. realisierte Ausgangsspanne am Jahresende</h2>
+<p>Die auf dem Preisetikett einkalkulierte Spanne ist nur die theoretische Eingangskalkulation. Zieht man über das Geschäftsjahr Kundenkarten-Boni, Saison-Abschriften, Änderungskosten und Inventurdifferenzen ab, liegt die realisierte Ausgangsspanne in der BWA oft 5 bis 9 Prozentpunkte tiefer. Wer am Jahresende real 50 % Rohertrag auf dem Papier sehen muss, um Miete und Team sicher zu decken, braucht im Einkauf konsequent Marken und Eigenprogramme mit 2,6 bis 3,0 Kalkulationsfaktor.</p>
+
+      <h2>Orientierungs- &amp; Vergleichstabelle für die Praxis</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Brutto-Faktor (bei 19 % USt.)</th><th>Netto-Kalkulationszuschlag</th><th>Echte Netto-Handelsspanne (DB I)</th><th>Praxis-Bewertung Mode/Fachhandel</th></tr></thead>
+          <tbody>
+            <tr><td>Faktor 2,00</td><td>+68,07 % auf EK</td><td>40,50 % Spanne</td><td>Zu knapp für beratungsintensive Innenstadtlagen</td></tr>
+<tr><td>Faktor 2,38</td><td>+100,00 % auf EK</td><td>50,00 % Spanne</td><td>Exakte mathematische 50-%-Spannen-Schwelle</td></tr>
+<tr><td>Faktor 2,60</td><td>+118,49 % auf EK</td><td>54,23 % Spanne</td><td>Solide Basis inkl. kleinem Abschriften-Puffer</td></tr>
+<tr><td>Faktor 2,80</td><td>+135,29 % auf EK</td><td>57,50 % Spanne</td><td>Starke Zielkalkulation für Markenmix &amp; Accessoires</td></tr>
+<tr><td>Faktor 3,00</td><td>+152,10 % auf EK</td><td>60,33 % Spanne</td><td>Exzellenter Margen-Anker (Eigenlabel / Ergänzer)</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Häufig gestellte Fragen (Kalkulationsfaktor &amp; Spanne)</h2>
+      <div>
+        <details><summary>Welchen Kalkulationsfaktor brauche ich für 50 % Handelsspanne bei 19 % MwSt.?</summary><p>Sie benötigen exakt den Brutto-Kalkulationsfaktor 2,38 (Rechnung: 1,19 ÷ (1 − 0,50) = 2,38). Bei 100 € EK netto ergibt 2,38 einen Ladenpreis von 238,00 € brutto (= 200,00 € netto) und damit genau 100,00 € bzw. 50 % Rohertrag.</p></details>
+<details><summary>Wie rechne ich die Handelsspanne in den Kalkulationszuschlag um?</summary><p>Mit der kaufmännischen Umrechnungsformel: Kalkulationszuschlag (%) = [Handelsspanne % ÷ (100 − Handelsspanne %)] × 100. Aus 50 % Handelsspanne werden so 100 % Kalkulationszuschlag; aus 60 % Handelsspanne werden 150 % Kalkulationszuschlag.</p></details>
+<details><summary>Wie berücksichtigt man Skonto und Bezugskosten beim Einkaufspreis?</summary><p>Grundlage für den Faktor sollte kaufmännisch immer der tatsächliche Einstandspreis (Bezugspreis) sein: Listen-Einkaufspreis abzüglich Lieferantenrabatt und Lieferantenskonto zuzüglich Fracht, Verpackung und Transportversicherung.</p></details>
+
+      </div>
+    </article>
+
+    <div class="cta-band">
+      <div>
+        <h2>Kennzahlen direkt auf Ihrer Verkaufsfläche verankern?</h2>
+        <p>Kein theoretischer Folien-Vortrag: Beim <strong>360° Store Quick-Check</strong> (490,00 € netto, Dienstvertrag nach § 611 BGB) prüfen wir Laufwege, Schaufenster, Team-Taktung, Kabinen-UPT und Ertragsbremsen gemeinsam im Geschäft.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn-light" href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">360° Quick-Check ansehen →</a>
+        <div class="social-bar">
+          <a class="social-btn" href="https://wa.me/491708957669" target="_blank" rel="noopener noreferrer">Direkt per WhatsApp fragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 style="font-size:22px;margin-bottom:14px">Weitere kostenlose Einzelhandels-Fachrechner &amp; Praxis-Leitfäden</h2>
+    <div class="cities" style="margin-bottom:16px">
+      <a href="./mietquote-einzelhandel-rechner.html">Mietquote-Rechner Einzelhandel</a><a href="./rabatt-deckungsbeitrag-rechner.html">Rabatt &amp; DB-I-Rechner</a><a href="./upt-kabinen-conversion-rechner.html">UPT &amp; Kabinen-Rechner</a><a href="./warenumschlag-lagerdauer-rechner.html">Warenumschlag &amp; Lagerdauer</a><a href="./flaechenproduktivitaet-quadratmeterumsatz-rechner.html">Flächenproduktivität (Umsatz/m²)</a><a href="./personalkostenquote-stundenleistung-rechner.html">Personalkostenquote &amp; PEP</a><a href="./inventurdifferenz-schwundquote-rechner.html">Inventurdifferenz-Rechner</a><a href="./conversion-rate-laden-rechner.html">Laden-Conversion-Rate Rechner</a><a href="./break-even-einzelhandel-rechner.html">Break-Even-Umsatz Rechner</a>
+    </div>
+    <div class="cities">
+      <a href="./ratgeber-rabatt-falle-db1.html">Ratgeber: 10-%-Rabatt-Falle</a>
+      <a href="./ratgeber-upt-steigern-umkleidekabine.html">Ratgeber: Kabinen-UPT steigern</a>
+      <a href="./ratgeber-10-to-10-morgenbriefing.html">Ratgeber: 10-to-10 Morgenbriefing</a>
+      <a href="./ratgeber-personaleinsatzplanung-frequenz.html">Ratgeber: Frequenz-PEP</a>
+      <a href="./ratgeber-inventurdifferenzen-senken.html">Ratgeber: Inventurdifferenzen senken</a>
+      <a href="./paderborn.html">Standort OWL: Paderborn</a>
+      <a href="./bielefeld.html">Standort OWL: Bielefeld</a>
+      <a href="./muenster.html">Standort Westfalen: Münster</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <span>© 2026 JPA 360° Retail Advisory · Jeeno Paulo Aring · Reiner Dienstvertrag nach § 611 BGB · 0 Cookies</span>
+  <span style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="./index.html">Alle Live-Rechner</a>
+    <a href="./jeeno-paulo-aring.html">Über Jeeno Paulo Aring</a>
+    <a href="./saas-abloesung-entwickler.html">Eigene Software statt SaaS</a>
+    <a href="https://www.jp-aring-advisory.de" target="_blank" rel="noopener">Haupt-Website &amp; Impressum</a>
+  </span>
+  <div class="social-bar">
+    <a class="social-btn" href="https://wa.me/491708957669" target="_blank" rel="noopener noreferrer">WhatsApp Direkt</a>
+    <a class="social-btn" href="https://www.instagram.com/jpa.360.retail_advisory" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a class="social-btn" href="https://www.linkedin.com/in/jeeno-paulo-aring-retail-it-operations/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</footer>
+<script>
+        (function(){
+          function fmt(n){return n.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});}
+          function calc(){
+            var ek=Math.max(0.01,parseFloat(document.getElementById('kfEk').value)||0.01);
+            var fak=Math.max(1.01,parseFloat(document.getElementById('kfFaktor').value)||2.0);
+            var ust=Math.max(0,parseFloat(document.getElementById('kfUst').value)||0);
+            var vkB=ek*fak;
+            var vkN=vkB/(1+(ust/100));
+            var roh=vkN-ek;
+            var zuschlag=((vkN-ek)/ek)*100;
+            var spanne=vkN>0?((vkN-ek)/vkN)*100:0;
+            document.getElementById('kfOutVkBrutto').textContent=fmt(vkB)+' €';
+            document.getElementById('kfOutVkNetto').textContent=fmt(vkN)+' €';
+            document.getElementById('kfOutRohertrag').textContent=fmt(roh)+' €';
+            document.getElementById('kfOutZuschlag').textContent='+'+fmt(zuschlag)+' %';
+            var sEl=document.getElementById('kfOutSpanne');
+            sEl.textContent=fmt(spanne)+' %';
+            sEl.className=spanne>=50?'kpi-good':(spanne>=40?'kpi-warn':'kpi-bad');
+          }
+          ['kfEk','kfFaktor','kfUst'].forEach(function(id){
+            document.getElementById(id).addEventListener('input',calc);
+          });
+          calc();
+        })();</script>
+</body>
+</html>
